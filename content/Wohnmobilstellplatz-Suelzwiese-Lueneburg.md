@@ -26,7 +26,7 @@ cover: img/20231005_142456.jpg
 coordinates:
   latitude: 53.24554
   longitude: 10.39753
-marker_icon: stellplatz.png
+marker_icon: /stellplatz.png
 
 pictures:
   - img/20231005_142456.jpg
