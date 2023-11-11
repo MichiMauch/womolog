@@ -44,7 +44,7 @@ jobs:
         with:
           submodules: recursive
       - name: Update baseURL
-        run: echo 'baseURL = "https://michimauch.github.io/womolog/"' > config.toml
+        run: echo 'baseURL = "https://michimauch.github.io/womolog/"' > hugo.toml
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
