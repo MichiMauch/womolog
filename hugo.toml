@@ -1,0 +1,13 @@
+baseurl = 'www.mauch.rocks'
+languageCode = 'en-us'
+title = 'Unser Womolog'
+author = 'Michi'
+theme = 'vinyl-records-collection-theme'
+
+[taxonomies]
+  art_des_platzes = 'art_des_platzes'
+  ausstattung = 'ausstattung'
+  genres = 'genres'
+  label = 'label'
+  year = 'year'
+  format = 'format'

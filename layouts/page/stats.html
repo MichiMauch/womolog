@@ -1,0 +1,79 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+<main class="record">
+    <article>
+        <div class="container">
+            <!-- Full-width box -->
+            <div class="box boxcentered">
+                {{ $anzahlPlaetze := 0 }}
+                {{ range .Site.RegularPages }}
+                {{ if and (isset .Params "anzahl_naechte") (ge (.Params.anzahl_naechte) 1) }}
+                {{ $anzahlPlaetze = add $anzahlPlaetze 1 }}
+                {{ end }}
+                {{ end }}
+                <p class="boxicon"><i class="fa-solid fa-map-location-dot"></i></p>
+                <p class="numberanimation"> {{ $anzahlPlaetze }}</p>
+                <div class="legend">Besuchte Plätze</div>
+            </div>
+            <div class="boxcentered">
+                {{ $gesamtNaechte := 0 }}
+                {{ range .Site.RegularPages }}
+                {{ if isset .Params "anzahl_naechte" }}
+                {{ $gesamtNaechte = add $gesamtNaechte .Params.anzahl_naechte }}
+                {{ end }}
+                {{ end }}
+                <p class="boxicon"><i class="fa-solid fa-bed"></i></p>
+                <p class="numberanimation"> {{ $gesamtNaechte }}</p>
+                <div class="legend">Total Übernachtungen</div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Full-width box -->
+            <div class="boxcentered">
+
+                {{ $jahresNaechte := dict }}
+                {{ $plaetzeProJahr := dict }}
+
+                {{ range .Site.RegularPages }}
+                {{ $jahr := .Date.Format "2006" }}
+                {{ if and .Params.anzahl_naechte (not .Draft) }}
+                {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
+                {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
+
+                {{ if ge .Params.anzahl_naechte 1 }}
+                {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
+                {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+
+                {{ range $jahr, $naechte := $jahresNaechte }}
+                {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
+
+
+                <div class="year-stats">
+                    <div class="stats-item">
+                        <i class="icon fa-regular fa-calendar-days boxiconstat"></i>
+                        <span class="year">{{ $jahr }}</span>
+                    </div>
+                    <div class="stats-item">
+                        <i class="icon fa-solid fa-map-location-dot boxiconstat"></i>
+                        <span class="places">{{ $plaetze }}</span>
+                    </div>
+                    <div class="stats-item">
+                        <i class="icon fa-solid fa-bed boxiconstat"></i>
+                        <span class="nights">{{ $naechte }}</span>
+                    </div>
+                </div>
+                {{ end }}
+
+
+            </div>
+        </div>
+    </article>
+</main>
+
+{{ end }}

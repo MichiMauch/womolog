@@ -1,0 +1,85 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+<main class="record">
+    <article>
+        <div class="container">
+            <!-- Full-width box -->
+            <div class="box">
+                <div id="mapid" data-latitude="{{ .Params.coordinates.latitude }}"
+                    data-longitude="{{ .Params.coordinates.longitude }}" data-marker-icon="{{ .Params.marker_icon }}">
+                </div>
+                <script src="/js/leafleet.js"></script>
+            </div>
+            <div class="box box-with-padding">
+                <h2 class="platz-title full-width-title">Informationen</h2>
+                <p><i class="fa-regular fa-calendar"></i>: {{.Params.aufenthalt_von_bis }} ({{ .Params.anzahl_naechte }}
+                    x <i class="fa fa-bed" aria-hidden="true"></i>)</p>
+                <p><i class="fa-solid fa-sack-dollar"></i>: {{ .Params.preis }}</p>
+                <p><i class="fa-solid fa-location-crosshairs"></i>: {{ .Params.coordinates.latitude }}, {{
+                    .Params.coordinates.longitude }}</p>
+                <p><i class="fa-solid fa-car-side"></i>: <a style="color: black;" target="_blank"
+                        href="https://www.openstreetmap.org/directions?from=&to={{ .Params.coordinates.latitude }},{{ .Params.coordinates.longitude }}&route=%3B#map=5/50.653/6.526">OSM
+                        Anfahrtslink</a>, <a style="color: black;" target="_blank"
+                        href="https://www.google.com/maps/dir//{{ .Params.coordinates.latitude }},{{ .Params.coordinates.longitude }}/@47.8010404,2.9140582,6z/data=!4m2!4m1!3e0?entry=ttu">Google
+                        Maps
+                        Anfahrtslink</a>
+                </p>
+                <p><i class="fa-regular fa-sun"></i>: <a style="color: black;" target="_blank"
+                        href="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat={{ .Params.coordinates.latitude }}&lon={{ .Params.coordinates.longitude }}&zoom=10">Aktuelles
+                        Wetter</a>
+                </p>
+                <h2 class="platz-title full-width-title">Ausstattung</h2>
+                {{ range .Params.ausstattung }}
+                <a href="/ausstattung/{{ . | urlize }}" class="genres">{{ . }}</a>
+                {{ end }}
+            </div>
+            <div class="box">
+                {{ if .Params.cover }}
+                <a href="/{{ .Params.cover | urlize }}">
+                    {{ end }}
+                    {{ $default_img := resources.Get "img/default.png" }}
+                    <img class="my-image-class"
+                        src="{{ if .Params.cover }}{{ .Site.BaseURL }}/{{ .Params.cover }}{{ else }}{{ $default_img.Permalink }}{{ end }}"
+                        alt="{{ .Title }}" title="{{ .Title }}" />
+                    {{ if .Params.cover }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="box box-with-padding">
+                <h2 class="platz-title full-width-title">Aktivitäten</h2>
+                {{ with .Params.aktivitaeten }}
+                {{ range . }}
+                <p><i class="{{ .icon }}"></i> <a style="color: black;" href="{{ .url }}">{{ .title }}</a></p>
+                {{ end }}
+                {{ else }}
+                <p><i class="fa-solid fa-bed"></i> Wir haben hier nichts gemacht.</p>
+                {{ end }}
+                <h2 class="platz-title full-width-title">Kurzbeschreibung</h2>
+                {{ if .Content }}
+                <section class="content">
+                    {{ .Content }}
+                </section>
+                {{ end }}
+            </div>
+            <div class="box full-width">
+                {{ if .Params.pictures }}
+                <section class="record-pictures">
+                    <details>
+                        <summary><i class="fa-regular fa-images"></i> Weitere Bilder</summary>
+                        {{ range .Params.pictures }}
+                        <a href="/{{ . }}" data-lightbox="roadtrip" data-title="{{ . }}"><img src="/{{ . }}"
+                                alt="{{ . }}" title="{{ . }}" /></a>
+                        {{ end }}
+                    </details>
+                </section>
+                {{ end }}
+            </div>
+
+        </div>
+    </article>
+</main>
+
+{{ end }}

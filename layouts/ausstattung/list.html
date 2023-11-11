@@ -1,0 +1,24 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+
+
+<main class="album-list">
+    {{ range sort (where .Pages "Type" "default") "Date" "desc" }}
+    {{ $default_img := resources.Get "img/default.png" }}
+    <section class="album-card"
+        style="background-image: url('{{ if .Params.cover }}{{ .Site.BaseURL }}/{{ .Params.cover }}{{ else }}{{ $default_img.Permalink }}{{ end }}')">
+        {{ if .Params.art_des_platzes }}
+        <a href="/art_des_platzes/{{ .Params.art_des_platzes | urlize }}" class="album-artist">{{
+            .Params.art_des_platzes }}</a>
+        {{ end }}
+        <a href="{{ .Page.Permalink }}" class="album-title">{{ .Title }}</a>
+        <p class="staydate">
+            <i class="fa-regular fa-calendar"></i> {{.Params.aufenthalt_von_bis }}
+        </p>
+    </section>
+    {{ end }}
+</main>
+{{ end }}

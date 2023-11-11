@@ -1,0 +1,19 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Vinyl Records Collection"
+license = "MIT"
+licenselink = "https://github.com/Wivik/vinyl-records-collection-theme/blob/main/LICENSE"
+description = "A Theme to display your vinyl records collection, with categories and images."
+homepage = "https://github.com/Wivik/vinyl-records-collection-theme"
+tags = ["collection", "records", "vinyl", "music"]
+features = []
+min_version = "0.116.1"
+
+demosite = "https://vinyl.zedas.fr"
+
+[author]
+  name = "Seb"
+  homepage = "https://zedas.fr"
+
+

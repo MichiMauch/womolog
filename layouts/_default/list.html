@@ -1,0 +1,17 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+
+
+<div class="listcontainer">
+    {{ range sort (where .Pages "Type" "default") "Date" "desc" }}
+    {{ $default_img := resources.Get "img/default.png" }}
+    <div class="listbox" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')">
+        <H2><a href="{{ .Page.Permalink }}">{{ .Title }}</a></H2>
+        <p><i class="fa-regular fa-calendar"></i> {{.Params.aufenthalt_von_bis }}</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

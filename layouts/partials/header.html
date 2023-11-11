@@ -1,0 +1,17 @@
+{{ $background_header := resources.Get "img/back-header.jpg" }}
+<header style="background-image: url('{{ $background_header.Permalink }}');">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.art_des_platzes }}</p>
+    <nav>
+        <a href="{{ .Site.BaseURL }}">Home</a>
+        <a href="/map/">Stellplatzkarte</a>
+        <div class="nav-dropdown">
+            <a href="#" class="dropbtn">Art des Platzes</a>
+            <div class="dropdown-content">
+                <a href="/art_des_platzes/campingplatz">Campingplätze</a>
+                <a href="/art_des_platzes/wohnmobilstellplatz">Stellplätze</a>
+            </div>
+        </div>
+        <a href="/stats/">Stats</a>
+    </nav>
+</header>
