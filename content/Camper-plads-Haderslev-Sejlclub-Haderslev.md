@@ -12,7 +12,7 @@ ausstattung:
   - "Versorgung"
   - "Entsorgung"
   - "Laden in Laufnähe"
-  - "wc/Dusche"
+  - "WC/Dusche"
 aktivitaeten:
   - title: "Kurzer Spaziergang durch die Altstadt von Haderslev"
     url: "https://www.strava.com/activities/9975701759"

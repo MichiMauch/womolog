@@ -1,4 +1,4 @@
-baseurl = 'www.mauch.rocks'
+baseurl = 'https://michimauch.github.io/womolog/'
 languageCode = 'en-us'
 title = 'Unser Womolog'
 author = 'Michi'
