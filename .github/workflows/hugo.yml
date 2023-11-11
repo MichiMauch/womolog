@@ -43,8 +43,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Update baseURL
-        run: echo 'baseURL = "https://michimauch.github.io/womolog/"' > hugo.toml
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
