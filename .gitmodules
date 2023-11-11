@@ -1,0 +1,3 @@
+[submodule "themes/vinyl-records-collection-theme"]
+	path = themes/vinyl-records-collection-theme
+	url = https://github.com/Wivik/vinyl-records-collection-theme
