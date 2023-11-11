@@ -33,7 +33,7 @@
                 </p>
                 <h2 class="platz-title full-width-title">Ausstattung</h2>
                 {{ range .Params.ausstattung }}
-                <a href="ausstattung/{{ . | urlize }}" class="genres">{{ . }}</a>
+                <a href="/ausstattung/{{ . | urlize }}" class="genres">{{ . }}</a>
                 {{ end }}
             </div>
             <div class="box">
