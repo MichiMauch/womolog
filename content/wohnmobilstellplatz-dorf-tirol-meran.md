@@ -1,7 +1,7 @@
 ---
 # Mandatory parts :
 title: "Wohnmobilstellplatz Sonnenburghof, Dorf Tirol"
-date: 2023-02-05T11:39:08+01:00
+date: 2023-05-02T11:39:08+01:00
 draft: false
 type: "default"
 
