@@ -1,7 +1,6 @@
 {{ $background_header := resources.Get "img/back-header.jpg" }}
 <header style="background-image: url('{{ $background_header.Permalink }}');">
     <h1>{{ .Title }}</h1>
-    <p>{{ .Params.art_des_platzes }}</p>
     <nav>
         <a href="{{ .Site.BaseURL }}">Home</a>
         <a href="/map/">Stellplatzkarte</a>

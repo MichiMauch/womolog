@@ -6,21 +6,32 @@
 <main class="record">
     <article>
         <div class="container">
-            <!-- Full-width box -->
             <div class="box">
-                <div id="mapid" style="height: 400px;"></div> <!-- Stelle sicher, dass die Karte eine Höhe hat -->
+                <select id="yearFilter">
+                    <option value="all">Alle Jahre</option>
+                    {{ $pages := where .Site.RegularPages "Type" "default" }}
+                    {{ $years := slice }}
+                    {{ range $pages }}
+                        {{ $dateStr := .Date.Format "2006" }}
+                        {{ $years = $years | append $dateStr }}
+                    {{ end }}
+                    {{ $uniqueYears := sort (uniq $years) }}
+                    {{ range $uniqueYears }}
+                    <option value="{{ . }}">{{ . }}</option>
+                    {{ end }}
+                </select>
+                <div id="mapid" style="height: 400px;"></div>
                 <script>
                     var mapMarkers = [
-                        {{ range .Site.RegularPages }}
-                            {{ if eq .Type "default" }}  
-                                {
-                                    "name": "{{ .Title | jsonify }}",
-                                    "latitude": {{ .Params.coordinates.latitude }},  
-                                    "longitude": {{ .Params.coordinates.longitude }},  
-                                    "marker_icon": "{{ .Params.marker_icon | relURL }}",
-                                    "url": "{{ .Permalink }}"
-                                },
-                            {{ end }}
+                        {{ range $pages }}
+                        {
+                            "name": {{ .Title | jsonify }},
+                            "latitude": {{ .Params.coordinates.latitude }},
+                            "longitude": {{ .Params.coordinates.longitude }},
+                            "marker_icon": {{ .Params.marker_icon | relURL }},
+                            "url": {{ .Permalink }},
+                            "year": "{{ .Date.Format "2006" }}"
+                        },
                         {{ end }}
                     ];
                     var mapElement = document.getElementById('mapid');
@@ -28,18 +39,14 @@
                         mapElement.dataset.markers = JSON.stringify(mapMarkers);
                     }
 
-                    // Initialisiere die Leaflet-Karte
                     var map = L.map('mapid').setView([46.8, 8.23], 5);
-
-                    // Füge TileLayer hinzu
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                         maxZoom: 20,
                         attribution: '© OpenStreetMap'
                     }).addTo(map);
-
-                    // Füge Fullscreen Control hinzu
                     map.addControl(new L.Control.Fullscreen());
 
+                    var allMarkers = [];
                     var markersData = JSON.parse(mapElement.dataset.markers);
                     markersData.forEach(function(marker) {
                         var customIcon = L.icon({
@@ -48,19 +55,32 @@
                             iconAnchor: [16, 32],
                             popupAnchor: [0, -32]
                         });
-
-                        L.marker([marker.latitude, marker.longitude], { icon: customIcon })
-                            .addTo(map)
+                        var markerInstance = L.marker([marker.latitude, marker.longitude], { icon: customIcon })
                             .bindPopup('<a href="' + marker.url + '">' + marker.name + '</a>');
+                        allMarkers.push({ instance: markerInstance, year: marker.year });
+                        markerInstance.addTo(map);
                     });
 
-                    
+                    function filterMarkersByYear(selectedYear) {
+                        allMarkers.forEach(function(markerData) {
+                            if (selectedYear === "all" || markerData.year === selectedYear) {
+                                map.addLayer(markerData.instance);
+                            } else {
+                                map.removeLayer(markerData.instance);
+                            }
+                        });
+                    }
+
+                    document.getElementById('yearFilter').addEventListener('change', function() {
+                        filterMarkersByYear(this.value);
+                    });
+
+                    filterMarkersByYear("all");
                 </script>
-                <script src="/js/leaflet.js"></script>
+                <script src="/js/leaflet.js"></script>                
             </div>
         </div>
     </article>
 </main>
-
 
 {{ end }}
