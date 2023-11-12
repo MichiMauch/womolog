@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main  # Der Hauptzweig deines Repositories
+
+media_folder: "static/uploads"  # Pfad, in dem Medien gespeichert werden
+public_folder: "/uploads"
+
+collections:  # Definiere hier deine Inhaltsarten
+  - name: "blog"  # Eine Sammlung
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    fields:  # Felder für deine Inhalte
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
