@@ -1,5 +1,5 @@
-baseurl = 'https://michimauch.github.io/womolog/'
-languageCode = 'en-us'
+baseurl = 'https://www.womolog.ch'
+languageCode = 'de-CH'
 title = 'Unser Womolog'
 author = 'Michi'
 theme = 'vinyl-records-collection-theme'
