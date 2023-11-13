@@ -16,28 +16,10 @@ collections:
       - {label: "Datum", name: "date", widget: "datetime"}
       - {label: "Entwurf", name: "draft", widget: "boolean"}
       - {label: "Typ", name: "type", widget: "hidden", default: "default"}
+      - {label: "Beschreibung", name: "description", widget: "textarea"}
       - {label: "Anzahl Nächte", name: "anzahl_naechte", widget: "number"}
       - {label: "Aufenthalt von bis", name: "aufenthalt_von_bis", widget: "string"}
       - {label: "Preis", name: "preis", widget: "string"}
-      - label: "Ausstattung"
-        name: "ausstattung"
-        widget: "list"
-        fields:
-          - {label: "Ausstattung", name: "ausstattung", widget: "string"}
-      - label: "Aktivitäten"
-        name: "aktivitaeten"
-        widget: "list"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "URL", name: "url", widget: "string"}
-          - label: "Icon"
-            name: "icon"
-            widget: "select"
-            options:
-              - {label: "Wandern", value: "fa-solid fa-person-hiking"}
-              - {label: "Spazieren", value: "fa-solid fa-person-walking"}
-              - {label: "Mountainbike", value: "fa-solid fa-bicycle"}
-              - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
       - label: "Art des Platzes"
         name: "art_des_platzes"
         widget: "select"
@@ -57,6 +39,25 @@ collections:
           - {label: "Stellplatz", value: "/stellplatz.png"}
           - {label: "Campingplatz", value: "/campingplatz.png"}
           - {label: "Parkplatz", value: "/parkplatz.png"}
+      - label: "Ausstattung"
+        name: "ausstattung"
+        widget: "list"
+        fields:
+          - {label: "Ausstattung", name: "ausstattung", widget: "string"}
+      - label: "Aktivitäten"
+        name: "aktivitaeten"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+          - label: "Icon"
+            name: "icon"
+            widget: "select"
+            options:
+              - {label: "Wandern", value: "fa-solid fa-person-hiking"}
+              - {label: "Spazieren", value: "fa-solid fa-person-walking"}
+              - {label: "Mountainbike", value: "fa-solid fa-bicycle"}
+              - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
       - {label: "Titelbild", name: "cover", widget: "image"}
       - label: "Bilder"
         name: "pictures"

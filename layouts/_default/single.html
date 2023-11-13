@@ -58,11 +58,15 @@
                 <p><i class="fa-solid fa-bed"></i> Wir haben hier nichts gemacht.</p>
                 {{ end }}
                 <h2 class="platz-title full-width-title">Kurzbeschreibung</h2>
-                {{ if .Content }}
                 <section class="content">
-                    {{ .Content }}
+                    {{ if .Params.description }}
+                        <p>{{ .Params.description }}</p>
+                    {{ else }}
+                        {{ if .Content }}
+                            {{ .Content }}
+                        {{ end }}
+                    {{ end }}
                 </section>
-                {{ end }}
             </div>
             <div class="box full-width">
                 {{ if .Params.pictures }}
