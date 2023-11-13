@@ -1,7 +1,7 @@
 ---
 # Mandatory parts :
 title: "Campingplatz Trendcamping, Wolfach"
-date: 2023-10-11T11:39:08+01:00
+date: 2023-10-10T11:39:08+01:00
 draft: false
 type: "default"
 
@@ -37,8 +37,6 @@ cover: img/20231010_133456.jpg
 # More optional details you can use for your collection.
 # mehr details zum platz
 
-## A quick description of your record. Markdown is supported
-description: Der Campingplatz liegt im Mittelschwarzwald. Ca. 45min von Freiburg entfernt. Zwar nahe an der Strasse aber durch die erhöhte und zurückliegende Lage sehr ruhig und entspannt. 
 
 # Koordinaten des Platzes. Wird auf der single page als Kartenausschnitt angezeigt
 coordinates:
@@ -59,7 +57,6 @@ pictures:
 - img/20231010_113705.jpg
 - img/20231010_113740.jpg
 - img/20231010_113831.jpg
-
 
 
 ## Below the metadata block, you can write some content such as a review or anything else you want. It'll be displayed in the album page
