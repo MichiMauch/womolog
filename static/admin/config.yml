@@ -1,15 +1,45 @@
 backend:
   name: git-gateway
-  branch: main  # Der Hauptzweig deines Repositories
+  branch: main
 
-media_folder: "static/uploads"  # Pfad, in dem Medien gespeichert werden
-public_folder: "/uploads"
+media_folder: "static/img" # Pfad, wo Medien gespeichert werden
+public_folder: "/img" # Pfad, wie er im CMS angezeigt wird
 
-collections:  # Definiere hier deine Inhaltsarten
-  - name: "blog"  # Eine Sammlung
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    fields:  # Felder für deine Inhalte
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+collections:
+  - name: "campingplatz" # Name der Sammlung
+    label: "Campingplatz" # Label, das im CMS angezeigt wird
+    folder: "content/campingplatz" # Verzeichnis im Repository
+    create: true # Erlaubt das Erstellen neuer Einträge
+    fields: # Felder für jeden Eintrag
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Entwurf", name: "draft", widget: "boolean"}
+      - {label: "Typ", name: "type", widget: "hidden", default: "default"}
+      - {label: "Anzahl Nächte", name: "anzahl_naechte", widget: "number"}
+      - {label: "Aufenthalt von bis", name: "aufenthalt_von_bis", widget: "string"}
+      - {label: "Preis", name: "preis", widget: "string"}
+      - label: "Ausstattung"
+        name: "ausstattung"
+        widget: "list"
+        fields:
+          - {label: "Ausstattung", name: "ausstattung", widget: "string"}
+      - label: "Aktivitäten"
+        name: "aktivitaeten"
+        widget: "list"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+          - {label: "Icon", name: "icon", widget: "string"}
+      - {label: "Art des Platzes", name: "art_des_platzes", widget: "string"}
+      - label: "Koordinaten"
+        name: "coordinates"
+        widget: "object"
+        fields:
+          - {label: "Breitengrad", name: "latitude", widget: "number"}
+          - {label: "Längengrad", name: "longitude", widget: "number"}
+      - {label: "Marker Icon", name: "marker_icon", widget: "image"}
+      - {label: "Titelbild", name: "cover", widget: "image"}
+      - label: "Bilder"
+        name: "pictures"
+        widget: "list"
+        field: {label: "Bild", name: "image", widget: "image"}
