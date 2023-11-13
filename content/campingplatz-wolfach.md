@@ -63,5 +63,5 @@ pictures:
 
 
 ## Below the metadata block, you can write some content such as a review or anything else you want. It'll be displayed in the album page.
-description:
-Im Trendcamping Wolfach, versteckt im malerischen Mittelschwarzwald, fanden wir ein ruhiges Plätzchen umgeben von Natur. Halbmeil war der perfekte Ausgangspunkt für atemberaubende Wanderungen – ein echter Geheimtipp für Erholungssuchende und Naturfreunde.
+description: "Im Trendcamping Wolfach, versteckt im malerischen Mittelschwarzwald, fanden wir ein ruhiges Plätzchen umgeben von Natur. Halbmeil war der perfekte Ausgangspunkt für atemberaubende Wanderungen – ein echter Geheimtipp für Erholungssuchende und Naturfreunde."
+---
