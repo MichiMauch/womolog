@@ -9,6 +9,7 @@ collections:
   - name: "campingplatz" # Name der Sammlung
     label: "Campingplatz" # Label, das im CMS angezeigt wird
     folder: "content/" # Verzeichnis im Repository
+    summary: "{{title}} - {{date}}"
     create: true # Erlaubt das Erstellen neuer Einträge
     fields: # Felder für jeden Eintrag
       - {label: "Titel", name: "title", widget: "string"}
