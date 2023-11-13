@@ -8,7 +8,7 @@ public_folder: "/img" # Pfad, wie er im CMS angezeigt wird
 collections:
   - name: "campingplatz" # Name der Sammlung
     label: "Campingplatz" # Label, das im CMS angezeigt wird
-    folder: "content/campingplatz" # Verzeichnis im Repository
+    folder: "content" # Verzeichnis im Repository
     create: true # Erlaubt das Erstellen neuer Einträge
     fields: # Felder für jeden Eintrag
       - {label: "Titel", name: "title", widget: "string"}
