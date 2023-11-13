@@ -1,7 +1,7 @@
 ---
 # Mandatory parts :
 title: "Campingplatz Trendcamping, Wolfach"
-date: 2023-10-10T11:39:08+01:00
+date: 2023-10-11T11:39:08+01:00
 draft: false
 type: "default"
 
