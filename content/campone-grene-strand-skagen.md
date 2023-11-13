@@ -39,5 +39,6 @@ pictures:
   - img/20231001_154103.jpg
   - img/20231001_154119.jpg
 
+
+description: "Grosser Camping am Rande von Skagen, direkt am Strand. Nicht weit bis zum grossen Leuchtrum und bis zur Stelle wo die Nord- und Ostsee aufeinander treffen."
 ---
-Grosser Camping am Rande von Skagen, direkt am Strand. Nicht weit bis zum grossen Leuchtrum und bis zur Stelle wo die Nord- und Ostsee aufeinander treffen.
