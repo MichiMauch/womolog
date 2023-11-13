@@ -9,7 +9,7 @@ collections:
   - name: "campingplatz" # Name der Sammlung
     label: "Campingplatz" # Label, das im CMS angezeigt wird
     folder: "content/" # Verzeichnis im Repository
-    summary: "{{title}} - {{date}}"
+    summary: "{{title}} - {{date | date('DD.MM.YYYY')}}"
     create: true # Erlaubt das Erstellen neuer Einträge
     fields: # Felder für jeden Eintrag
       - {label: "Titel", name: "title", widget: "string"}
@@ -28,17 +28,35 @@ collections:
         name: "aktivitaeten"
         widget: "list"
         fields:
-          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "URL", name: "url", widget: "string"}
-          - {label: "Icon", name: "icon", widget: "string"}
-      - {label: "Art des Platzes", name: "art_des_platzes", widget: "string"}
+          - label: "Icon"
+            name: "icon"
+            widget: "select"
+            options:
+              - {label: "Wandern", value: "fa-solid fa-person-hiking"}
+              - {label: "Spazieren", value: "fa-solid fa-person-walking"}
+              - {label: "Mountainbike", value: "fa-solid fa-bicycle"}
+              - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
+      - label: "Art des Platzes"
+        name: "art_des_platzes"
+        widget: "select"
+        options:
+          - {label: "Stellplatz", value: "Stellplatz"}
+          - {label: "Campingplatz", value: "Campingplatz"}
       - label: "Koordinaten"
         name: "coordinates"
         widget: "object"
         fields:
           - {label: "Breitengrad", name: "latitude", widget: "number"}
           - {label: "Längengrad", name: "longitude", widget: "number"}
-      - {label: "Marker Icon", name: "marker_icon", widget: "image"}
+      - label: "Marker Icon"
+        name: "marker_icon"
+        widget: "select"
+        options:
+          - {label: "Stellplatz", value: "/stellplatz.png"}
+          - {label: "Campingplatz", value: "/campingplatz.png"}
+          - {label: "Parkplatz", value: "/parkplatz.png"}
       - {label: "Titelbild", name: "cover", widget: "image"}
       - label: "Bilder"
         name: "pictures"
