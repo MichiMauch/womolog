@@ -16,7 +16,7 @@ collections:
       - {label: "Datum", name: "date", widget: "datetime"}
       - {label: "Entwurf", name: "draft", widget: "boolean"}
       - {label: "Typ", name: "type", widget: "hidden", default: "default"}
-      - {label: "Beschreibung", name: "description", widget: "textarea"}
+      - {label: "Beschreibung", name: "description", widget: "text"}
       - {label: "Anzahl Nächte", name: "anzahl_naechte", widget: "number"}
       - {label: "Aufenthalt von bis", name: "aufenthalt_von_bis", widget: "string"}
       - {label: "Preis", name: "preis", widget: "string"}
