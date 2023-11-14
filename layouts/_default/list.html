@@ -5,40 +5,13 @@
 {{- partial "header.html" . -}}
 
 <div class="listcontainer">
-    {{ $paginator := .Paginate (where .Pages "Type" "default").ByDate.Reverse 8 }}
-    {{ range $paginator.Pages }}
-    {{ $default_img := resources.Get "img/default.png" }}
+    {{ range where .Site.RegularPages "Section" "plaetze" }}
     <div class="listbox">
-        <a href="{{ .Page.Permalink }}"><div class="zoomable-background" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"></div></a>
-        <H2><a href="{{ .Page.Permalink }}">{{ .Title }}</a></H2>
-        <p><a href="{{ .Page.Permalink }}"><i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis }}</a></p>
+        <a href="{{ .Permalink }}"><div class="zoomable-background" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"></div></a>
+        <H2><a href="{{ .Permalink }}">{{ .Title }}</a></H2>
+        <p><a href="{{ .Permalink }}"><i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis }}</a></p>
     </div>
     {{ end }}
 </div>
-
-<script>
-    let currentPage = 1;
-    const totalPages = {{ $paginator.TotalPages }};
-    const loadMoreContent = () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            fetch(`/page/${currentPage}/`)
-                .then(response => response.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newContent = doc.querySelector('.listcontainer').innerHTML;
-                    document.querySelector('.listcontainer').innerHTML += newContent;
-                });
-        }
-    };
-
-    window.addEventListener('scroll', () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            loadMoreContent();
-        }
-    });
-</script>
-
 
 {{ end }}

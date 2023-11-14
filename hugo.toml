@@ -4,6 +4,10 @@ title = 'Unser Womolog'
 author = 'Michi'
 theme = 'vinyl-records-collection-theme'
 
+[permalinks]
+  plaetze = "/plaetze/:filename/"
+
+
 [taxonomies]
   art_des_platzes = 'art_des_platzes'
   ausstattung = 'ausstattung'

@@ -6,9 +6,9 @@ media_folder: "static/img" # Pfad, wo Medien gespeichert werden
 public_folder: "/img" # Pfad, wie er im CMS angezeigt wird
 
 collections:
-  - name: "campingplatz" # Name der Sammlung
-    label: "Campingplatz" # Label, das im CMS angezeigt wird
-    folder: "content/" # Verzeichnis im Repository
+  - name: "plaetze" # Name der Sammlung
+    label: "Plätze" # Label, das im CMS angezeigt wird
+    folder: "content/plaetze/" # Verzeichnis im Repository
     summary: "{{title}} - {{date | date('DD.MM.YYYY')}}"
     create: true # Erlaubt das Erstellen neuer Einträge
     fields: # Felder für jeden Eintrag
