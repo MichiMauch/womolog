@@ -13,9 +13,9 @@ preis: "€ 67.00"
 ausstattung:
   - "Versorgung"
   - "Entsorgung"
-  - "Laden auf dem Platz"
+  - "Laden auf Platz"
   - "Laden in Laufnähe"
-  - "Restaurant auf dem Platz"
+  - "Restaurant auf Platz"
 aktivitaeten:
   - title: "Camping Halbmeil - Vesperstube Benzenhof - Schwarzwald Tour"
     url: "https://www.strava.com/activities/10018568096"

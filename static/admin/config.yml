@@ -41,8 +41,9 @@ collections:
           - {label: "Parkplatz", value: "/parkplatz.png"}
       - label: "Ausstattung"
         name: "ausstattung"
-        widget: "tags"
-        options: ["Versorgung", "Entsorgung", "WC/Duschen", "Laden auf Platz", "Laden in laufnähe", "Restaurant auf Platz", "WLAN"] # Beispiele für Ausstattungsmerkmale
+        widget: "list"
+        fields:
+          - {label: "Ausstattung", name: "ausstattung", widget: "string"}
       - label: "Aktivitäten"
         name: "aktivitaeten"
         widget: "list"
