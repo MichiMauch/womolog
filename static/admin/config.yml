@@ -51,8 +51,8 @@ collections:
         name: "ausstattung"
         widget: "list"
         fields:
-          - label: "Ausstattungsmerkmal"
-            name: "ausstattungsmerkmal"
+          - label: "Ausstattung"
+            name: "ausstattung"
             widget: "select"
             options:
               - {label: "Entsorgung", value: "Entsorgung"}
@@ -78,9 +78,6 @@ collections:
               - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
       - {label: "Titelbild", name: "cover", widget: "image"}
       - label: "Bilder"
-        name: "images"
+        name: "pictures"
         widget: "list"
-        fields:
-          - label: "Bild"
-            name: "image"
-            widget: "image"
+        field: {label: "Bild", name: "image", widget: "image"}
