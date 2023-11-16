@@ -51,7 +51,17 @@ collections:
         name: "ausstattung"
         widget: "list"
         fields:
-          - {label: "Ausstattung", name: "ausstattung", widget: "string"}
+          - label: "Ausstattungsmerkmal"
+            name: "ausstattungsmerkmal"
+            widget: "select"
+            options:
+              - {label: "Entsorgung", value: "Entsorgung"}
+              - {label: "Versorgung", value: "Versorgung"}
+              - {label: "WC/Dusche", value: "WC/Dusche"}
+              - {label: "WLAN", value: "WLAN"}
+              - {label: "Laden auf Platz", value: "Laden auf Platz"}
+              - {label: "Laden in Laufnähe", value: "Laden in Laufnähe"}
+              - {label: "Restaurant auf Platz", value: "Restaurant auf Platz"}
       - label: "Aktivitäten"
         name: "aktivitaeten"
         widget: "list"
