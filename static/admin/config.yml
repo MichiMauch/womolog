@@ -3,7 +3,7 @@ backend:
   branch: main
 
 media_folder: "static/img" # Pfad, wo Medien gespeichert werden
-public_folder: "/img" # Pfad, wie er im CMS angezeigt wird
+public_folder: "img" # Pfad, wie er im CMS angezeigt wird
 
 collections:
   - name: "plaetze" # Name der Sammlung
