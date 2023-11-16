@@ -13,8 +13,8 @@ aufenthalt_von_bis: 17.10.2022 - 18.10.2022
 preis: CHF 26.40
 art_des_platzes: Campingplatz
 coordinates:
-  latitude: 46
-  longitude: 8
+  latitude: 46.13836
+  longitude: 8.90746
 marker_icon: /stellplatz.png
 ausstattung:
   - ausstattung: Versorgung
