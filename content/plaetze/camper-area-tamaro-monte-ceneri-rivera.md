@@ -23,9 +23,7 @@ ausstattung:
 aktivitaeten: []
 cover: /img/20221017_165942.jpg
 pictures:
-  - /img/20221017_170048.jpg
-  - /img/20221017_165938.jpg
-  - /img/20221017_165942.jpg
+  - img/20221017_170056.jpg
 images:
   - image: /img/20221017_170056.jpg
   - image: /img/20221017_170035.jpg
