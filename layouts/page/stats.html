@@ -33,27 +33,36 @@
         <div class="container">
             <!-- Full-width box -->
             <div class="boxcentered">
-
                 {{ $jahresNaechte := dict }}
                 {{ $plaetzeProJahr := dict }}
-
+                {{ $platzartenProJahr := dict }}
+        
                 {{ range .Site.RegularPages }}
                 {{ $jahr := .Date.Format "2006" }}
                 {{ if and .Params.anzahl_naechte (not .Draft) }}
                 {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
                 {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
-
+        
                 {{ if ge .Params.anzahl_naechte 1 }}
                 {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
                 {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
                 {{ end }}
+        
+                {{ $artDesPlatzes := .Params.art_des_platzes }}
+                {{ if $artDesPlatzes }}
+                {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
+                {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
+                {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
+                {{ end }}
+        
                 {{ end }}
                 {{ end }}
-
+        
                 {{ range $jahr, $naechte := $jahresNaechte }}
                 {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
-
-
+                {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+        
                 <div class="year-stats">
                     <div class="stats-item">
                         <i class="icon fa-regular fa-calendar-days boxiconstat"></i>
@@ -67,13 +76,22 @@
                         <i class="icon fa-solid fa-bed boxiconstat"></i>
                         <span class="nights">{{ $naechte }}</span>
                     </div>
+                    <!-- Ausgabe der Platzarten -->
+                    <div class="stats-item">
+                        <i class="icon fa-solid fa-caravan boxiconstat"></i>
+                        {{ range $platzart, $anzahl := $platzarten }}
+                        {{ $pluralMap := dict "Campingplatz" "Campingplätze" "Stellplatz" "Stellplätze" "Parkplatz" "Parkplätze" }}
+                        <div class="platzart">
+                            {{ index $pluralMap $platzart | default $platzart }}: {{ $anzahl }}
+                        </div>
+                        {{ end }}
+                    </div>
                 </div>
                 {{ end }}
-
-
             </div>
         </div>
-    </article>
+        
+            </article>
 </main>
 
 {{ end }}

@@ -24,7 +24,7 @@ ausstattung:
 
 
 ## The artist's name
-art_des_platzes: "Wohnmobilstellplatz"
+art_des_platzes: "Stellplatz"
 
 ## Cover image : will be displayed in the album list and top page.
 ## Display a default one unless you change this value.
