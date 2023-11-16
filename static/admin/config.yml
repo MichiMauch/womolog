@@ -68,26 +68,20 @@ collections:
               - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
       - {label: "Titelbild", name: "cover", widget: "image"}
       - label: "Bilder"
-            name: "images"
-            widget: "list"
-            fields:
-              - label: "Bild"
-                name: "image"
-                widget: "image"
-      - name: “image carousel”
-        label: “Image Carousel”
-        create: true
-        slug: “index”
-        media_folder: “”
-        public_folder: “”
-        editor:
-        preview: false
+        name: "images"
+        widget: "list"
+        fields:
+          - label: "Bild"
+            name: "image"
+            widget: "image"
+      - label: "Image Carousel"
+        name: "image carousel"
         fields:
           {
-          label: “Images”,
-          name: “images”,
-          widget: “list”,
-          summary: “{{fields.image}}”,
+          label: "Images",
+          name: "images",
+          widget: "list",
+          summary: "{{fields.image}}",
           field:
-          { label: “Image”, name: “image”, widget: “image” },
+          { label: "Image", name: "image", widget: "image" },
           }
