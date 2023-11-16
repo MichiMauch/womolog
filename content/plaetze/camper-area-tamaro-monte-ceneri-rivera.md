@@ -17,9 +17,9 @@ coordinates:
   longitude: 8.90746
 marker_icon: /stellplatz.png
 ausstattung:
-  - ausstattung: Versorgung
-  - ausstattung: Entsorgung
-  - ausstattung: Laden in Laufnähe
+  - Entsorgung
+  - Versorgung
+  - Laden in Laufnähe
 aktivitaeten: []
 cover: img/20221017_165938.jpg
 pictures:
