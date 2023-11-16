@@ -560,7 +560,7 @@ footer a:hover {
 
 
 .boxcentered {
-  flex-basis: calc(50% - 40px);
+  flex-basis: calc(33% - 40px);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -595,6 +595,7 @@ footer a:hover {
   font-size: 3rem;
   color: #ADD19E;
   margin-bottom: 5px;
+
   /* Färbt das Icon grün */
 
 }
@@ -749,4 +750,58 @@ footer a:hover {
   border-radius: 10px; /* Macht die Ecken des Dropdown-Menüs rund */
   padding: 5px 10px; /* Fügt innen etwas Abstand hinzu */
   padding-right: 30px;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center; /* Zentriert die Icons vertikal, falls nötig */
+}
+
+.platzart {
+  display: flex;
+  align-items: center; /* Zentriert die Elemente vertikal */
+}
+
+.platzart .boxicon, .platzart .numberanimation {
+  margin-right: 10px; /* Fügt einen Abstand zwischen den Elementen hinzu */
+}
+.platzart .numberanimation {
+  font-size: 1.5em; /* Oder einen anderen Wert, je nach Bedarf */
+}
+.platzart .boxicon i {
+  font-size: 0.7em; /* Direkte Größenanpassung */
+}
+
+@media (max-width: 600px) { /* Passen Sie die Pixelzahl je nach Bedarf an */
+  .year-stats {
+      flex-direction: column; /* Stapelt die .stats-item-Elemente in einer Spalte */
+  }
+
+  .stats-item {
+      justify-content: center; /* Zentriert die Items horizontal */
+      margin: 5px; /* Verringert den Abstand zwischen den Items */
+  }
+
+  .icon {
+      font-size: 2rem; /* Verkleinert die Icons für mobile Geräte */
+  }
+
+  .year, .places, .nights, .platzart {
+      font-size: 1.5rem; /* Verkleinert den Text für mobile Geräte */
+  }
+
+  .icons-container {
+      justify-content: center; /* Zentriert die Icons, wenn sie nebeneinander sind */
+  }
+}
+
+.year-stats:not(:last-child):after {
+  content: "";
+  display: block;
+  margin: 10px 0; /* Stellt den Abstand oben und unten der Linie ein */
+  height: 1px; /* Höhe der Linie */
+  background: #000; /* Farbe der Linie */
+  margin-left: auto; /* Zentriert die Linie horizontal */
+  margin-right: auto; /* Zentriert die Linie horizontal */
+  width: calc(100% - 0px); /* Breite der Linie, wobei 20px der Gesamtabstand von beiden Seiten ist */
 }

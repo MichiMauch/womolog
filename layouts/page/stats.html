@@ -29,6 +29,33 @@
                 <p class="numberanimation"> {{ $gesamtNaechte }}</p>
                 <div class="legend">Total Übernachtungen</div>
             </div>
+            <div class="boxcentered">
+                {{ $gesamtPlatzarten := dict }}
+                {{ $platzartIcons := dict 
+                    "Campingplatz" "fa-campground" 
+                    "Stellplatz" "fa-van-shuttle" 
+                    "Parkplatz" "fa-parking" 
+                }}
+            
+                {{ range .Site.RegularPages }}
+                {{ if and (isset .Params "anzahl_naechte") (gt .Params.anzahl_naechte 0) }}
+                {{ $artDesPlatzes := .Params.art_des_platzes }}
+                {{ if $artDesPlatzes }}
+                {{ $aktuellePlatzartAnzahl := add (index $gesamtPlatzarten $artDesPlatzes | default 0) 1 }}
+                {{ $gesamtPlatzarten = merge $gesamtPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+            
+                {{ range $platzart, $anzahl := $gesamtPlatzarten }}
+                <div class="platzart">
+                    <p class="boxicon"><i class="fa {{ index $platzartIcons $platzart | default "fa-question-circle" }}"></i></p>
+                    <p class="numberanimation">{{ $anzahl }}</p>
+                </div>
+                {{ end }}
+                <div class="legend">Total der Platzarten</div>
+            </div>
+                        
         </div>
         <div class="container">
             <!-- Full-width box -->
@@ -78,8 +105,11 @@
                     </div>
                     <!-- Ausgabe der Platzarten -->
                     <div class="stats-item">
-                        <i class="icon fa-solid fa-caravan boxiconstat"></i>
-                        {{ range $platzart, $anzahl := $platzarten }}
+                        <div class="icons-container">
+                            <i class="icon fa-solid fa-campground boxiconstat"></i>
+                            <i class="icon fa-solid fa-van-shuttle boxiconstat"></i>
+                        </div>
+                                                {{ range $platzart, $anzahl := $platzarten }}
                         {{ $pluralMap := dict "Campingplatz" "Campingplätze" "Stellplatz" "Stellplätze" "Parkplatz" "Parkplätze" }}
                         <div class="platzart">
                             {{ index $pluralMap $platzart | default $platzart }}: {{ $anzahl }}
