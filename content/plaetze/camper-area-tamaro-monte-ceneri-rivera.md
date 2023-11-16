@@ -13,8 +13,9 @@ aufenthalt_von_bis: 17.10.2022 - 18.10.2022
 preis: CHF 26.40
 art_des_platzes: Campingplatz
 ausstattung:
-  - ausstattung: Versorgung
-  - ausstattung: Entsorgung
+  - ausstattungsmerkmal: Versorgung
+  - ausstattungsmerkmal: Entsorgung
+  - ausstattungsmerkmal: Laden in Laufnähe
 pictures:
   - /img/20221017_170048.jpg
 coordinates:
