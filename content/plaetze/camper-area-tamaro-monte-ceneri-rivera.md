@@ -21,9 +21,15 @@ ausstattung:
   - ausstattung: Entsorgung
   - ausstattung: Laden in Laufnähe
 aktivitaeten: []
-cover: /img/20221017_165942.jpg
+cover: img/20221017_165938.jpg
 pictures:
   - img/20221017_170056.jpg
+  - img/20221017_170048.jpg
+  - img/20221017_170035.jpg
+  - img/20221017_170026.jpg
+  - img/20221017_165956.jpg
+  - img/20221017_165942.jpg
+  - img/20221017_165938.jpg
 images:
   - image: /img/20221017_170056.jpg
   - image: /img/20221017_170035.jpg
