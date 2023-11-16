@@ -3,23 +3,26 @@
 {{ define "main" }}
 
 {{- partial "header.html" . -}}
+
 <main class="record">
     <article>
+        <div class="dropdown-wrapper">
+            <select id="yearFilter">
+                <option value="all">Alle Jahre</option>
+                {{ $pages := where .Site.RegularPages "Type" "default" }}
+                {{ $years := slice }}
+                {{ range $pages }}
+                    {{ $dateStr := .Date.Format "2006" }}
+                    {{ $years = $years | append $dateStr }}
+                {{ end }}
+                {{ $uniqueYears := sort (uniq $years) }}
+                {{ range $uniqueYears }}
+                <option value="{{ . }}">{{ . }}</option>
+                {{ end }}
+            </select>
+        </div>
         <div class="container">
             <div class="box">
-                <select id="yearFilter">
-                    <option value="all">Alle Jahre</option>
-                    {{ $pages := where .Site.RegularPages "Type" "default" }}
-                    {{ $years := slice }}
-                    {{ range $pages }}
-                        {{ $dateStr := .Date.Format "2006" }}
-                        {{ $years = $years | append $dateStr }}
-                    {{ end }}
-                    {{ $uniqueYears := sort (uniq $years) }}
-                    {{ range $uniqueYears }}
-                    <option value="{{ . }}">{{ . }}</option>
-                    {{ end }}
-                </select>
                 <div id="mapid" style="height: 400px;"></div>
                 <script>
                     var mapMarkers = [

@@ -376,6 +376,7 @@ footer a:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .box {
@@ -735,3 +736,17 @@ footer a:hover {
   text-decoration: none; /* Optional: Entfernt die Unterstreichung */
 }
 
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center; /* Zentriert das Dropdown und Icon horizontal */
+  align-items: center; /* Zentriert das Dropdown und Icon vertikal */
+  margin: 0 auto; /* Zusätzliche Zentrierung, falls benötigt */
+  position: relative;
+}
+
+#yearFilter {
+  font-size: 16px; /* Passt die Schriftgröße an */
+  border-radius: 10px; /* Macht die Ecken des Dropdown-Menüs rund */
+  padding: 5px 10px; /* Fügt innen etwas Abstand hinzu */
+  padding-right: 30px;
+}
