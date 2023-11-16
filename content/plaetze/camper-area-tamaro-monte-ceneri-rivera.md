@@ -25,10 +25,10 @@ marker_icon: /stellplatz.png
 aktivitaeten: []
 cover: /img/20221017_165942.jpg
 images:
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_170056.jpg
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_170035.jpg
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_165956.jpg
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_170026.jpg
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_165938.jpg
-  - image: https://www.mauch.rocks/wp-content/uploads/2022/10/20221017_165942.jpg
+  - image: /img/20221017_170056.jpg
+  - image: /img/20221017_170035.jpg
+  - image: /img/20221017_165956.jpg
+  - image: /img/20221017_170026.jpg
+  - image: /img/20221017_165938.jpg
+  - image: /img/20221017_165942.jpg
 ---
