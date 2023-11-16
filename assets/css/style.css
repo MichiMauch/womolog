@@ -772,7 +772,18 @@ footer a:hover {
   font-size: 0.7em; /* Direkte Größenanpassung */
 }
 
-@media (max-width: 600px) { /* Passen Sie die Pixelzahl je nach Bedarf an */
+@media (max-width: 600px) {
+  .year-stats:not(:last-child):after {
+      content: "";
+      display: block;
+      margin: 10px 0; /* Stellt den Abstand oben und unten der Linie ein */
+      height: 1px; /* Höhe der Linie */
+      background: #000; /* Farbe der Linie */
+      margin-left: auto; /* Zentriert die Linie horizontal */
+      margin-right: auto; /* Zentriert die Linie horizontal */
+      width: calc(100% - 40px); /* Breite der Linie, wobei 40px der Gesamtabstand von beiden Seiten ist */
+  }
+
   .year-stats {
       flex-direction: column; /* Stapelt die .stats-item-Elemente in einer Spalte */
   }
@@ -793,15 +804,4 @@ footer a:hover {
   .icons-container {
       justify-content: center; /* Zentriert die Icons, wenn sie nebeneinander sind */
   }
-}
-
-.year-stats:not(:last-child):after {
-  content: "";
-  display: block;
-  margin: 10px 0; /* Stellt den Abstand oben und unten der Linie ein */
-  height: 1px; /* Höhe der Linie */
-  background: #000; /* Farbe der Linie */
-  margin-left: auto; /* Zentriert die Linie horizontal */
-  margin-right: auto; /* Zentriert die Linie horizontal */
-  width: calc(100% - 0px); /* Breite der Linie, wobei 20px der Gesamtabstand von beiden Seiten ist */
 }
