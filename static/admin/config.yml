@@ -74,14 +74,3 @@ collections:
           - label: "Bild"
             name: "image"
             widget: "image"
-      - label: "Image Carousel"
-        name: "image carousel"
-        fields:
-          {
-          label: "Images",
-          name: "images",
-          widget: "list",
-          summary: "{{fields.image}}",
-          field:
-          { label: "Image", name: "image", widget: "image" },
-          }
