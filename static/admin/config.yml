@@ -67,7 +67,12 @@ collections:
               - {label: "Mountainbike", value: "fa-solid fa-bicycle"}
               - {label: "Schwimmen", value: "fa-solid fa-person-swimming"}
       - {label: "Titelbild", name: "cover", widget: "image"}
-      - label: "Bilder"
-        name: "pictures"
-        widget: "list"
-        field: {label: "Bild", name: "image", widget: "image"}
+        fields:
+        {
+        label: “Images”,
+        name: “images”,
+        widget: “list”,
+        summary: “{{fields.image}}”,
+        field:
+        { label: “Image”, name: “image”, widget: “image” },
+        }
