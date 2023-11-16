@@ -8,7 +8,7 @@ description: Relativ grosser Stellplatz fast direkt bei der Autobahn Richtung
   Schritte vom Eingang entfernt hat es eine Tankstelle mit allem was es braucht.
   Für eine Nacht oder vielleicht für einen Besuch in der Therne jedenfalls zu
   empfehlen.
-anzahl_naechte: -3
+anzahl_naechte: 1
 aufenthalt_von_bis: 17.10.2022 - 18.10.2022
 preis: CHF 26.40
 art_des_platzes: Campingplatz
