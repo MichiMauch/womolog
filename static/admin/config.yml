@@ -30,8 +30,16 @@ collections:
         name: "coordinates"
         widget: "object"
         fields:
-          - {label: "Breitengrad", name: "latitude", widget: "number"}
-          - {label: "Längengrad", name: "longitude", widget: "number"}
+          - label: "Breitengrad"
+            name: "latitude"
+            widget: "number"
+            step: 0.00001
+            value_type: "float"
+          - label: "Längengrad"
+            name: "longitude"
+            widget: "number"
+            step: 0.00001
+            value_type: "float"
       - label: "Marker Icon"
         name: "marker_icon"
         widget: "select"
@@ -62,4 +70,5 @@ collections:
       - label: "Bilder"
         name: "pictures"
         widget: "list"
-        field: {label: "Bild", name: "image", widget: "image"}
+        fields:
+          - {label: "Bild", name: "image", widget: "image"}
