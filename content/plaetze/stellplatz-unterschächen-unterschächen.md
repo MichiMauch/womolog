@@ -7,7 +7,7 @@ description: Sehr schöner kleiner Stellplatz beim Langlaufzentrum von
   Unterschächen. Freundlicher Betreiber der gerne hilft und für Auskünfte zur
   Verfügung steht. Sanitäreanlagen sauber und grosszügig.
 anzahl_naechte: 3
-aufenthalt_von_bis: 12.08.2023 - 15.08.2023
+aufenthalt_von_bis: 12.08.2022 - 15.08.2022
 preis: CHF 60.00
 art_des_platzes: Stellplatz
 coordinates:
