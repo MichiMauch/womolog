@@ -1,47 +1,37 @@
 ---
-# Mandatory parts :
-title: "Campingplatz Trendcamping, Wolfach"
-date: 2023-10-10T11:39:08+01:00
+slug: wohnmobil-stellplatz-todtmoos-todtmoos-2022
+title: Wohnmobil Stellplatz Todtmoos, Todtmoos
+date: 2022-07-29T08:03:18.751Z
 draft: false
-type: "default"
-
-anzahl_naechte: 2
-aufenthalt_von_bis: "10.10.2023 - 12.10.2023"
-preis: "€ 67.00"
-ausstattung:
-  - "Versorgung"
-  - "Entsorgung"
-  - "Laden auf dem Platz"
-  - "Laden in Laufnähe"
-  - "Restaurant auf dem Platz"
-aktivitaeten:
-  - title: "Camping Halbmeil - Vesperstube Benzenhof - Schwarzwald Tour"
-    url: "https://www.strava.com/activities/10018568096"
-    icon: "fa-solid fa-person-hiking"
-    ## icons:
-    ## - hike: fa-solid fa-person-hiking
-    ## - walk: fa-solid fa-person-walking
-    ## - mountainbike: fa-solid fa-bicycle
-    ## - swiming: fa-solid fa-person-swimming
-
-art_des_platzes: "Campingplatz"
-
+type: default
+description: Toller Stellplatz mit grossen, abgetrennten Parzellen. Strom und
+  Wasser direkt bei der Parzelle. Leider muss man mittlerweile reservieren, wie
+  auf einem Campingplatz.
+anzahl_naechte: 3
+aufenthalt_von_bis: 29.07.2022 - 01.08.2022
+preis: € 45.00
+art_des_platzes: Stellplatz
 coordinates:
-  latitude: 48.29173
-  longitude: 8.27858
-marker_icon: /campingplatz.png
-
-cover: img/20231010_133456.jpg
-
-pictures: 
-- img/20231010_113715.jpg
-- img/20231010_113752.jpg
-- img/20231010_113703.jpg	
-- img/20231010_113735.jpg
-- img/20231010_113805.jpg
-- img/20231010_113705.jpg
-- img/20231010_113740.jpg
-- img/20231010_113831.jpg
-
+  latitude: 47.730521
+  longitude: 8.00184
+marker_icon: /stellplatz.png
+ausstattung:
+  - Entsorgung
+  - Versorgung
+  - WC/Dusche
+  - Laden in Laufnähe
+aktivitaeten:
+  - title: Todtmoos Hochkopf-Runde
+    url: https://www.strava.com/activities/7555571727
+    icon: fa-solid fa-person-hiking
+  - title: Herrenkopf Todtmoos Runde
+    url: https://www.strava.com/activities/7561276816
+    icon: fa-solid fa-bicycle
+cover: img/todtmoos-davos-13-550x400.jpg
+pictures:
+  - img/todtmoos-davos-10-550x400.jpg
+  - img/todtmoos-davos-11-550x400.jpg
+  - img/todtmoos-davos-12-550x400.jpg
+  - img/todtmoos-davos-13-550x400.jpg
+  - img/2023-11-17_10-18-21.jpg
 ---
-Im Trendcamping Wolfach, versteckt im malerischen Mittelschwarzwald, fanden wir ein ruhiges Plätzchen umgeben von Natur. Halbmeil war der perfekte Ausgangspunkt für atemberaubende Wanderungen – ein echter Geheimtipp für Erholungssuchende und Naturfreunde.
