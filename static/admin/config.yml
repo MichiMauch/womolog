@@ -12,6 +12,7 @@ collections:
     summary: "{{title}} - {{date | date('DD.MM.YYYY')}}"
     create: true # Erlaubt das Erstellen neuer Einträge
     fields: # Felder für jeden Eintrag
+      - {label: "URL", name: "slug", widget: "string", required: false}
       - {label: "Titel", name: "title", widget: "string"}
       - {label: "Datum", name: "date", widget: "datetime"}
       - {label: "Entwurf", name: "draft", widget: "boolean"}
