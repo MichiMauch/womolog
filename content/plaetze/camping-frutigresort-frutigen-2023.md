@@ -31,4 +31,3 @@ cover: img/IMG_20210206_152647.jpg
 pictures:
   - img/IMG_20210206_152647.jpg
 ---
-Campingplatz im Frutigresort. Hat alles was es braucht. Zwar direkt neben der Bahn aber der neue Tunnel schluckt die meisten Züge bevor man sie hört. Restaurant und kleiner Laden direakt auf dem Platz...und ein grosses Freibad.

@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+
+<div id="map" style="width: 100vw; height: 100vh;"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v1.7.1/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([47.33885, 8.05065], 13);
+
+    var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+        minZoom: 1,
+        maxZoom: 16,
+        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        ext: 'jpg'
+    }).addTo(map);
+
+    // Koordinaten aus Markdown-Dateien
+    var places = [
+        {{ range $index, $page := .Site.RegularPages }}
+        {{- if and $page.Params.coordinates.latitude $page.Params.coordinates.longitude -}}
+        [{{ $page.Params.coordinates.latitude }}, {{ $page.Params.coordinates.longitude }}]{{ if ne (add $index 1) (len $.Site.RegularPages) }},{{ end }}
+        {{- end -}}
+        {{ end }}
+    ];
+
+    // Funktion zur Generierung einer zufälligen Farbe
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Linien zwischen den Punkten zeichnen
+    for (var i = 0; i < places.length - 1; i++) {
+        L.polyline([places[i], places[i + 1]], {color: getRandomColor()}).addTo(map);
+    }
+</script>
+
+{{ end }}

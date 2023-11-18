@@ -15,7 +15,8 @@
     }).addTo(map);
 
     // Deine Wohnadresse als Startpunkt
-    var home = L.marker([47.33885, 8.05065]).addTo(map);
+    var homeLatLng = L.latLng([47.33885, 8.05065]);
+    var home = L.marker(homeLatLng).addTo(map);
 
     // Koordinaten aus Markdown-Dateien
     var places = [
@@ -36,10 +37,33 @@
         return color;
     }
 
-    // Linien zu jedem Zielort zeichnen
+    // Linien zu jedem Zielort zeichnen und Entfernung beschriften
     places.forEach(function(latlng) {
-        var polyline = L.polyline([home.getLatLng(), latlng], {color: getRandomColor()}).addTo(map);
+        var destinationLatLng = L.latLng(latlng);
+        var polyline = L.polyline([homeLatLng, destinationLatLng], {color: getRandomColor()}).addTo(map);
+
+        // Entfernung berechnen
+        var distance = homeLatLng.distanceTo(destinationLatLng) / 1000; // Umrechnung in Kilometer
+        var distanceLabel = L.marker(destinationLatLng, {
+            icon: L.divIcon({
+                className: 'distance-label',
+                html: distance.toFixed(2),
+                iconSize: [100, 40]
+            })
+        }).addTo(map);
     });
 </script>
+
+<style>
+    .distance-label {
+        background-color: white;
+        padding: 5px 2px;
+        border-radius: 3px;
+        border-color: black;
+        border-style: dashed;
+        font-size: 20px;
+        text-align: center;
+    }
+</style>
 
 {{ end }}
