@@ -15,7 +15,7 @@ ausstattung:
   - "Laden in Laufnähe"
 
 aktivitaeten:
-  - title: "CFrederikshavn - Palmenstrand - Fussgängerzone - Pikkerbakken Biketour"
+  - title: "Frederikshavn - Palmenstrand - Fussgängerzone - Pikkerbakken Biketour"
     url: "https://www.strava.com/activities/9962421636"
     icon: "fa-solid fa-bicycle"
     ## icons:
