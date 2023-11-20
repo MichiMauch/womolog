@@ -1,0 +1,530 @@
+{
+    "Deutschland": {
+        "Besuche": 15,
+        "Orte": [
+            {
+                "Ort": "Wohnmobilpark Bad Hindelang",
+                "Strasse": "Ostrachstraße",
+                "Stadt": "Bad Hindelang",
+                "PLZ": "87541",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobilpark-bad-hindelang.md"
+            },
+            {
+                "Ort": "Wohnmobilstellplatz Rehbach",
+                "Strasse": "Rehbachweg",
+                "Stadt": "St. Blasien",
+                "PLZ": "79837",
+                "Land": "Deutschland",
+                "Dateiname": "stellplatz-rehbach-menzenschwand.md"
+            },
+            {
+                "Ort": "Weßner Hof",
+                "Strasse": "Pettendorf",
+                "Stadt": "Unbekannt",
+                "PLZ": "83250",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobilstellplatz-wessnerhof-marquartstein.md"
+            },
+            {
+                "Ort": "Trend Camping",
+                "Strasse": "Schiltacher Straße",
+                "Stadt": "Wolfach",
+                "PLZ": "77709",
+                "Land": "Deutschland",
+                "Dateiname": "campingplatz-wolfach.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Sportzentrum",
+                "Stadt": "Bruchsal",
+                "PLZ": "76646",
+                "Land": "Deutschland",
+                "Dateiname": "Wohnmobilpark-beim-Sportplatz-Bruchsal.md"
+            },
+            {
+                "Ort": "Camping Erlebnis Zugspitze",
+                "Strasse": "Griesener Straße",
+                "Stadt": "Unbekannt",
+                "PLZ": "82491",
+                "Land": "Deutschland",
+                "Dateiname": "camping-erlebnis-zugspitze-grainau.md"
+            },
+            {
+                "Ort": "Park-Camping Lindau",
+                "Strasse": "Fraunhoferstraße",
+                "Stadt": "Lindau (Bodensee)",
+                "PLZ": "88131",
+                "Land": "Deutschland",
+                "Dateiname": "park-camping-lindau.md"
+            },
+            {
+                "Ort": "Sülzwiesen",
+                "Strasse": "Am Bargenturm",
+                "Stadt": "Lüneburg",
+                "PLZ": "21339",
+                "Land": "Deutschland",
+                "Dateiname": "Wohnmobilstellplatz-Suelzwiese-Lueneburg.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Abt-Hafner-Straße",
+                "Stadt": "Füssen",
+                "PLZ": "87629",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobilpark-fuessen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Allerweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "29690",
+                "Land": "Deutschland",
+                "Dateiname": "stellplatz-marina-bay-yacht-club-buchholz.md"
+            },
+            {
+                "Ort": "Rupertus Therme",
+                "Strasse": "Hammerschmiedweg",
+                "Stadt": "Bad Reichenhall",
+                "PLZ": "83435",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobilpark-rupertus-therme-bad-reichenhall.md"
+            },
+            {
+                "Ort": "Wohnmobilstellplatz an der Wehra",
+                "Strasse": "Jägermatt",
+                "Stadt": "Unbekannt",
+                "PLZ": "79682",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobil-stellplatz-todtmoos-todtmoos.md"
+            },
+            {
+                "Ort": "Reisemobilpark der Therme Bad Wörishofen",
+                "Strasse": "Thermenallee",
+                "Stadt": "Bad Wörishofen",
+                "PLZ": "86825",
+                "Land": "Deutschland",
+                "Dateiname": "stellplatz-therme-bad-woerishofen.md"
+            },
+            {
+                "Ort": "Südsee-Camp",
+                "Strasse": "Linlandweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "29649",
+                "Land": "Deutschland",
+                "Dateiname": "suedsee-camp-wietzendorf.md"
+            },
+            {
+                "Ort": "Wohnmobilstellplatz an der Therme",
+                "Strasse": "Hochriesstraße",
+                "Stadt": "Bad Aibling",
+                "PLZ": "83043",
+                "Land": "Deutschland",
+                "Dateiname": "wohnmobilstellplatz-an-der-therme-bad-aibling.md"
+            }
+        ],
+        "country_code": "de"
+    },
+    "Schweiz/Suisse/Svizzera/Svizra": {
+        "Besuche": 34,
+        "Orte": [
+            {
+                "Ort": "Monte Ceneri",
+                "Strasse": "Via Monte Ceneri",
+                "Stadt": "Monteceneri",
+                "PLZ": "6802",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camper-area-tamaro-monte-ceneri-rivera.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Emmenuferweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "6174",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-soerenberg-platz-soerenberg-2023_05.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Emmenuferweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "6174",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-sörenberg-platz-sörenberg.md"
+            },
+            {
+                "Ort": "Camping Muglin",
+                "Strasse": "Via Muglin",
+                "Stadt": "Val Müstair",
+                "PLZ": "7537",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-muglin-muestair.md"
+            },
+            {
+                "Ort": "TempCamp",
+                "Strasse": "Werkstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6465",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-unterschächen-unterschächen.md"
+            },
+            {
+                "Ort": "Stellplatz Lampertji 6",
+                "Strasse": "Lampertji",
+                "Stadt": "Gampel-Bratsch",
+                "PLZ": "3940",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-lampertij-6-gampel-2022-04.md"
+            },
+            {
+                "Ort": "Camping Bumbach",
+                "Strasse": "229.8",
+                "Stadt": "Unbekannt",
+                "PLZ": "6197",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-bumbach-schangnau.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Via Tassino",
+                "Stadt": "Lugano",
+                "PLZ": "6932",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-lugano-2023.md"
+            },
+            {
+                "Ort": "Campingplatz Obsee",
+                "Strasse": "Fritzengass",
+                "Stadt": "Unbekannt",
+                "PLZ": "6078",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "Camping-Obess-Lungern.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Jaunpass",
+                "Stadt": "Unbekannt",
+                "PLZ": "3766",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-jaunpass-boltigen.md"
+            },
+            {
+                "Ort": "Stellplatz Lampertji 6",
+                "Strasse": "Lampertji",
+                "Stadt": "Gampel-Bratsch",
+                "PLZ": "3940",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-lampertij-6-gampel-2022.md"
+            },
+            {
+                "Ort": "Camping Yverdon Plage",
+                "Strasse": "Chemin du Buron",
+                "Stadt": "Yverdon-les-Bains",
+                "PLZ": "1401",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-yverdon-plage-yverdon.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Seestrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-manor-farm-unterseen.md"
+            },
+            {
+                "Ort": "JungfrauCamp",
+                "Strasse": "Steindlerstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-unterseen-2022-05.md"
+            },
+            {
+                "Ort": "JungfrauCamp",
+                "Strasse": "Steindlerstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-unterseen-2023-2.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Rue des Rocailles",
+                "Stadt": "Unbekannt",
+                "PLZ": "3960",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobil-stellplatz-lac-sourterrain-st-leonard.md"
+            },
+            {
+                "Ort": "Camping International Lido Luzern",
+                "Strasse": "Lidostrasse",
+                "Stadt": "Luzern",
+                "PLZ": "6006",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-lido-luzern-2022.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Laufteggstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "9108",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-gonten.md"
+            },
+            {
+                "Ort": "JungfrauCamp",
+                "Strasse": "Steindlerstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-unterseen-2023-1.md"
+            },
+            {
+                "Ort": "Stellplatz Lampertji 6",
+                "Strasse": "Lampertji",
+                "Stadt": "Gampel-Bratsch",
+                "PLZ": "3940",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-lampertij6-gampel-steg-2023.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Rütistrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "campingplatz-countryfestival-interlaken.md"
+            },
+            {
+                "Ort": "TCS Camping Thunersee - Gwatt",
+                "Strasse": "Gwattstrasse",
+                "Stadt": "Thun",
+                "PLZ": "3645",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "tcs-camping-gwatt-thun.md"
+            },
+            {
+                "Ort": "TCS Camping Thusis Viamala",
+                "Strasse": "Pantunweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "7430",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "tcs-camping-thusis-viamala.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Strandweg",
+                "Stadt": "Köniz",
+                "PLZ": "3084",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-eichholz-bern-2022-01.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Sportweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "3714",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-frutigresort-frutigen-2023.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Gotthardstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6482",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-geisssticki-gurtnellen-2023.md"
+            },
+            {
+                "Ort": "Sunstar Camping Stellplatz",
+                "Strasse": "Obere Strasse",
+                "Stadt": "Davos",
+                "PLZ": "7270",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-hotel-sunstar-davos.md"
+            },
+            {
+                "Ort": "TCS Camping zum Muttenhof",
+                "Strasse": "Glutzenhofstrasse",
+                "Stadt": "Solothurn",
+                "PLZ": "4500",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "tcs-camping-solothurn.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Via Tassino",
+                "Stadt": "Lugano",
+                "PLZ": "6932",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-lugano-2022-01.md"
+            },
+            {
+                "Ort": "Camping de Vidy",
+                "Strasse": "Chemin du Camping",
+                "Stadt": "Lausanne",
+                "PLZ": "1007",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-de-vidy-lausanne.md"
+            },
+            {
+                "Ort": "Attermenzen",
+                "Strasse": "213",
+                "Stadt": "Unbekannt",
+                "PLZ": "3928",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-attermenzen-randa.md"
+            },
+            {
+                "Ort": "Camping International Lido Luzern",
+                "Strasse": "Lidostrasse",
+                "Stadt": "Luzern",
+                "PLZ": "6006",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-lido-luzern.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Strandweg",
+                "Stadt": "Köniz",
+                "PLZ": "3084",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-eichholz-bern-2023.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Unbekannt",
+                "Stadt": "Unbekannt",
+                "PLZ": "6174",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-soerenberg-platz-soerenberg-2022-06.md"
+            }
+        ],
+        "country_code": "ch"
+    },
+    "Danmark": {
+        "Besuche": 8,
+        "Orte": [
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Egå Havvej",
+                "Stadt": "Unbekannt",
+                "PLZ": "8250",
+                "Land": "Danmark",
+                "Dateiname": "wohnmobilstellplatz-ega-marina-ega.md"
+            },
+            {
+                "Ort": "First Camp Lakolk Strand-Rømø",
+                "Strasse": "Vesterhavsvej",
+                "Stadt": "Unbekannt",
+                "PLZ": "Unbekannt",
+                "Land": "Danmark",
+                "Dateiname": "camping-lakolk-strand-romo.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Sydhavnsvej",
+                "Stadt": "Haderslev",
+                "PLZ": "6100",
+                "Land": "Danmark",
+                "Dateiname": "Camper-plads-Haderslev-Sejlclub-Haderslev.md"
+            },
+            {
+                "Ort": "CampOne Grenen Strand",
+                "Strasse": "Gammel Fyrvej",
+                "Stadt": "Skagen",
+                "PLZ": "9990",
+                "Land": "Danmark",
+                "Dateiname": "campone-grene-strand-skagen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Havnegade",
+                "Stadt": "Unbekannt",
+                "PLZ": "Unbekannt",
+                "Land": "Danmark",
+                "Dateiname": "wohnmobilstellplatz-haverslev-havn.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Saltebakken",
+                "Stadt": "Frederikshavn",
+                "PLZ": "9900",
+                "Land": "Danmark",
+                "Dateiname": "Stellplatz-Frederikshavn-Marina-Frederikshavn.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Otto Pedersvej",
+                "Stadt": "Unbekannt",
+                "PLZ": "6960",
+                "Land": "Danmark",
+                "Dateiname": "autocamper-plads-hivde-sande-havn.md"
+            },
+            {
+                "Ort": "Autocamperplads Oasen Rømø – 1",
+                "Strasse": "Rømersvej",
+                "Stadt": "Unbekannt",
+                "PLZ": "6792",
+                "Land": "Danmark",
+                "Dateiname": "wohnmobilstellplatz-oasen-romo.md"
+            }
+        ],
+        "country_code": "dk"
+    },
+    "Italia": {
+        "Besuche": 6,
+        "Orte": [
+            {
+                "Ort": "Camper-Stellplatz Schneeburghof",
+                "Strasse": "Segenbühelweg - Via Monte Benedetto",
+                "Stadt": "Unbekannt",
+                "PLZ": "39019",
+                "Land": "Italia",
+                "Dateiname": "wohnmobilstellplatz-dorf-tirol-meran.md"
+            },
+            {
+                "Ort": "Camping Goldrain Cevedale",
+                "Strasse": "Vinschgauer Straße - Via Val Venosta",
+                "Stadt": "Unbekannt",
+                "PLZ": "39021",
+                "Land": "Italia",
+                "Dateiname": "camping-goldrain-suedtirol.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Via Martiri Oggebbiesi",
+                "Stadt": "Unbekannt",
+                "PLZ": "28824",
+                "Land": "Italia",
+                "Dateiname": "wohnmobil-stellplatz-oggebbio.md"
+            },
+            {
+                "Ort": "Camping Fusina",
+                "Strasse": "Via Moranzani",
+                "Stadt": "Venezia",
+                "PLZ": "Unbekannt",
+                "Land": "Italia",
+                "Dateiname": "Fusina Camping & Dock, Fusina, Venedig.md"
+            },
+            {
+                "Ort": "Camping Thöni",
+                "Strasse": "Landstraße - Via Vitt. Veneto",
+                "Stadt": "Graun - Curon Venosta",
+                "PLZ": "39027",
+                "Land": "Italia",
+                "Dateiname": "camping-thoeni-st-valentin-auf-der-haide-vinschgau-suedtirol.md"
+            },
+            {
+                "Ort": "Camping Fornella",
+                "Strasse": "Via San Fermo",
+                "Stadt": "Unbekannt",
+                "PLZ": "29080",
+                "Land": "Italia",
+                "Dateiname": "Camping Fornella, San Felice del Benaco.md"
+            }
+        ],
+        "country_code": "it"
+    }
+}

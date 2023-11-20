@@ -120,8 +120,32 @@
                 {{ end }}
             </div>
         </div>
-        
-            </article>
+        <div class="container">
+            <div class="boxcentered">
+            <div class="boxcenteredflag">
+                <!-- Lade die Statistiken aus dem JSON-File -->
+                {{ $stats := .Site.Data.stats }}
+            
+                <!-- Durchlaufe jedes Land in den Statistiken -->
+                {{ range $land, $info := $stats }}
+                <div class="year-stats">
+                    <div class="stats-itemflag">
+                        <div class="flag-and-number">
+                            <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
+                            <span class="fi fi-{{ $info.country_code | lower }}"></span>
+                            <span class="visits">{{ $info.Besuche }}</span>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            </div>
+        </div>
+        </div>
+    </article>
+
+            
+
 </main>
 
 {{ end }}

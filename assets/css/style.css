@@ -791,6 +791,7 @@ footer a:hover {
   .stats-item {
       justify-content: center; /* Zentriert die Items horizontal */
       margin: 5px; /* Verringert den Abstand zwischen den Items */
+
   }
 
   .icon {
@@ -804,4 +805,33 @@ footer a:hover {
   .icons-container {
       justify-content: center; /* Zentriert die Icons, wenn sie nebeneinander sind */
   }
+}
+
+.flag-and-number {
+  display: flex; /* Flex-Container */
+  align-items: center; /* Vertikale Zentrierung der Inhalte */
+}
+
+.visits {
+  margin-left: 10px; /* Abstand zwischen Flagge und Text */
+  font-size: 1.5rem;
+  white-space: nowrap; /* Verhindert, dass die Zahl umbricht */
+}
+
+.fi {
+  flex-shrink: 0; /* Verhindert, dass die Flagge skaliert */
+  margin-right: 10px; /* Abstand zwischen Flagge und Zahl */
+  font-size: 2em;
+}
+
+.boxcenteredflag {
+  display: flex; /* Flex-Container */
+  flex-direction: column; /* Elemente von oben nach unten stapeln */
+  align-items: flex-start; /* Elemente linksbündig ausrichten */
+}
+
+.stats-itemflag {
+  display: flex; /* Flex-Container */
+  align-items: center; /* Elemente vertikal zentrieren */
+  margin-bottom: 10px; /* Abstand zwischen den Länderstatistiken */
 }
