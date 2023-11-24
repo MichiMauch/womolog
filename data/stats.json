@@ -126,7 +126,7 @@
         "country_code": "de"
     },
     "Schweiz/Suisse/Svizzera/Svizra": {
-        "Besuche": 34,
+        "Besuche": 42,
         "Orte": [
             {
                 "Ort": "Monte Ceneri",
@@ -143,6 +143,14 @@
                 "PLZ": "6174",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "stellplatz-soerenberg-platz-soerenberg-2023_05.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Via Tassino",
+                "Stadt": "Lugano",
+                "PLZ": "6932",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-lugano-2021-09.md"
             },
             {
                 "Ort": "Unbekannt",
@@ -193,6 +201,14 @@
                 "Dateiname": "wohnmobilstellplatz-lugano-2023.md"
             },
             {
+                "Ort": "Alpencamping",
+                "Strasse": "Brünigstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3860",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "alpencamping-meiringen.md"
+            },
+            {
                 "Ort": "Campingplatz Obsee",
                 "Strasse": "Fritzengass",
                 "Stadt": "Unbekannt",
@@ -207,6 +223,22 @@
                 "PLZ": "3766",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-jaunpass-boltigen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Campingstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6074",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-international-giswil.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Laufteggstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "9108",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-gonten-2021-08.md"
             },
             {
                 "Ort": "Stellplatz Lampertji 6",
@@ -231,6 +263,14 @@
                 "PLZ": "3800",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-manor-farm-unterseen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "A8",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-jungfraupark-interlaken.md"
             },
             {
                 "Ort": "JungfrauCamp",
@@ -263,6 +303,22 @@
                 "PLZ": "6006",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-lido-luzern-2022.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Unbekannt",
+                "Stadt": "Unbekannt",
+                "PLZ": "6174",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-soerenberg-platz-soerenberg-2021-07.md"
+            },
+            {
+                "Ort": "Campeggio ai Bosconi",
+                "Strasse": "Via Bosconi",
+                "Stadt": "Unbekannt",
+                "PLZ": "6987",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "cameggio-ai-bosconi-caslano.md"
             },
             {
                 "Ort": "Unbekannt",
@@ -361,6 +417,14 @@
                 "Dateiname": "wohnmobilstellplatz-lugano-2022-01.md"
             },
             {
+                "Ort": "Unbekannt",
+                "Strasse": "Knirigasse",
+                "Stadt": "Stans",
+                "PLZ": "6370",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "privater-stellplatz-knirig-stans.md"
+            },
+            {
                 "Ort": "Camping de Vidy",
                 "Strasse": "Chemin du Camping",
                 "Stadt": "Lausanne",
@@ -402,6 +466,44 @@
             }
         ],
         "country_code": "ch"
+    },
+    "Österreich": {
+        "Besuche": 4,
+        "Orte": [
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Dorf",
+                "Stadt": "Unbekannt",
+                "PLZ": "6351",
+                "Land": "Österreich",
+                "Dateiname": "kaiser-camp-scheffau-at.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Gesäusestraße",
+                "Stadt": "Unbekannt",
+                "PLZ": "8911",
+                "Land": "Österreich",
+                "Dateiname": "camping-forstgarten-gstatterboden-at.md"
+            },
+            {
+                "Ort": "Camping Aufenfeld",
+                "Strasse": "Aufenfeldweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "6274",
+                "Land": "Österreich",
+                "Dateiname": "camping-zillertal-aschau-at.md"
+            },
+            {
+                "Ort": "Reisemobilstellplatz Salzburg",
+                "Strasse": "Carl-Zuckmayer-Straße",
+                "Stadt": "Salzburg",
+                "PLZ": "5101",
+                "Land": "Österreich",
+                "Dateiname": "reisemobil-stellplatz-salzburg.md"
+            }
+        ],
+        "country_code": "at"
     },
     "Danmark": {
         "Besuche": 8,
