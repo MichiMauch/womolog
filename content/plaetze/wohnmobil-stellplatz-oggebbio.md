@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Sehr schöner Stellplatz mit herrlicher Sicht auf den Lago Maggiore. Zu jedem Stellplatz gehört noch ein eigener Sitzplatz. Anfahrt braucht allenfalls ein wenig nerven, wenn jemand entgegen kommt aber es lohnt sich.
 anzahl_naechte: 2
-aufenthalt_von_bis: 18.04.2022 - 20.04.2023
+aufenthalt_von_bis: 18.04.2022 - 20.04.2022
 preis: € 40.00
 art_des_platzes: Stellplatz
 coordinates:

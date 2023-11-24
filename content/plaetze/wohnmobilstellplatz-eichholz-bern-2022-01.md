@@ -6,7 +6,7 @@ draft: false
 type: "default"
 
 anzahl_naechte: 3
-aufenthalt_von_bis: "20.01.2022 - 23.01.2021"
+aufenthalt_von_bis: "20.01.2023 - 23.01.2023"
 preis: "CHF 90.00"
 ausstattung:
   - "Versorgung"

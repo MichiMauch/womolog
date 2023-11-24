@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Grosser Campingplatz ein wenig ausserhalb von Garmisch-Partenkirchen. Direkter Blick auf die Zugspitze.
 anzahl_naechte: 3
-aufenthalt_von_bis: 22.10.2021 - 25.10.2022
+aufenthalt_von_bis: 22.10.2021 - 25.10.2021
 preis: € ???
 art_des_platzes: Campingplatz
 coordinates:

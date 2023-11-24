@@ -376,7 +376,8 @@ footer a:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  
+  gap: 10px; /* Fügt einen Abstand zwischen den Boxen hinzu */
+
 }
 
 .box {
@@ -824,14 +825,33 @@ footer a:hover {
   font-size: 2em;
 }
 
-.boxcenteredflag {
-  display: flex; /* Flex-Container */
-  flex-direction: column; /* Elemente von oben nach unten stapeln */
-  align-items: flex-start; /* Elemente linksbündig ausrichten */
-}
+
 
 .stats-itemflag {
   display: flex; /* Flex-Container */
   align-items: center; /* Elemente vertikal zentrieren */
   margin-bottom: 10px; /* Abstand zwischen den Länderstatistiken */
+}
+
+/* Stil für den Haupt-Container */
+.main-container {
+  display: flex;
+  flex-direction: row; /* Boxen nebeneinander anordnen */
+  align-items: flex-start; /* Boxen am Anfang der Kreuzachse ausrichten */
+}
+
+/* Stil für den Container der oberen Box */
+.right-box {
+  flex: 2; /* Nimmt zwei Drittel der Breite ein */
+  border: #000 1px solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Stil für den Container der unteren Box */
+.left-box {
+  flex: 1; /* Nimmt ein Drittel der Breite ein */
+  border: #000 1px solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }

@@ -9,7 +9,7 @@ type: default
 
 anzahl_naechte: 2
 aufenthalt_von_bis: "13.07.2018 - 15.07.2018"
-preis: "CCHF 100.00"
+preis: "CHF 100.00"
 ausstattung:
   - "Brötchenservice"
   - "Laden auf dem Platz"
@@ -17,12 +17,6 @@ ausstattung:
   - "Versorgung"
 
 aktivitaeten:
-  - title: "Südsee Camp - Wietzendorf - Reiningen Runde"
-    url: "https://www.strava.com/activities/10000199346"
-    icon: "fa-solid fa-person-walking"
-  - title: "Walking around the Campingplatz 😀"
-    url: "https://www.strava.com/activities/9987920154"
-    icon: "fa-solid fa-person-hiking"
     
     ## icons:
     ## - hike: fa-solid fa-person-hiking

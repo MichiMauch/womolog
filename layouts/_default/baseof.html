@@ -37,7 +37,8 @@
     <meta property="og:title" content="{{ .Title | default .Title }}">
     <meta property="og:description" content="{{ with .Params.description }}{{ . | htmlEscape }}{{ else }}{{ .Content | plainify | htmlEscape }}{{ end }}">
     <meta property="og:image" content="{{ .Params.cover | absURL }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>  
+
     <!-- Matomo -->
     <script>
         var _paq = window._paq = window._paq || [];

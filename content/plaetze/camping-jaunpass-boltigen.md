@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Campingplatz auf dem Jaunpass. Perfekt im Winter für zum Skifahren, Langlaufen oder Schneeschuhtouren
 anzahl_naechte: 2
-aufenthalt_von_bis: 18.04.2022 - 20.04.2023
+aufenthalt_von_bis: 18.04.2022 - 20.04.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
 coordinates:

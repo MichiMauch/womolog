@@ -7,7 +7,7 @@ draft: false
 type: "default"
 
 anzahl_naechte: 3
-aufenthalt_von_bis: "25.05.2023 - 28.05.2023"
+aufenthalt_von_bis: "25.05.2022 - 28.05.2022"
 preis: "CHF 201.00"
 description: Kleiner familiärer Campingplatz in Unterseen direkt neben Interlaken. Kleiner Laden auf dem Platz und auch ein kleines aber feines Restaurant. Weiter hinten auf dem Camping, bei den Saisonplätzen, hat es noch einen Pool. Jederzeit gerne wieder.
 ausstattung:

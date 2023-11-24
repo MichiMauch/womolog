@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Kleiner Stellpaltz direkt beim unterirdischen See von St. Leonard. Strom, Wasser und WC vorhanden.
 anzahl_naechte: 1
-aufenthalt_von_bis: 22.04.2022 - 23.04.2023
+aufenthalt_von_bis: 22.04.2022 - 23.04.2022
 preis: CHF 18
 art_des_platzes: Stellplatz
 coordinates:

@@ -6,7 +6,7 @@ draft: false
 type: default
 description: TCS Campingplatz am Rande von Solothurn direkt an der Aare. Der Platz ist ganzjährig geöffnet. Perfekt für eine Wanderung auf den Weissenstein.
 anzahl_naechte: 3
-aufenthalt_von_bis: 03.03.2022 - 06.03.2023
+aufenthalt_von_bis: 03.03.2022 - 06.03.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
 coordinates:

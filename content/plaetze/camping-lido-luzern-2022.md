@@ -7,7 +7,7 @@ draft: false
 type: "default"
 
 anzahl_naechte: 1
-aufenthalt_von_bis: "19.05.2023 - 20.05.2023"
+aufenthalt_von_bis: "19.05.2022 - 20.05.2022"
 preis: "CHF 43.00"
 ausstattung:
   - "Versorgung"

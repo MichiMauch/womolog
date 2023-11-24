@@ -54,93 +54,93 @@
                 </div>
                 {{ end }}
                 <div class="legend">Total der Platzarten</div>
-            </div>
-                        
+            </div>   
         </div>
+
         <div class="container">
-            <!-- Full-width box -->
+                <!-- Full-width box -->
             <div class="boxcentered">
-                {{ $jahresNaechte := dict }}
-                {{ $plaetzeProJahr := dict }}
-                {{ $platzartenProJahr := dict }}
-        
-                {{ range .Site.RegularPages }}
-                {{ $jahr := .Date.Format "2006" }}
-                {{ if and .Params.anzahl_naechte (not .Draft) }}
-                {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
-                {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
-        
-                {{ if ge .Params.anzahl_naechte 1 }}
-                {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
-                {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
-                {{ end }}
-        
-                {{ $artDesPlatzes := .Params.art_des_platzes }}
-                {{ if $artDesPlatzes }}
-                {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
-                {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
-                {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
-                {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
-                {{ end }}
-        
-                {{ end }}
-                {{ end }}
-        
-                {{ range $jahr, $naechte := $jahresNaechte }}
-                {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
-                {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
-        
-                <div class="year-stats">
-                    <div class="stats-item">
-                        <i class="icon fa-regular fa-calendar-days boxiconstat"></i>
-                        <span class="year">{{ $jahr }}</span>
-                    </div>
-                    <div class="stats-item">
-                        <i class="icon fa-solid fa-map-location-dot boxiconstat"></i>
-                        <span class="places">{{ $plaetze }}</span>
-                    </div>
-                    <div class="stats-item">
-                        <i class="icon fa-solid fa-bed boxiconstat"></i>
-                        <span class="nights">{{ $naechte }}</span>
-                    </div>
-                    <!-- Ausgabe der Platzarten -->
-                    <div class="stats-item">
-                        <div class="icons-container">
-                            <i class="icon fa-solid fa-campground boxiconstat"></i>
-                            <i class="icon fa-solid fa-van-shuttle boxiconstat"></i>
+                    {{ $jahresNaechte := dict }}
+                    {{ $plaetzeProJahr := dict }}
+                    {{ $platzartenProJahr := dict }}
+            
+                    {{ range .Site.RegularPages }}
+                    {{ $jahr := .Date.Format "2006" }}
+                    {{ if and .Params.anzahl_naechte (not .Draft) }}
+                    {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
+                    {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
+            
+                    {{ if ge .Params.anzahl_naechte 1 }}
+                    {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
+                    {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
+                    {{ end }}
+            
+                    {{ $artDesPlatzes := .Params.art_des_platzes }}
+                    {{ if $artDesPlatzes }}
+                    {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
+                    {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
+                    {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                    {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
+                    {{ end }}
+            
+                    {{ end }}
+                    {{ end }}
+            
+                    {{ range $jahr, $naechte := $jahresNaechte }}
+                    {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
+                    {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+            
+                    <div class="year-stats">
+                        <div class="stats-item">
+                            <i class="icon fa-regular fa-calendar-days boxiconstat"></i>
+                            <span class="year">{{ $jahr }}</span>
                         </div>
-                                                {{ range $platzart, $anzahl := $platzarten }}
-                        {{ $pluralMap := dict "Campingplatz" "Campingplätze" "Stellplatz" "Stellplätze" "Parkplatz" "Parkplätze" }}
-                        <div class="platzart">
-                            {{ index $pluralMap $platzart | default $platzart }}: {{ $anzahl }}
+                        <div class="stats-item">
+                            <i class="icon fa-solid fa-map-location-dot boxiconstat"></i>
+                            <span class="places">{{ $plaetze }}</span>
+                        </div>
+                        <div class="stats-item">
+                            <i class="icon fa-solid fa-bed boxiconstat"></i>
+                            <span class="nights">{{ $naechte }}</span>
+                        </div>
+                        <!-- Ausgabe der Platzarten -->
+                        <div class="stats-item">
+                            <div class="icons-container">
+                                <i class="icon fa-solid fa-campground boxiconstat"></i>
+                                <i class="icon fa-solid fa-van-shuttle boxiconstat"></i>
+                            </div>
+                            {{ range $platzart, $anzahl := $platzarten }}
+                                {{ $pluralMap := dict "Campingplatz" "Campingplätze" "Stellplatz" "Stellplätze" "Parkplatz" "Parkplätze" }}
+                            <div class="platzart">
+                                {{ index $pluralMap $platzart | default $platzart }}: {{ $anzahl }}
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="container">
+                <div class="boxcentered">
+                    <div class="boxcenteredflag">
+                        <!-- Lade die Statistiken aus dem JSON-File -->
+                        {{ $stats := .Site.Data.stats }}
+                    
+                        <!-- Durchlaufe jedes Land in den Statistiken -->
+                        {{ range $land, $info := $stats }}
+                        <div class="year-stats">
+                            <div class="stats-itemflag">
+                                <div class="flag-and-number">
+                                    <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
+                                    <span class="fi fi-{{ $info.country_code | lower }}"></span>
+                                    <span class="visits">{{ $info.Besuche }}</span>
+                                </div>
+                            </div>
                         </div>
                         {{ end }}
                     </div>
                 </div>
-                {{ end }}
             </div>
-        </div>
-        <div class="container">
-            <div class="boxcentered">
-            <div class="boxcenteredflag">
-                <!-- Lade die Statistiken aus dem JSON-File -->
-                {{ $stats := .Site.Data.stats }}
-            
-                <!-- Durchlaufe jedes Land in den Statistiken -->
-                {{ range $land, $info := $stats }}
-                <div class="year-stats">
-                    <div class="stats-itemflag">
-                        <div class="flag-and-number">
-                            <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
-                            <span class="fi fi-{{ $info.country_code | lower }}"></span>
-                            <span class="visits">{{ $info.Besuche }}</span>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            </div>
-        </div>
         </div>
     </article>
 

@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Grosser Campingplatz direkt am Neuenburgersee. Bis in die Stadt Yverdon nur ein paar Minuten.
 anzahl_naechte: 3
-aufenthalt_von_bis: 01.05.2022 - 07.05.2023
+aufenthalt_von_bis: 01.05.2022 - 07.05.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
 coordinates:

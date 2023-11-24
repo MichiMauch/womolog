@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Schöner Campingplatz in Thusis. Man kann schon fast von einem Waldcamping sprechen. Auch an Ostern nicht überfüllt. Toll für einen Besuch der Viamala Schlucht
 anzahl_naechte: 2
-aufenthalt_von_bis: 16.04.2022 - 18.04.2023
+aufenthalt_von_bis: 16.04.2022 - 18.04.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
 coordinates:
