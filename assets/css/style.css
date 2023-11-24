@@ -749,8 +749,9 @@ footer a:hover {
 #yearFilter {
   font-size: 16px; /* Passt die Schriftgröße an */
   border-radius: 10px; /* Macht die Ecken des Dropdown-Menüs rund */
-  padding: 5px 10px; /* Fügt innen etwas Abstand hinzu */
-  padding-right: 30px;
+  padding: 5px 8px; /* Fügt innen etwas Abstand hinzu */
+  padding-right: 25px;
+  height: 48px;
 }
 
 .icons-container {
@@ -855,3 +856,69 @@ footer a:hover {
   border-radius: 10px;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
+.switch {                   /* Das label-Element */ 
+	position: relative; /* Um im nächsten Schritt den runden Button mit position:absolute festzusetzen */ 
+	width: 64px;
+	height: 29px;
+	display: inline-block;
+}
+
+.switch span {		    /* Der graue Untergrund des Schalters */ 
+	position: absolute;
+	background-color: #ccc;
+	border-radius: 17px;
+  height: 35px;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: background-color .4s;
+}
+
+.switch span::before {    /* Der kreisrunde Button im Switch */ 
+	background-color: white;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: 4px;
+	bottom: 5px;
+	height: 25px;
+	width: 25px;
+}
+
+input:checked + span {
+  background-color: darkgreen;
+}
+
+input:checked + span::before {
+  transform: translateX(30px);
+}
+
+.switch input {
+	display: none;
+}
+
+.switch {
+	position: relative;
+	display: grid;
+	grid-template-columns: 85px 64px;
+	grid-template-rows: 34px;
+	grid-template-areas: "settings switch";
+  background-color: white;
+  border-radius: 10px; /* Macht die Ecken des Dropdown-Menüs rund */
+  padding: 5px 10px; /* Fügt innen etwas Abstand hinzu */
+  padding-right: 160px;
+  font-size: 16px; /* Passt die Schriftgröße an */
+  height: 45px;
+  
+}
+
+.switch span {
+	background-color: #ccc;
+	transition: .4s;
+	grid-area: switch;
+}
+
+

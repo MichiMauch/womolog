@@ -20,11 +20,27 @@
                 <option value="{{ . }}">{{ . }}</option>
                 {{ end }}
             </select>
+            <span style="padding-right:10px;"></span>
+            <label class="switch" for="clusterToggle">
+            <input type="checkbox" id="clusterToggle" checked>
+            <span></span>
+            <p style="margin-top:10px;">Clustern:</p>
+            </label>
         </div>
         <div class="container">
             <div class="box">
-                <div id="mapid" style="height: 400px;"></div>
+                <div id="mapid" style="width: 90vw; height: 70vh;"></div>
                 <script>
+                    var map = L.map('mapid').setView([46.8, 8.23], 5);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 20,
+                        attribution: '© OpenStreetMap'
+                    }).addTo(map);
+                    map.addControl(new L.Control.Fullscreen());
+
+                    var markerClusterGroup = L.markerClusterGroup();
+                    var individualMarkers = [];
+
                     var mapMarkers = [
                         {{ range $pages }}
                         {
@@ -37,50 +53,52 @@
                         },
                         {{ end }}
                     ];
-                    var mapElement = document.getElementById('mapid');
-                    if (mapElement) {
-                        mapElement.dataset.markers = JSON.stringify(mapMarkers);
-                    }
 
-                    var map = L.map('mapid').setView([46.8, 8.23], 5);
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 20,
-                        attribution: '© OpenStreetMap'
-                    }).addTo(map);
-                    map.addControl(new L.Control.Fullscreen());
-
-                    var allMarkers = [];
-                    var markersData = JSON.parse(mapElement.dataset.markers);
-                    markersData.forEach(function(marker) {
+                    mapMarkers.forEach(function(markerData) {
                         var customIcon = L.icon({
-                            iconUrl: marker.marker_icon,
+                            iconUrl: markerData.marker_icon,
                             iconSize: [32, 32],
                             iconAnchor: [16, 32],
                             popupAnchor: [0, -32]
                         });
-                        var markerInstance = L.marker([marker.latitude, marker.longitude], { icon: customIcon })
-                            .bindPopup('<a href="' + marker.url + '">' + marker.name + '</a>');
-                        allMarkers.push({ instance: markerInstance, year: marker.year });
-                        markerInstance.addTo(map);
+                        var markerInstance = L.marker([markerData.latitude, markerData.longitude], { icon: customIcon })
+                            .bindPopup('<a href="' + markerData.url + '">' + markerData.name + '</a>');
+                        markerInstance.year = markerData.year; // Speichere das Jahr direkt im Marker
+                        markerClusterGroup.addLayer(markerInstance);
+                        individualMarkers.push(markerInstance);
                     });
 
-                    function filterMarkersByYear(selectedYear) {
-                        allMarkers.forEach(function(markerData) {
-                            if (selectedYear === "all" || markerData.year === selectedYear) {
-                                map.addLayer(markerData.instance);
-                            } else {
-                                map.removeLayer(markerData.instance);
+                    function updateMarkers() {
+                        var selectedYear = document.getElementById('yearFilter').value;
+                        var isClustering = document.getElementById('clusterToggle').checked;
+                        markerClusterGroup.clearLayers();
+                        individualMarkers.forEach(function(marker) {
+                            map.removeLayer(marker);
+                        });
+
+                        individualMarkers.forEach(function(markerInstance) {
+                            if (selectedYear === "all" || markerInstance.year === selectedYear) {
+                                if (isClustering) {
+                                    markerClusterGroup.addLayer(markerInstance);
+                                } else {
+                                    map.addLayer(markerInstance);
+                                }
                             }
                         });
+
+                        if (isClustering) {
+                            map.addLayer(markerClusterGroup);
+                        } else {
+                            map.removeLayer(markerClusterGroup);
+                        }
                     }
 
-                    document.getElementById('yearFilter').addEventListener('change', function() {
-                        filterMarkersByYear(this.value);
-                    });
+                    document.getElementById('yearFilter').addEventListener('change', updateMarkers);
+                    document.getElementById('clusterToggle').addEventListener('change', updateMarkers);
 
-                    filterMarkersByYear("all");
+                    updateMarkers(); // Initial update call
                 </script>
-                <script src="/js/leaflet.js"></script>                
+                <script src="/js/leaflet.js"></script>
             </div>
         </div>
     </article>

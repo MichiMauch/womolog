@@ -13,11 +13,9 @@
         ext: 'jpg'
     }).addTo(map);
 
-    // Deine Wohnadresse als Startpunkt
     var homeLatLng = L.latLng([47.33885, 8.05065]);
     var home = L.marker(homeLatLng).addTo(map);
 
-    // Koordinaten aus Markdown-Dateien
     var places = [
         {{ range .Site.RegularPages }}
         {{ if and .Params.coordinates.latitude .Params.coordinates.longitude }}
@@ -26,7 +24,6 @@
         {{ end }}
     ];
 
-    // Funktion zur Generierung einer zufälligen Farbe
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
@@ -36,32 +33,55 @@
         return color;
     }
 
-    // Linien zu jedem Zielort zeichnen und Entfernung beschriften
+    var polylines = [];
+    var distanceLabels = [];
+
     places.forEach(function(latlng) {
         var destinationLatLng = L.latLng(latlng);
-        var polyline = L.polyline([homeLatLng, destinationLatLng], {color: getRandomColor()}).addTo(map);
+        var polylineColor = getRandomColor();
+        var polyline = L.polyline([homeLatLng, destinationLatLng], {color: polylineColor}).addTo(map);
+        polylines.push(polyline);
 
-        // Entfernung berechnen
-        var distance = homeLatLng.distanceTo(destinationLatLng) / 1000; // Umrechnung in Kilometer
+        var distance = homeLatLng.distanceTo(destinationLatLng) / 1000;
+        var labelColor = getRandomColor();
+        var backgroundColor = getRandomColor();
         var distanceLabel = L.marker(destinationLatLng, {
             icon: L.divIcon({
                 className: 'distance-label',
-                html: distance.toFixed(2),
+                html: '<div style="color: ' + labelColor + '; background-color: ' + backgroundColor + '">' + distance.toFixed(2) + ' km</div>',
                 iconSize: [100, 40]
             })
         }).addTo(map);
+        distanceLabels.push({label: distanceLabel, latlng: destinationLatLng, distance: distance});
     });
+
+    function updatePolylineColors() {
+        polylines.forEach(function(polyline, index) {
+            var newPolylineColor = getRandomColor();
+            polyline.setStyle({ color: newPolylineColor });
+
+            var distanceLabel = distanceLabels[index];
+            var newLabelColor = getRandomColor();
+            var newBackgroundColor = getRandomColor();
+            distanceLabel.label.setIcon(L.divIcon({
+                className: 'distance-label',
+                html: '<div style="color: ' + newLabelColor + '; background-color: ' + newBackgroundColor + '">' + distanceLabel.distance.toFixed(2) + ' km</div>',
+                iconSize: [100, 40]
+            }));
+        });
+    }
+
+    setInterval(updatePolylineColors, 1000); // Ändert die Farben alle 10 Sekunden
 </script>
 
 <style>
-    .distance-label {
-        background-color: white;
-        padding: 5px 2px;
+    .distance-label div {
+        padding: 5px;
         border-radius: 3px;
-        border-color: black;
-        border-style: dashed;
         font-size: 20px;
         text-align: center;
+        margin: -8px; /* Ausgleich für das Padding und die Grenze */
+
     }
 </style>
 

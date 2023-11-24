@@ -6,7 +6,7 @@ draft: false
 type: default
 description: Neuer Stell- bzw. Campingplatz. Teilweise mit privatem WC/Dusche. Sehr schön gelegen, mit toller Aussicht auf die umliegenden Berge. Nettes Restaurant auf dem Platz.
 anzahl_naechte: 4
-aufenthalt_von_bis: 06.06.2021 - 10.06.201
+aufenthalt_von_bis: 06.06.2021 - 10.06.2021
 preis: CHF ???
 art_des_platzes: Campingplatz
 coordinates:

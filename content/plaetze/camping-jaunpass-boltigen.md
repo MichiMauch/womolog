@@ -12,7 +12,7 @@ art_des_platzes: Campingplatz
 coordinates:
   latitude: 46.59208
   longitude: 7.3374
-marker_icon: /Campingplatz.png
+marker_icon: /campingplatz.png
 ausstattung:
   - Versorgung
   - Entsorgung
