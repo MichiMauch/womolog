@@ -126,7 +126,7 @@
         "country_code": "de"
     },
     "Schweiz/Suisse/Svizzera/Svizra": {
-        "Besuche": 42,
+        "Besuche": 54,
         "Orte": [
             {
                 "Ort": "Monte Ceneri",
@@ -146,11 +146,27 @@
             },
             {
                 "Ort": "Unbekannt",
+                "Strasse": "Sportweg",
+                "Stadt": "Unbekannt",
+                "PLZ": "3714",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-frutigresort-frutigen-2021.md"
+            },
+            {
+                "Ort": "Unbekannt",
                 "Strasse": "Via Tassino",
                 "Stadt": "Lugano",
                 "PLZ": "6932",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "wohnmobilstellplatz-lugano-2021-09.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Hüttstetterstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6078",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobil-stellplatz-stockalp-melchtal-winter.md"
             },
             {
                 "Ort": "Unbekannt",
@@ -175,6 +191,14 @@
                 "PLZ": "6465",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "stellplatz-unterschächen-unterschächen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Strandweg",
+                "Stadt": "Köniz",
+                "PLZ": "3084",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "wohnmobilstellplatz-eichholz-bern-2021-03.md"
             },
             {
                 "Ort": "Stellplatz Lampertji 6",
@@ -241,6 +265,14 @@
                 "Dateiname": "camping-gonten-2021-08.md"
             },
             {
+                "Ort": "swiss plage",
+                "Strasse": "Gemmistrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3970",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-swiss-plage-salgesch.md"
+            },
+            {
                 "Ort": "Stellplatz Lampertji 6",
                 "Strasse": "Lampertji",
                 "Stadt": "Gampel-Bratsch",
@@ -263,6 +295,14 @@
                 "PLZ": "3800",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-manor-farm-unterseen.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Grünenstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3455",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "womo-dinner-stellplatz-rest-hirschen-gruenen.md"
             },
             {
                 "Ort": "Unbekannt",
@@ -297,6 +337,14 @@
                 "Dateiname": "wohnmobil-stellplatz-lac-sourterrain-st-leonard.md"
             },
             {
+                "Ort": "Aaregg",
+                "Strasse": "Rue de Blâmage",
+                "Stadt": "Unbekannt",
+                "PLZ": "3855",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-aaregg-brienz.md"
+            },
+            {
                 "Ort": "Camping International Lido Luzern",
                 "Strasse": "Lidostrasse",
                 "Stadt": "Luzern",
@@ -311,6 +359,14 @@
                 "PLZ": "6174",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "stellplatz-soerenberg-platz-soerenberg-2021-07.md"
+            },
+            {
+                "Ort": "JungfrauCamp",
+                "Strasse": "Steindlerstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3800",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "jungfrau-camp-unterseen-2021-04.md"
             },
             {
                 "Ort": "Campeggio ai Bosconi",
@@ -351,6 +407,14 @@
                 "PLZ": "3800",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "campingplatz-countryfestival-interlaken.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Marktplatz",
+                "Stadt": "Lyss",
+                "PLZ": "3250",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "womo-dinner-stellplatz-weisses-kreuz-lyss.md"
             },
             {
                 "Ort": "TCS Camping Thunersee - Gwatt",
@@ -401,6 +465,22 @@
                 "Dateiname": "stellplatz-hotel-sunstar-davos.md"
             },
             {
+                "Ort": "Campingplatz Thorbach",
+                "Strasse": "Thorbachstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6173",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-thorbach-fluehli.md"
+            },
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Unbekannt",
+                "Stadt": "Safiental",
+                "PLZ": "7106",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "stellplatz-bei-der-hofstatt-tenna.md"
+            },
+            {
                 "Ort": "TCS Camping zum Muttenhof",
                 "Strasse": "Glutzenhofstrasse",
                 "Stadt": "Solothurn",
@@ -415,6 +495,14 @@
                 "PLZ": "6932",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "wohnmobilstellplatz-lugano-2022-01.md"
+            },
+            {
+                "Ort": "TCS Camping Lugano",
+                "Strasse": "Via alla Foce",
+                "Stadt": "Unbekannt",
+                "PLZ": "6933",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "tcs-camping-lugano-agno-winter.md"
             },
             {
                 "Ort": "Unbekannt",
@@ -449,6 +537,14 @@
                 "Dateiname": "camping-lido-luzern.md"
             },
             {
+                "Ort": "Camping Bachtalen",
+                "Strasse": "Querweg",
+                "Stadt": "Möhlin",
+                "PLZ": "4313",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-bachtalen-moehlin.md"
+            },
+            {
                 "Ort": "Unbekannt",
                 "Strasse": "Strandweg",
                 "Stadt": "Köniz",
@@ -468,7 +564,7 @@
         "country_code": "ch"
     },
     "Österreich": {
-        "Besuche": 4,
+        "Besuche": 5,
         "Orte": [
             {
                 "Ort": "Unbekannt",
@@ -493,6 +589,14 @@
                 "PLZ": "6274",
                 "Land": "Österreich",
                 "Dateiname": "camping-zillertal-aschau-at.md"
+            },
+            {
+                "Ort": "Kohlhofmühl",
+                "Strasse": "Hauptstraße",
+                "Stadt": "Gemeinde Waidmannsfeld",
+                "PLZ": "2763",
+                "Land": "Österreich",
+                "Dateiname": "camping-kohlhofmuehl-pernitz-at.md"
             },
             {
                 "Ort": "Reisemobilstellplatz Salzburg",
