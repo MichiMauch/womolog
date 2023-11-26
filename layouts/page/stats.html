@@ -59,88 +59,309 @@
 
         <div class="container">
                 <!-- Full-width box -->
-            <div class="boxcentered">
-                    {{ $jahresNaechte := dict }}
-                    {{ $plaetzeProJahr := dict }}
-                    {{ $platzartenProJahr := dict }}
-            
-                    {{ range .Site.RegularPages }}
-                    {{ $jahr := .Date.Format "2006" }}
-                    {{ if and .Params.anzahl_naechte (not .Draft) }}
-                    {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
-                    {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
-            
-                    {{ if ge .Params.anzahl_naechte 1 }}
-                    {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
-                    {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
-                    {{ end }}
-            
-                    {{ $artDesPlatzes := .Params.art_des_platzes }}
-                    {{ if $artDesPlatzes }}
-                    {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
-                    {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
-                    {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
-                    {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
-                    {{ end }}
-            
-                    {{ end }}
-                    {{ end }}
-            
-                    {{ range $jahr, $naechte := $jahresNaechte }}
-                    {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
-                    {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
-            
+            <div class="boxcentered2" style="height: 700px;">
+                <div class="boxcenteredflag">
+                    <!-- Lade die Statistiken aus dem JSON-File -->
+                    {{ $stats := .Site.Data.stats }}
+                    <!-- Durchlaufe jedes Land in den Statistiken -->
+                    {{ range $land, $info := $stats }}
                     <div class="year-stats">
-                        <div class="stats-item">
-                            <i class="icon fa-regular fa-calendar-days boxiconstat"></i>
-                            <span class="year">{{ $jahr }}</span>
-                        </div>
-                        <div class="stats-item">
-                            <i class="icon fa-solid fa-map-location-dot boxiconstat"></i>
-                            <span class="places">{{ $plaetze }}</span>
-                        </div>
-                        <div class="stats-item">
-                            <i class="icon fa-solid fa-bed boxiconstat"></i>
-                            <span class="nights">{{ $naechte }}</span>
-                        </div>
-                        <!-- Ausgabe der Platzarten -->
-                        <div class="stats-item">
-                            <div class="icons-container">
-                                <i class="icon fa-solid fa-campground boxiconstat"></i>
-                                <i class="icon fa-solid fa-van-shuttle boxiconstat"></i>
+                        <div class="stats-itemflag">
+                            <div class="flag-and-number">
+                                <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
+                                <span class="fi fi-{{ $info.country_code | lower }}"></span>
+                                <span class="numberanimation-mini">{{ $info.Besuche }}</span>
                             </div>
-                            {{ range $platzart, $anzahl := $platzarten }}
-                                {{ $pluralMap := dict "Campingplatz" "Campingplätze" "Stellplatz" "Stellplätze" "Parkplatz" "Parkplätze" }}
-                            <div class="platzart">
-                                {{ index $pluralMap $platzart | default $platzart }}: {{ $anzahl }}
-                            </div>
-                            {{ end }}
                         </div>
                     </div>
                     {{ end }}
+                </div>
+                </div>
+                <div class="boxcentered2">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
+                    <script>
+                        var map = L.map('map').setView([47.33885, 7.05065], 5);
+
+                        var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+                            minZoom: 1,
+                            maxZoom: 16,
+                            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                            ext: 'jpg'
+                        }).addTo(map);
+
+                        var homeLatLng = L.latLng([47.33885, 8.05065]);
+                        var home = L.marker(homeLatLng).addTo(map);
+
+                        var places = [
+                            {{ range .Site.RegularPages }}
+                            {{ if and .Params.coordinates.latitude .Params.coordinates.longitude }}
+                            [{{ .Params.coordinates.latitude }}, {{ .Params.coordinates.longitude }}]{{ if not (eq (index .Site.RegularPages (sub (len .Site.RegularPages) 1)).Permalink .Permalink) }},{{ end }}
+                            {{ end }}
+                            {{ end }}
+                        ];
+
+                        function getRandomColor() {
+                            var letters = '0123456789ABCDEF';
+                            var color = '#';
+                            for (var i = 0; i < 6; i++) {
+                                color += letters[Math.floor(Math.random() * 16)];
+                            }
+                            return color;
+                        }
+
+                        var polylines = [];
+                        var distanceLabels = [];
+
+                        places.forEach(function(latlng) {
+                            var destinationLatLng = L.latLng(latlng);
+                            var polylineColor = getRandomColor();
+                            var polyline = L.polyline([homeLatLng, destinationLatLng], {color: polylineColor}).addTo(map);
+                            polylines.push(polyline);
+
+                            var distance = homeLatLng.distanceTo(destinationLatLng) / 1000;
+                            var labelColor = getRandomColor();
+                            var backgroundColor = getRandomColor();
+                            var distanceLabel = L.marker(destinationLatLng, {
+                                icon: L.divIcon({
+                                    className: 'distance-label',
+                                    html: '<div style="color: ' + labelColor + '; background-color: ' + backgroundColor + '">' + distance.toFixed(2) + ' km</div>',
+                                    iconSize: [100, 40]
+                                })
+                            }).addTo(map);
+                            distanceLabels.push({label: distanceLabel, latlng: destinationLatLng, distance: distance});
+                        });
+
+                        function updatePolylineColors() {
+                            polylines.forEach(function(polyline, index) {
+                                var newPolylineColor = getRandomColor();
+                                polyline.setStyle({ color: newPolylineColor });
+
+                                var distanceLabel = distanceLabels[index];
+                                var newLabelColor = getRandomColor();
+                                var newBackgroundColor = getRandomColor();
+                                distanceLabel.label.setIcon(L.divIcon({
+                                    className: 'distance-label',
+                                    html: '<div style="color: ' + newLabelColor + '; background-color: ' + newBackgroundColor + '">' + distanceLabel.distance.toFixed(2) + ' km</div>',
+                                    iconSize: [100, 40]
+                                }));
+                            });
+                        }
+
+                        setInterval(updatePolylineColors, 1000); // Ändert die Farben alle 10 Sekunden
+                    </script>
+
+                    <style>
+                        .distance-label div {
+                            padding: 5px;
+                            border-radius: 3px;
+                            font-size: 20px;
+                            text-align: center;
+                            margin: -8px; /* Ausgleich für das Padding und die Grenze */
+
+                        }
+                    </style>
                 </div>
             </div>
             <div class="container">
-                <div class="boxcentered">
-                    <div class="boxcenteredflag">
-                        <!-- Lade die Statistiken aus dem JSON-File -->
-                        {{ $stats := .Site.Data.stats }}
-                    
-                        <!-- Durchlaufe jedes Land in den Statistiken -->
-                        {{ range $land, $info := $stats }}
-                        <div class="year-stats">
-                            <div class="stats-itemflag">
-                                <div class="flag-and-number">
-                                    <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
-                                    <span class="fi fi-{{ $info.country_code | lower }}"></span>
-                                    <span class="visits">{{ $info.Besuche }}</span>
-                                </div>
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
+                <div class="boxcentered" id="meineKarte" style="height: 400px;">
+                    <script>    
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var meineKarte = L.map('meineKarte').setView([48.5260, 15.2551], 4);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 18,
+                        }).addTo(meineKarte);
+
+                        var besuchteLaender = [
+                            {{ range $land, $info := .Site.Data.stats }}
+                            { code: "{{ $info.country_code | upper }}", besuche: {{ $info.Besuche }} },
+                            {{ end }}
+                        ];
+
+                        function landBesucht(landCode) {
+                            return besuchteLaender.some(function(l) { return l.code === landCode; });
+                        }
+
+                        function besuchteLaenderAnzahl(landCode) {
+                            var land = besuchteLaender.find(function(l) { return l.code === landCode; });
+                            return land && land.besuche !== undefined ? land.besuche : 0;
+                        }
+
+                        meineKarte.on('zoomend', function() {
+                        var zoomLevel = meineKarte.getZoom(); // Aktuelle Zoomstufe abrufen
+                        console.log('Aktuelle Zoomstufe:', zoomLevel);
+                    });
+
+                        $.getJSON('https://raw.githubusercontent.com/MichiMauch/country_capital-cities_coordinates_iso2-3/main/countries-capitalcities-coordinates-iso2-3.geojson', function(capitalCitiesData) {
+                        var capitalCities = {};
+                        capitalCitiesData.features.forEach(function(feature) {
+                            var countryIsoCode = feature.properties.ISO2; // Verwende ISO2 in Großbuchstaben
+                            var capitalCityCoordinates = [feature.properties.Latitude, feature.properties.Longitude]; // Korrekte Reihenfolge: [Latitude, Longitude]
+                            capitalCities[countryIsoCode] = capitalCityCoordinates;
+                            console.log('Hauptstadt geladen:', countryIsoCode, capitalCityCoordinates);
+                        });
+
+                            $.getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson', function(data) {
+                                L.geoJson(data, {
+                                    onEachFeature: function(feature, layer) {
+                                        var isoCode = feature.properties.iso_a2;
+                                        if (isoCode && landBesucht(isoCode)) {
+                                            layer.setStyle({
+                                                fillColor: "#ADD19E",
+                                                fillOpacity: 0.6,
+                                                color: "#9CB58B",
+                                                weight: 2
+                                            });
+
+                                            if (capitalCities[isoCode]) { // Keine Umwandlung in Kleinbuchstaben
+                                                var capitalCoords = capitalCities[isoCode];
+                                                console.log('Marker Koordinaten:', capitalCoords); // Log der Marker-Koordinaten
+                                                var customIcon = L.divIcon({
+                                                    html: `<img src="/${isoCode.toLowerCase()}.svg" style="width: 32px; height: 32px;">`, // HTML-Bild-Element
+                                                    //className: `fi fi-${isoCode.toLowerCase()}`,
+                                                    iconSize: [32, 32],
+                                                    iconAnchor: [16, 16],
+                                                    popupAnchor: [0, -24]
+                                                });
+                                                L.marker(capitalCoords, { icon: customIcon }).addTo(meineKarte)
+                                                    .bindPopup(`${feature.properties.name} Besuche: ${besuchteLaenderAnzahl(isoCode)}`);
+                                                console.log('Marker gesetzt für:', isoCode, capitalCoords);
+                                            } 
+                                            else {
+                                                console.log('Keine Hauptstadtdaten für:', isoCode);
+                                            }
+                                        } else {
+                                            layer.setStyle({
+                                                fillColor: "#000000",
+                                                fillOpacity: 0.1,
+                                                color: "#9CB58B",
+                                                weight: 1
+                                            });
+                                        }
+                                    }
+                                }).addTo(meineKarte);
+                            });
+                        });
+                    });
+
+                    </script>                                        
+                                        
+                                                            
+                                        
+                        
                 </div>
             </div>
+            <div class="container">
+                <div class="boxcentered2">
+                    <canvas id="meinLiniendiagramm" style="height: 200px;"></canvas>
+                </div>
+                {{ $jahresNaechte := dict }}
+                {{ $plaetzeProJahr := dict }}
+                {{ $platzartenProJahr := dict }}
+
+                {{ range .Site.RegularPages }}
+                {{ $jahr := .Date.Format "2006" }}
+                {{ if and .Params.anzahl_naechte (not .Draft) }}
+                {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
+                {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
+
+                {{ if ge .Params.anzahl_naechte 1 }}
+                {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
+                {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
+                {{ end }}
+
+                {{ $artDesPlatzes := .Params.art_des_platzes }}
+                {{ if $artDesPlatzes }}
+                {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
+                {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
+                {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
+                {{ end }}
+
+                {{ end }}
+                {{ end }}
+
+                {{ range $jahr, $naechte := $jahresNaechte }}
+                {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
+                {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+
+                {{ end }}
+                <script>
+                    var ctx = document.getElementById('meinLiniendiagramm').getContext('2d');
+                    
+                    // Arrays für die Daten
+                    var jahre = [];
+                    var naechte = [];
+                    var plaetze = [];
+                    var campingplaetze = []; // Array für Campingplätze
+                    var stellplaetze = [];   // Array für Stellplätze
+                    
+                    // Füge hier weitere Arrays für zusätzliche Daten hinzu, falls benötigt
+                    
+                    {{ range $jahr, $nacht := $jahresNaechte }}
+                    jahre.push("{{ $jahr }}");
+                    naechte.push({{ $nacht }});
+                    plaetze.push({{ index $plaetzeProJahr $jahr | default 0 }});
+                    
+                    // Füge hier weitere Datensätze hinzu, falls benötigt
+                    // Daten für jede Platzart
+                    {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+                    campingplaetze.push({{ index $platzarten "Campingplatz" | default 0 }});
+                    stellplaetze.push({{ index $platzarten "Stellplatz" | default 0 }});
+                    {{ end }}
+                    
+                    var chartData = {
+                        labels: jahre,
+                        datasets: [{
+                            label: 'Anzahl der Plätze',
+                            data: plaetze,
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            fill: false,
+                        }, {
+                            label: 'Anzahl der Nächte',
+                            data: naechte,
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Anzahl der Campingplätze',
+                            data: campingplaetze,
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Anzahl der Stellplätze',
+                            data: stellplaetze,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            fill: false
+                        }
+                        // Füge hier weitere Datensätze für andere Platzarten hinzu
+                    ]
+                };
+                
+                    var meinLiniendiagramm = new Chart(ctx, {
+                        type: 'line',
+                        data: chartData,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            animation: {
+                                duration: 1000, // Dauer in Millisekunden
+                                easing: 'easeInOutQuart', // Easing-Typ
+                                onProgress: function(animation) {
+                                    console.log(animation.currentStep / animation.numSteps);
+                                },
+                                onComplete: function() {
+                                    console.log('Animation completed!');
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            
         </div>
     </article>
 

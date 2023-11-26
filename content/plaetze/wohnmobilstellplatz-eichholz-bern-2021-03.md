@@ -33,7 +33,7 @@ coordinates:
   longitude: 7.45672
 marker_icon: /stellplatz.png
 
-cover: img/eichholz-wohnmobil-stellplatz-2020-10-550x400.jpg
+cover: img/eichholz-wohnmobil-stellplatz-2020-2-550x400.jpg
 
 pictures: 
 - img/0ef4387b-ca43-0536-9a8d-e94eff67a1cf.jpg

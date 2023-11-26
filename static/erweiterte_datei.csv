@@ -1,0 +1,235 @@
+Country,Capital City,Latitude,Longitude,Capital Type,ISO2,ISO3,TLD,FIPS,ISON
+Afghanistan,Kabul,34.5289,69.1725,Capital,AF,AFG,af,AF,4.0
+Albania,Tiranë (Tirana),41.3275,19.8189,Capital,AL,ALB,al,AL,8.0
+Algeria,El Djazaïr  (Algiers),36.7525,3.042,Capital,DZ,DZA,dz,AG,12.0
+American Samoa,Pago Pago,-14.2781,-170.7025,Capital,AS,ASM,as,AQ,16.0
+Andorra,Andorra la Vella,42.5078,1.5211,Capital,AD,AND,ad,AN,20.0
+Angola,Luanda,-8.8368,13.2343,Capital,AO,AGO,ao,AO,24.0
+Anguilla,The Valley,18.217,-63.0578,Capital,AI,AIA,ai,AV,660.0
+Antigua and Barbuda,St. John's,17.1172,-61.8457,Capital,AG,ATG,ag,AC,28.0
+Argentina,Buenos Aires,-34.6051,-58.4004,Capital,AR,ARG,ar,AR,32.0
+Armenia,Yerevan,40.182,44.5146,Capital,AM,ARM,am,AM,51.0
+Aruba,Oranjestad,12.524,-70.027,Capital,AW,ABW,aw,AA,533.0
+Australia,Canberra,-35.2835,149.1281,Capital,AU,AUS,au,AS,36.0
+Austria,Wien (Vienna),48.2064,16.3707,Capital,AT,AUT,at,AU,40.0
+Azerbaijan,Baku,40.3777,49.892,Capital,AZ,AZE,az,AJ,31.0
+Bahamas,Nassau,25.0582,-77.3431,Capital,BS,BHS,bs,BF,44.0
+Bahrain,Al-Manamah (Manama),26.2154,50.5832,Capital,BH,BHR,bh,BA,48.0
+Bangladesh,Dhaka,23.7104,90.4074,Capital,BD,BGD,bd,BG,50.0
+Barbados,Bridgetown,13.1,-59.6167,Capital,BB,BRB,bb,BB,52.0
+Belarus,Minsk,53.9,27.5667,Capital,BY,BLR,by,BO,112.0
+Belgium,Bruxelles-Brussel,50.8467,4.3499,Capital,BE,BEL,be,BE,56.0
+Belize,Belmopan,17.25,-88.7667,Capital,BZ,BLZ,bz,BH,84.0
+Benin,Cotonou,6.3654,2.4183,Economic Capital,BJ,BEN,bj,BN,204.0
+Bermuda,Hamilton,32.2915,-64.778,Capital,BM,BMU,bm,BD,60.0
+Bhutan,Thimphu,27.4661,89.6419,Capital,BT,BTN,bt,BT,64.0
+Bolivia (Plurinational State of),La Paz,-16.5,-68.15,Seat of Government,,,,,
+Bosnia and Herzegovina,Sarajevo,43.8486,18.3564,Capital,BA,BIH,ba,BK,70.0
+Botswana,Gaborone,-24.6545,25.9086,Capital,BW,BWA,bw,BC,72.0
+Brazil,Brasília,-15.7797,-47.9297,Capital,BR,BRA,br,BR,76.0
+British Virgin Islands,Road Town,18.4167,-64.6167,Capital,VG,VGB,vg,VI,92.0
+Brunei Darussalam,Bandar Seri Begawan,4.9403,114.9481,Capital,,,,,
+Bulgaria,Sofia,42.6975,23.3242,Capital,BG,BGR,bg,BU,100.0
+Burkina Faso,Ouagadougou,12.3642,-1.5383,Capital,BF,BFA,bf,UV,854.0
+Burundi,Bujumbura,-3.3822,29.3644,Capital,BI,BDI,bi,BY,108.0
+Cabo Verde,Praia,14.9215,-23.5087,Capital,,,,,
+Cambodia,Phnum Pénh (Phnom Penh),11.5625,104.916,Capital,KH,KHM,kh,CB,116.0
+Cameroon,Yaoundé,3.8667,11.5167,Capital,CM,CMR,cm,CM,120.0
+Canada,Ottawa-Gatineau,45.4166,-75.698,Capital,CA,CAN,ca,CA,124.0
+Caribbean Netherlands,Kralendijk,12.15,-68.2667,Capital,,,,,
+Cayman Islands,George Town,19.2866,-81.3744,Capital,KY,CYM,ky,CJ,136.0
+Central African Republic,Bangui,4.3612,18.555,Capital,CF,CAF,cf,CT,140.0
+Chad,N'Djaména,12.1067,15.0444,Capital,TD,TCD,td,CD,148.0
+Channel Islands,St. Helier,49.188,-2.1049,Capital,,,,,
+Channel Islands,St. Peter Port,49.4598,-2.5353,Capital,,,,,
+Chile,Santiago,-33.4569,-70.6483,Capital,CL,CHL,cl,CI,152.0
+China,Beijing,39.9075,116.3972,Capital,CN,CHN,cn,CH,156.0
+"China, Hong Kong SAR",Hong Kong,22.2796,114.1887,Capital,,,,,
+"China, Macao SAR",Macao,22.2006,113.5461,Capital,,,,,
+"China, Taiwan Province of China",Taibei,25.047,121.5457,Others,,,,,
+Colombia,Bogotá,4.6097,-74.0818,Capital,CO,COL,co,CO,170.0
+Comoros,Moroni,-11.7022,43.2551,Capital,KM,COM,km,CN,174.0
+Congo,Brazzaville,-4.2658,15.2832,Capital,,,,,
+Cook Islands,Rarotonga,-21.23,-159.76,Capital,CK,COK,ck,CW,184.0
+Costa Rica,San José,9.9278,-84.0807,Capital,CR,CRI,cr,CS,188.0
+Côte d'Ivoire,Abidjan,5.3453,-4.0268,Administrative Capital,,,,,
+Croatia,Zagreb,45.8144,15.978,Capital,HR,HRV,hr,HR,191.0
+Cuba,La Habana (Havana),23.1195,-82.3785,Capital,CU,CUB,cu,CU,192.0
+Curaçao,Willemstad,12.1084,-68.9335,Capital,,,,,
+Cyprus,Lefkosia (Nicosia),35.1595,33.3669,Capital,CY,CYP,cy,CY,196.0
+Czechia,Praha (Prague),50.088,14.4208,Capital,,,,,
+Dem. People's Republic of Korea,P'yongyang,39.0339,125.7543,Capital,,,,,
+Democratic Republic of the Congo,Kinshasa,-4.3276,15.3136,Capital,,,,,
+Denmark,København (Copenhagen),55.6759,12.5655,Capital,DK,DNK,dk,DA,208.0
+Djibouti,Djibouti,11.5877,43.1447,Capital,DJ,DJI,dj,DJ,262.0
+Dominica,Roseau,15.3017,-61.3881,Capital,DM,DMA,dm,DO,212.0
+Dominican Republic,Santo Domingo,18.4896,-69.9018,Capital,DO,DOM,do,DR,214.0
+Ecuador,Quito,-0.2299,-78.525,Capital,EC,ECU,ec,EC,218.0
+Egypt,Al-Qahirah (Cairo),30.0392,31.2394,Capital,EG,EGY,eg,EG,818.0
+El Salvador,San Salvador,13.6894,-89.1872,Capital,SV,SLV,sv,ES,222.0
+Equatorial Guinea,Malabo,3.75,8.7833,Capital,GQ,GNQ,gq,EK,226.0
+Eritrea,Asmara,15.3333,38.9333,Capital,ER,ERI,er,ER,232.0
+Estonia,Tallinn,59.437,24.7535,Capital,EE,EST,ee,EN,233.0
+Ethiopia,Addis Ababa,9.025,38.7469,Capital,ET,ETH,et,ET,231.0
+Faeroe Islands,Tórshavn,62.0097,-6.7716,Capital,,,,,
+Falkland Islands (Malvinas),Stanley,-51.7012,-57.8494,Others,,,,,
+Fiji,Suva,-18.1416,178.4415,Capital,FJ,FJI,fj,FJ,242.0
+Finland,Helsinki,60.1692,24.9402,Capital,FI,FIN,fi,FI,246.0
+France,Paris,48.8534,2.3488,Capital,FR,FRA,fr,FR,250.0
+French Guiana,Cayenne,4.9333,-52.3333,Capital,,,,,
+French Polynesia,Papeete,-17.5333,-149.5667,Capital,PF,PYF,pf,FP,258.0
+Gabon,Libreville,0.3925,9.4537,Capital,GA,GAB,ga,GB,266.0
+Gambia,Banjul,13.4531,-16.6794,Capital,GM,GMB,gm,GA,270.0
+Georgia,Tbilisi,41.6941,44.8337,Capital,GE,GEO,ge,GG,268.0
+Germany,Berlin,52.5244,13.4105,Capital,DE,DEU,de,GM,276.0
+Ghana,Accra,5.556,-0.1969,Capital,GH,GHA,gh,GH,288.0
+Gibraltar,Gibraltar,36.1447,-5.3526,Capital,GI,GIB,gi,GI,292.0
+Greece,Athínai (Athens),37.9534,23.749,Capital,GR,GRC,gr,GR,300.0
+Greenland,Nuuk (Godthåb),64.1835,-51.7216,Capital,GL,GRL,gl,GL,304.0
+Grenada,St.George's,12.0564,-61.7485,Capital,GD,GRD,gd,GJ,308.0
+Guadeloupe,Basse-Terre,15.9985,-61.7255,Capital,,,,,
+Guam,Hagåtña,13.4757,144.7489,Capital,GU,GUM,gu,GQ,316.0
+Guatemala,Ciudad de Guatemala (Guatemala City),14.6127,-90.5307,Capital,GT,GTM,gt,GT,320.0
+Guinea,Conakry,9.5716,-13.6476,Capital,GN,GIN,gn,GV,324.0
+Guinea-Bissau,Bissau,11.8636,-15.5977,Capital,GW,GNB,gw,PU,624.0
+Guyana,Georgetown,6.8045,-58.1553,Capital,GY,GUY,gy,GY,328.0
+Haiti,Port-au-Prince,18.5392,-72.335,Capital,HT,HTI,ht,HA,332.0
+Holy See,Vatican City,41.9024,12.4533,Capital,VA,VAT,va,VT,336.0
+Honduras,Tegucigalpa,14.0818,-87.2068,Capital,HN,HND,hn,HO,340.0
+Hungary,Budapest,47.498,19.0399,Capital,HU,HUN,hu,HU,348.0
+Iceland,Reykjavík,64.1355,-21.8954,Capital,IS,ISL,is,IC,352.0
+India,Delhi,28.6667,77.2167,Capital,IN,IND,in,IN,356.0
+Indonesia,Jakarta,-6.2118,106.8416,Capital,ID,IDN,id,ID,360.0
+Iran (Islamic Republic of),Tehran,35.6944,51.4215,Capital,,,,,
+Iraq,Baghdad,33.3406,44.4009,Capital,IQ,IRQ,iq,IZ,368.0
+Ireland,Dublin,53.3331,-6.2489,Capital,IE,IRL,ie,EI,372.0
+Isle of Man,Douglas,54.15,-4.4833,Capital,IM,IMN,im,IM,833.0
+Israel,Jerusalem,31.769,35.2163,Capital,IL,ISR,il,IS,376.0
+Italy,Roma (Rome),41.8947,12.4811,Capital,IT,ITA,it,IT,380.0
+Jamaica,Kingston,17.997,-76.7936,Capital,JM,JAM,jm,JM,388.0
+Japan,Tokyo,35.6895,139.6917,Capital,JP,JPN,jp,JA,392.0
+Jordan,Amman,31.9552,35.945,Capital,JO,JOR,jo,JO,400.0
+Kazakhstan,Astana,51.1801,71.446,Capital,KZ,KAZ,kz,KZ,398.0
+Kenya,Nairobi,-1.2833,36.8167,Capital,KE,KEN,ke,KE,404.0
+Kiribati,Tarawa,1.3272,172.9813,Capital,KI,KIR,ki,KR,296.0
+Kuwait,Al Kuwayt (Kuwait City),29.3697,47.9783,Capital,KW,KWT,kw,KU,414.0
+Kyrgyzstan,Bishkek,42.87,74.59,Capital,KG,KGZ,kg,KG,417.0
+Lao People's Democratic Republic,Vientiane,17.9667,102.6,Capital,,,,,
+Latvia,Riga,56.946,24.1059,Capital,LV,LVA,lv,LG,428.0
+Lebanon,Bayrut (Beirut),33.9,35.4833,Capital,LB,LBN,lb,LE,422.0
+Lesotho,Maseru,-29.3167,27.4833,Capital,LS,LSO,ls,LT,426.0
+Liberia,Monrovia,6.3005,-10.7969,Capital,LR,LBR,lr,LI,430.0
+Libya,Tarabulus (Tripoli),32.8752,13.1875,Capital,LY,LBY,ly,LY,434.0
+Liechtenstein,Vaduz,47.1415,9.5215,Capital,LI,LIE,li,LS,438.0
+Lithuania,Vilnius,54.6892,25.2798,Capital,LT,LTU,lt,LH,440.0
+Luxembourg,Luxembourg,49.6117,6.13,Capital,LU,LUX,lu,LU,442.0
+Madagascar,Antananarivo,-18.9137,47.5361,Capital,MG,MDG,mg,MA,450.0
+Malawi,Lilongwe,-13.9669,33.7873,Capital,MW,MWI,mw,MI,454.0
+Malaysia,Kuala Lumpur,3.1412,101.6865,Capital,MY,MYS,my,MY,458.0
+Maldives,Male,4.1748,73.5089,Capital,MV,MDV,mv,MV,462.0
+Mali,Bamako,12.65,-8.0,Capital,ML,MLI,ml,ML,466.0
+Malta,Valletta,35.8997,14.5147,Capital,MT,MLT,mt,MT,470.0
+Marshall Islands,Majuro,7.0897,171.3803,Capital,MH,MHL,mh,RM,584.0
+Martinique,Fort-de-France,14.6089,-61.0733,Capital,,,,,
+Mauritania,Nouakchott,18.0858,-15.9785,Capital,MR,MRT,mr,MR,478.0
+Mauritius,Port Louis,-20.1619,57.4989,Capital,MU,MUS,mu,MP,480.0
+Mayotte,Mamoudzou,-12.7794,45.2272,Capital,YT,MYT,yt,MF,175.0
+Mexico,Ciudad de México (Mexico City),19.4273,-99.1419,Capital,MX,MEX,mx,MX,484.0
+Micronesia (Fed. States of),Palikir,6.9174,158.1588,Capital,,,,,
+Monaco,Monaco,43.7333,7.4167,Capital,MC,MCO,mc,MN,492.0
+Mongolia,Ulaanbaatar,47.9077,106.8832,Capital,MN,MNG,mn,MG,496.0
+Montenegro,Podgorica,42.4411,19.2636,Capital,ME,MNE,me,MJ,499.0
+Montserrat,Brades Estate,16.7918,-62.2106,Capital,MS,MSR,ms,MH,500.0
+Morocco,Rabat,34.0133,-6.8326,Capital,MA,MAR,ma,MO,504.0
+Mozambique,Maputo,-25.9653,32.5892,Capital,MZ,MOZ,mz,MZ,508.0
+Myanmar,Nay Pyi Taw,19.745,96.1297,Capital,MM,MMR,mm,BM,104.0
+Namibia,Windhoek,-22.5594,17.0832,Capital,NA,NAM,na,WA,516.0
+Nauru,Nauru,-0.5308,166.9112,Capital,NR,NRU,nr,NR,520.0
+Nepal,Kathmandu,27.7017,85.3206,Capital,NP,NPL,np,NP,524.0
+Netherlands,Amsterdam,52.374,4.8897,Capital,NL,NLD,nl,NL,528.0
+New Caledonia,Nouméa,-22.2763,166.4572,Capital,NC,NCL,nc,NC,540.0
+New Zealand,Wellington,-41.2866,174.7756,Capital,NZ,NZL,nz,NZ,554.0
+Nicaragua,Managua,12.1328,-86.2504,Capital,NI,NIC,ni,NU,558.0
+Niger,Niamey,13.5137,2.1098,Capital,NE,NER,ne,NG,562.0
+Nigeria,Abuja,9.0574,7.4898,Capital,NG,NGA,ng,NI,566.0
+Niue,Alofi,-19.0585,-169.9213,Capital,NU,NIU,nu,NE,570.0
+Northern Mariana Islands,Saipan,15.2123,145.7545,Capital,MP,MNP,mp,CQ,580.0
+Norway,Oslo,59.9127,10.7461,Capital,NO,NOR,no,NO,578.0
+Oman,Masqat (Muscat),23.6139,58.5922,Capital,OM,OMN,om,MU,512.0
+Pakistan,Islamabad,33.7035,73.0594,Capital,PK,PAK,pk,PK,586.0
+Palau,Koror,7.3426,134.4789,Capital,PW,PLW,pw,PS,585.0
+Panama,Ciudad de Panamá (Panama City),8.9958,-79.5196,Capital,PA,PAN,pa,PM,591.0
+Papua New Guinea,Port Moresby,-9.4431,147.1797,Capital,PG,PNG,pg,PP,598.0
+Paraguay,Asunción,-25.3007,-57.6359,Capital,PY,PRY,py,PA,600.0
+Peru,Lima,-12.0432,-77.0282,Capital,PE,PER,pe,PE,604.0
+Philippines,Manila,14.6042,120.9822,Capital,PH,PHL,ph,RP,608.0
+Poland,Warszawa (Warsaw),52.2298,21.0118,Capital,PL,POL,pl,PL,616.0
+Portugal,Lisboa (Lisbon),38.7169,-9.1399,Capital,PT,PRT,pt,PO,620.0
+Puerto Rico,San Juan,18.4663,-66.1057,Capital,PR,PRI,pr,RQ,630.0
+Qatar,Ad-Dawhah (Doha),25.2747,51.5245,Capital,QA,QAT,qa,QA,634.0
+Republic of Korea,Seoul,37.5683,126.9778,Capital,,,,,
+Republic of Moldova,Chişinău,47.0056,28.8575,Capital,,,,,
+Réunion,Saint-Denis,-20.8823,55.4504,Capital,,,,,
+Romania,Bucuresti (Bucharest),44.4328,26.1043,Capital,RO,ROU,ro,RO,642.0
+Russian Federation,Moskva (Moscow),55.755,37.6218,Capital,,,,,
+Rwanda,Kigali,-1.9474,30.0579,Capital,RW,RWA,rw,RW,646.0
+Saint Helena,Jamestown,-15.9387,-5.7168,Capital,,,,,
+Saint Kitts and Nevis,Basseterre,17.2948,-62.7261,Capital,KN,KNA,kn,SC,659.0
+Saint Lucia,Castries,14.006,-60.991,Capital,LC,LCA,lc,ST,662.0
+Saint Pierre and Miquelon,Saint-Pierre,46.7738,-56.1815,Capital,PM,SPM,pm,SB,666.0
+Saint Vincent and the Grenadines,Kingstown,13.1587,-61.2248,Capital,VC,VCT,vc,VC,670.0
+Samoa,Apia,-13.8333,-171.7667,Capital,WS,WSM,ws,WS,882.0
+San Marino,San Marino,43.9333,12.45,Capital,SM,SMR,sm,SM,674.0
+Sao Tome and Principe,São Tomé,0.3365,6.7273,Capital,ST,STP,st,TP,678.0
+Saudi Arabia,Ar-Riyadh (Riyadh),24.6905,46.7096,Capital,SA,SAU,sa,SA,682.0
+Senegal,Dakar,14.6937,-17.4441,Capital,SN,SEN,sn,SG,686.0
+Serbia,Beograd (Belgrade),44.8176,20.4633,Capital,RS,SRB,rs,RB,688.0
+Seychelles,Victoria,-4.6167,55.45,Capital,SC,SYC,sc,SE,690.0
+Sierra Leone,Freetown,8.484,-13.2299,Capital,SL,SLE,sl,SL,694.0
+Singapore,Singapore,1.2897,103.8501,Capital,SG,SGP,sg,SN,702.0
+Sint Maarten (Dutch part),Philipsburg,18.026,-63.0458,Capital,,,,,
+Slovakia,Bratislava,48.1482,17.1067,Capital,SK,SVK,sk,LO,703.0
+Slovenia,Ljubljana,46.0511,14.5051,Capital,SI,SVN,si,SI,705.0
+Solomon Islands,Honiara,-9.4333,159.95,Capital,SB,SLB,sb,BP,90.0
+Somalia,Muqdisho (Mogadishu),2.0416,45.3435,Capital,SO,SOM,so,SO,706.0
+South Africa,Cape Town,-33.9258,18.4232,Legislative Capital,ZA,ZAF,za,SF,710.0
+South Sudan,Juba,4.8517,31.5825,Capital,,,,,
+Spain,Madrid,40.4165,-3.7026,Capital,ES,ESP,es,SP,724.0
+Sri Lanka,Colombo,6.9319,79.8478,Capital,LK,LKA,lk,CE,144.0
+State of Palestine,Al-Quds[East Jerusalem],31.7834,35.2339,Capital,,,,,
+Sudan,Al-Khartum (Khartoum),15.5518,32.5324,Capital,SD,SDN,sd,SU,736.0
+Suriname,Paramaribo,5.8664,-55.1668,Capital,SR,SUR,sr,NS,740.0
+Swaziland,Mbabane,-26.3167,31.1333,Capital,SZ,SWZ,sz,WZ,748.0
+Sweden,Stockholm,59.3326,18.0649,Capital,SE,SWE,se,SW,752.0
+Switzerland,Bern,46.9481,7.4474,Capital,CH,CHE,ch,SZ,756.0
+Syrian Arab Republic,Dimashq (Damascus),33.5086,36.3084,Capital,,,,,
+Tajikistan,Dushanbe,38.5358,68.7791,Capital,TJ,TJK,tj,TI,762.0
+TFYR Macedonia,Skopje,42.0,21.4333,Capital,,,,,
+Thailand,Krung Thep (Bangkok),13.722,100.5252,Capital,TH,THA,th,TH,764.0
+Timor-Leste,Dili,-8.5601,125.5668,Capital,TL,TLS,tl,TT,626.0
+Togo,Lomé,6.1375,1.2123,Capital,TG,TGO,tg,TO,768.0
+Tokelau,Tokelau,-9.38,-171.25,Others,TK,TKL,tk,TL,772.0
+Tonga,Nuku'alofa,-21.1394,-175.2032,Capital,TO,TON,to,TN,776.0
+Trinidad and Tobago,Port of Spain,10.6662,-61.5166,Capital,TT,TTO,tt,TD,780.0
+Tunisia,Tunis,36.819,10.1658,Capital,TN,TUN,tn,TS,788.0
+Turkey,Ankara,39.9199,32.8543,Capital,TR,TUR,tr,TU,792.0
+Turkmenistan,Ashgabat,37.95,58.3833,Capital,TM,TKM,tm,TX,795.0
+Turks and Caicos Islands,Cockburn Town,21.4612,-71.1419,Capital,TC,TCA,tc,TK,796.0
+Tuvalu,Funafuti,-8.5189,179.1991,Capital,TV,TUV,tv,TV,798.0
+Uganda,Kampala,0.3163,32.5822,Capital,UG,UGA,ug,UG,800.0
+Ukraine,Kyiv (Kiev),50.4454,30.5186,Capital,UA,UKR,ua,UP,804.0
+United Arab Emirates,Abu Zaby (Abu Dhabi),24.4648,54.3618,Capital,AE,ARE,ae,AE,784.0
+United Kingdom,London,51.5085,-0.1257,Capital,GB,GBR,uk,UK,826.0
+United Republic of Tanzania,Dodoma,-6.1722,35.7395,Capital,,,,,
+United States of America,"Washington, D.C.",38.8951,-77.0364,Capital,,,,,
+United States Virgin Islands,Charlotte Amalie,18.3419,-64.9307,Capital,,,,,
+Uruguay,Montevideo,-34.8335,-56.1674,Capital,UY,URY,uy,UY,858.0
+Uzbekistan,Tashkent,41.2647,69.2163,Capital,UZ,UZB,uz,UZ,860.0
+Vanuatu,Port Vila,-17.7338,168.3219,Capital,VU,VUT,vu,NH,548.0
+Venezuela (Bolivarian Republic of),Caracas,10.488,-66.8792,Capital,,,,,
+Viet Nam,Hà Noi,21.0245,105.8412,Capital,,,,,
+Wallis and Futuna Islands,Matu-Utu,-13.2816,-176.1745,Capital,,,,,
+Western Sahara,El Aaiún,27.1532,-13.2014,Capital,EH,ESH,eh,WI,732.0
+Yemen,Sana'a',15.3531,44.2078,Capital,YE,YEM,ye,YM,887.0
+Zambia,Lusaka,-15.4134,28.2771,Capital,ZM,ZMB,zm,ZA,894.0
+Zimbabwe,Harare,-17.8294,31.0539,Capital,ZW,ZWE,zw,ZI,716.0

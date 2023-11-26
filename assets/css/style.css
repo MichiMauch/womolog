@@ -578,7 +578,24 @@ footer a:hover {
   background-size: cover;
   background-position: center;
   color: #000;
-
+}
+.boxcentered2 {
+  flex-basis: calc(49% - 40px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  border: #000 1px solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../mapbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -619,6 +636,12 @@ footer a:hover {
   animation: growAndSpin 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   font-size: 5rem;
   color: black;
+}
+.numberanimation-mini {
+  animation: growAndSpin 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  font-size: 4rem;
+  color: black;
+  padding-left: 20px;
 }
 
 .year-stats {
@@ -823,8 +846,9 @@ footer a:hover {
 .fi {
   flex-shrink: 0; /* Verhindert, dass die Flagge skaliert */
   margin-right: 10px; /* Abstand zwischen Flagge und Zahl */
-  font-size: 2em;
+  font-size: 4em;
 }
+
 
 
 
@@ -921,4 +945,13 @@ input:checked + span::before {
 	grid-area: switch;
 }
 
+#meinLiniendiagramm {
+	background-color: #fff;
+}
 
+.leaflet-marker-icon {
+  background: transparent !important;
+  border: none !important; /* Entfernt den Rand */
+  box-shadow: none !important; /* Entfernt eventuelle Schatten */
+
+}
