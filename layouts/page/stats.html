@@ -162,7 +162,7 @@
                     </style>
                 </div>
             </div>
-            <div class="container">
+            <div class="flex-container">
                 <div class="boxcentered" id="meineKarte" style="height: 400px;">
                     <script>    
                     document.addEventListener('DOMContentLoaded', function() {
@@ -200,6 +200,39 @@
                             console.log('Hauptstadt geladen:', countryIsoCode, capitalCityCoordinates);
                         });
 
+                            // Funktionen für Hover-Effekt
+                            function highlightFeature(e) {
+                                var layer = e.target;
+                                layer.setStyle({
+                                    fillColor: "#FFEDA0", // Farbe beim Hover
+                                    fillOpacity: 0.7,
+                                    color: "#9CB58B",
+                                    weight: 2
+                                });
+                            }
+
+                            function resetHighlight(e) {
+                                var layer = e.target;
+                                if (landBesucht(layer.feature.properties.iso_a2)) {
+                                    // Zurücksetzen auf Stil für besuchte Länder
+                                    layer.setStyle({
+                                        fillColor: "#ADD19E",
+                                        fillOpacity: 0.6,
+                                        color: "#9CB58B",
+                                        weight: 2
+                                    });
+                                } else {
+                                    // Zurücksetzen auf Standardstil
+                                    layer.setStyle({
+                                        fillColor: "#000000",
+                                        fillOpacity: 0.1,
+                                        color: "#9CB58B",
+                                        weight: 1
+                                    });
+                                }
+                            }
+
+                            // Länderdaten hinzufügen
                             $.getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson', function(data) {
                                 L.geoJson(data, {
                                     onEachFeature: function(feature, layer) {
@@ -212,12 +245,11 @@
                                                 weight: 2
                                             });
 
-                                            if (capitalCities[isoCode]) { // Keine Umwandlung in Kleinbuchstaben
+                                            if (capitalCities[isoCode]) {
                                                 var capitalCoords = capitalCities[isoCode];
-                                                console.log('Marker Koordinaten:', capitalCoords); // Log der Marker-Koordinaten
+                                                console.log('Marker Koordinaten:', capitalCoords);
                                                 var customIcon = L.divIcon({
-                                                    html: `<img src="/${isoCode.toLowerCase()}.svg" style="width: 32px; height: 32px;">`, // HTML-Bild-Element
-                                                    //className: `fi fi-${isoCode.toLowerCase()}`,
+                                                    html: `<img src="/${isoCode.toLowerCase()}.svg" style="width: 32px; height: 32px;">`,
                                                     iconSize: [32, 32],
                                                     iconAnchor: [16, 16],
                                                     popupAnchor: [0, -24]
@@ -225,10 +257,16 @@
                                                 L.marker(capitalCoords, { icon: customIcon }).addTo(meineKarte)
                                                     .bindPopup(`${feature.properties.name} Besuche: ${besuchteLaenderAnzahl(isoCode)}`);
                                                 console.log('Marker gesetzt für:', isoCode, capitalCoords);
-                                            } 
-                                            else {
+                                            } else {
                                                 console.log('Keine Hauptstadtdaten für:', isoCode);
                                             }
+
+                                            // Hinzufügen der Hover-Ereignisse
+                                            layer.on({
+                                                mouseover: highlightFeature,
+                                                mouseout: resetHighlight
+                                            });
+
                                         } else {
                                             layer.setStyle({
                                                 fillColor: "#000000",
@@ -240,17 +278,13 @@
                                     }
                                 }).addTo(meineKarte);
                             });
+
                         });
                     });
 
-                    </script>                                        
-                                        
-                                                            
-                                        
-                        
+                    </script>                                       
                 </div>
-            </div>
-            <div class="container">
+            
                 <div class="boxcentered2">
                     <canvas id="meinLiniendiagramm" style="height: 200px;"></canvas>
                 </div>

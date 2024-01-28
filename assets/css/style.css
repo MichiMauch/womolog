@@ -955,3 +955,14 @@ input:checked + span::before {
   box-shadow: none !important; /* Entfernt eventuelle Schatten */
 
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container > div {
+  flex: 1; /* Jeder Container nimmt 50% der Breite ein */
+  max-width: 50%; /* Maximale Breite auf 50% begrenzen */
+  height: 600px; /* Höhe auf 600px setzen */
+}
