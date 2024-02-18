@@ -1,5 +1,4 @@
 :root {
-
   /* Set sans-serif & mono fonts */
   --sans-font: "Droid Sans", Arial, Helvetica, "Helvetica Neue", sans-serif;
   --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -19,14 +18,14 @@
   --bg-transparent: #2f2f2f41;
   --bg-album-transparent: #2f2f2fe5;
   --bg-genres: #0d517e;
-  --accent-bg: #2B2B2B;
+  --accent-bg: #2b2b2b;
   --text: #000000;
-  --text-light: #ABABAB;
+  --text-light: #ababab;
   --border: #666;
   --accent: #0099ff;
-  --accent-light: #FFECB3;
-  --code: #F06292;
-  --preformatted: #CCC;
+  --accent-light: #ffecb3;
+  --code: #f06292;
+  --preformatted: #ccc;
   --disabled: #111;
   --link-genres: #fff;
   --link-color: #0d517e;
@@ -35,9 +34,7 @@
   --nav-a-accent-bg: #666;
   --bg-header-elements: #b4b4b438;
   --footer-text-color: #fff;
-  --bg-album-card: #F0F0F0;
-  ;
-
+  --bg-album-card: #f0f0f0;
 }
 
 /* main body */
@@ -63,7 +60,6 @@ li {
 body {
   color: var(--color);
   background: linear-gradient(to bottom, #4a7c59, #9c8265);
-
 }
 
 header {
@@ -113,7 +109,6 @@ main {
     margin-left: 0.2rem;
     margin-right: 0.2rem;
   }
-
 }
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -123,7 +118,6 @@ main {
     margin-right: 0.1rem;
   }
 }
-
 
 /* common */
 
@@ -161,7 +155,7 @@ a.album-info:hover {
   border-color: var(--accent);
 }
 
-ul>li {
+ul > li {
   list-style-type: none;
   font-size: smaller;
   margin: 0.1rem;
@@ -175,13 +169,11 @@ main.album-list {
   justify-content: space-between;
 }
 
-
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 692px) {
   .album-card {
     flex: 50%;
   }
-
 }
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -210,7 +202,7 @@ a.album-artist:visited {
 }
 
 a.album-artist:hover {
-  color: var(--accent)
+  color: var(--accent);
 }
 
 a.album-title:link,
@@ -223,18 +215,16 @@ a.album-title:visited {
   color: var(--link-color);
   padding-top: 10px;
   padding-left: 8px;
-
 }
 
 a.album-title:hover {
-  color: var(--accent)
+  color: var(--accent);
 }
 
 p.album-genres {
   font-size: small;
   margin: 0.5rem;
 }
-
 
 /* album display page */
 
@@ -244,35 +234,34 @@ section.record {
   flex-wrap: wrap;
 }
 
-section.record>div {
+section.record > div {
   flex: 25%;
   margin: 1rem;
   /* border: 1px solid black; */
 }
 
-section.record>div>p {
+section.record > div > p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-section.record>div>ul>li {
+section.record > div > ul > li {
   list-style-type: none;
 }
 
-section.record>div>h1 {
+section.record > div > h1 {
   border-bottom: 1px solid var(--link-color);
   margin-bottom: 0.1rem;
 }
 
-section.record>div>h2 {
+section.record > div > h2 {
   border-bottom: 1px solid var(--link-color);
   margin-bottom: 1rem;
 }
 
-section.record>div>h1.album-title {
+section.record > div > h1.album-title {
   font-size: xx-large;
 }
-
 
 section.record-pictures {
   flex: 100%;
@@ -344,7 +333,7 @@ a.record-artist:visited {
 }
 
 a.record-artist:hover {
-  color: var(--accent)
+  color: var(--accent);
 }
 
 /* footer */
@@ -367,7 +356,6 @@ footer a:hover {
   text-decoration: none;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -377,7 +365,6 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* Fügt einen Abstand zwischen den Boxen hinzu */
-
 }
 
 .box {
@@ -388,10 +375,9 @@ footer a:hover {
   border: #000 1px solid;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   padding-top: 0px;
   overflow: hidden;
-
 }
 
 .box .my-image-class {
@@ -431,8 +417,6 @@ footer a:hover {
   /* For spacing between the full-width box and the rest */
 }
 
-
-
 .platz-title {
   margin-bottom: 10px;
 }
@@ -441,10 +425,9 @@ footer a:hover {
   width: calc(100% + 20px);
   margin-left: -10px;
   margin-right: -10px;
-  background-color: #ADD19E;
+  background-color: #add19e;
   padding: 10px 10px 10px 10px;
 }
-
 
 @media (max-width: 768px) {
   .full-width::after {
@@ -490,7 +473,7 @@ footer a:hover {
   position: absolute;
   left: 0;
   top: 100%;
-  background-color: #ADD19E;
+  background-color: #add19e;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   z-index: 1;
@@ -508,7 +491,6 @@ footer a:hover {
   /* Kein Außenabstand für Dropdown-Links */
   transition: background-color 0.3s ease-in-out;
   display: block;
-
 }
 
 /* Zeige Dropdown-Inhalte beim Hover über den Dropdown-Button an */
@@ -529,10 +511,10 @@ footer a:hover {
 .legend {
   display: inline-block;
   overflow: hidden;
-  border-right: .15em solid #ADD19E;
+  border-right: 0.15em solid #add19e;
   white-space: nowrap;
-  letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* Animation für den Schreibeffekt */
@@ -548,17 +530,15 @@ footer a:hover {
 
 /* Animation für den blinkenden Cursor */
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;
   }
 
   50% {
-    border-color: #ADD19E;
+    border-color: #add19e;
   }
 }
-
 
 .boxcentered {
   flex-basis: calc(33% - 40px);
@@ -574,7 +554,11 @@ footer a:hover {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
   padding: 20px;
   overflow: hidden;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../mapbackground.jpg');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../mapbackground.jpg");
   background-size: cover;
   background-position: center;
   color: #000;
@@ -592,14 +576,17 @@ footer a:hover {
   border-radius: 10px;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../mapbackground.jpg');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../mapbackground.jpg");
   background-size: cover;
   background-position: center;
   color: #000;
 }
 
 @media (max-width: 768px) {
-
   /* 768px ist ein gängiger Breakpoint für Tablets und mobile Geräte */
   .boxcentered {
     flex-basis: 100%;
@@ -611,11 +598,10 @@ footer a:hover {
 
 .boxicon {
   font-size: 3rem;
-  color: #ADD19E;
+  color: #add19e;
   margin-bottom: 5px;
 
   /* Färbt das Icon grün */
-
 }
 
 @keyframes growAndSpin {
@@ -666,10 +652,9 @@ footer a:hover {
 
 .boxiconstat {
   font-size: 2rem;
-  color: #ADD19E;
+  color: #add19e;
   margin-bottom: 5px;
   /* Färbt das Icon grün */
-
 }
 
 .year,
@@ -681,10 +666,12 @@ footer a:hover {
 .listcontainer {
   display: flex;
   flex-wrap: wrap;
+  margin: 5px;
 }
 
 .listbox {
-  flex: 0 0 25%; /* Jede Box nimmt 25% der Breite ein */
+  flex: 1 0 calc(25% - 20px); /* Adjust 'flex-basis' to account for margin */
+  /* flex: 0 0 25%; Jede Box nimmt 25% der Breite ein */
   height: 300px; /* Höhe auf Desktop */
   border: 0;
   padding: 15px; /* Fügt Padding zur gesamten Box hinzu */
@@ -694,6 +681,7 @@ footer a:hover {
   background-position: center; /* Zentriert das Bild in der Box */
   background-size: cover; /* Startgröße des Bildes */
   overflow: hidden; /* Verhindert, dass das Hintergrundbild über die Grenzen hinausgeht */
+  margin: 10px;
 }
 .zoomable-background {
   width: 100%;
@@ -707,7 +695,8 @@ footer a:hover {
   z-index: 1; /* Stellt sicher, dass das Hintergrundbild hinter den anderen Elementen liegt */
 }
 
-.listbox h2, .listbox p {
+.listbox h2,
+.listbox p {
   position: relative;
   z-index: 2; /* Stellt sicher, dass der Text über dem Hintergrundbild liegt */
 }
@@ -722,25 +711,41 @@ footer a:hover {
     flex: 0 0 100%; /* Setzt die Flex-Basis auf 100% der Breite */
     width: 100%; /* Setzt die Breite auf 100% */
     height: 300px; /* Höhe auf Mobilgeräten */
+  }
+}
 
+/* Media Query für Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .listbox {
+    flex-basis: 50%; /* Setzt die Flex-Basis auf 50% für 2 Spalten Layout */
   }
 }
 
 .listbox p {
   position: absolute;
   bottom: 0;
-  background-color: rgba(80, 147, 146, 0.7); /* Setzt die halbtransparente Hintergrundfarbe */
+  background-color: rgba(
+    80,
+    147,
+    146,
+    0.7
+  ); /* Setzt die halbtransparente Hintergrundfarbe */
   color: white; /* Schriftfarbe auf Weiß setzen */
   text-align: center; /* Zentriert den Text */
   margin: 0 -15px; /* Erweitert den Hintergrund nach links und rechts bis an den Rand */
   padding: 10px 15px; /* Setzt Padding für oben und unten sowie für die Seiten */
   justify-content: center; /* Zentriert Inhalt horizontal */
-    align-items: center; /* Zentriert Inhalt vertikal */
+  align-items: center; /* Zentriert Inhalt vertikal */
 }
 
 .listbox h2 {
   text-align: center; /* Zentriert den Text horizontal */
-  background-color: rgba(80, 147, 146, 0.6); /* Setzt die halbtransparente Hintergrundfarbe */
+  background-color: rgba(
+    80,
+    147,
+    146,
+    0.6
+  ); /* Setzt die halbtransparente Hintergrundfarbe */
   text-align: center;
   margin: -15px -15px; /* Setzt negative Margin für links und rechts */
   padding: 10px 15px; /* Setzt Padding für alle Seiten */
@@ -751,12 +756,15 @@ footer a:hover {
 .listbox h2 a:hover,
 .listbox h2 a:active,
 .listbox h2 a:focus {
-    color: white; /* Setzt die Schriftfarbe auf Weiß */
-    text-decoration: none; /* Optional: Entfernt die Unterstreichung */
-    /* Weitere Stile für das Link-Element, falls nötig */
+  color: white; /* Setzt die Schriftfarbe auf Weiß */
+  text-decoration: none; /* Optional: Entfernt die Unterstreichung */
+  /* Weitere Stile für das Link-Element, falls nötig */
 }
 
-.listbox a, .listbox a:visited, .listbox a:hover, .listbox a:active {
+.listbox a,
+.listbox a:visited,
+.listbox a:hover,
+.listbox a:active {
   color: white;
   text-decoration: none; /* Optional: Entfernt die Unterstreichung */
 }
@@ -787,7 +795,8 @@ footer a:hover {
   align-items: center; /* Zentriert die Elemente vertikal */
 }
 
-.platzart .boxicon, .platzart .numberanimation {
+.platzart .boxicon,
+.platzart .numberanimation {
   margin-right: 10px; /* Fügt einen Abstand zwischen den Elementen hinzu */
 }
 .platzart .numberanimation {
@@ -799,36 +808,40 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .year-stats:not(:last-child):after {
-      content: "";
-      display: block;
-      margin: 10px 0; /* Stellt den Abstand oben und unten der Linie ein */
-      height: 1px; /* Höhe der Linie */
-      background: #000; /* Farbe der Linie */
-      margin-left: auto; /* Zentriert die Linie horizontal */
-      margin-right: auto; /* Zentriert die Linie horizontal */
-      width: calc(100% - 40px); /* Breite der Linie, wobei 40px der Gesamtabstand von beiden Seiten ist */
+    content: "";
+    display: block;
+    margin: 10px 0; /* Stellt den Abstand oben und unten der Linie ein */
+    height: 1px; /* Höhe der Linie */
+    background: #000; /* Farbe der Linie */
+    margin-left: auto; /* Zentriert die Linie horizontal */
+    margin-right: auto; /* Zentriert die Linie horizontal */
+    width: calc(
+      100% - 40px
+    ); /* Breite der Linie, wobei 40px der Gesamtabstand von beiden Seiten ist */
   }
 
   .year-stats {
-      flex-direction: column; /* Stapelt die .stats-item-Elemente in einer Spalte */
+    flex-direction: column; /* Stapelt die .stats-item-Elemente in einer Spalte */
   }
 
   .stats-item {
-      justify-content: center; /* Zentriert die Items horizontal */
-      margin: 5px; /* Verringert den Abstand zwischen den Items */
-
+    justify-content: center; /* Zentriert die Items horizontal */
+    margin: 5px; /* Verringert den Abstand zwischen den Items */
   }
 
   .icon {
-      font-size: 2rem; /* Verkleinert die Icons für mobile Geräte */
+    font-size: 2rem; /* Verkleinert die Icons für mobile Geräte */
   }
 
-  .year, .places, .nights, .platzart {
-      font-size: 1.5rem; /* Verkleinert den Text für mobile Geräte */
+  .year,
+  .places,
+  .nights,
+  .platzart {
+    font-size: 1.5rem; /* Verkleinert den Text für mobile Geräte */
   }
 
   .icons-container {
-      justify-content: center; /* Zentriert die Icons, wenn sie nebeneinander sind */
+    justify-content: center; /* Zentriert die Icons, wenn sie nebeneinander sind */
   }
 }
 
@@ -848,9 +861,6 @@ footer a:hover {
   margin-right: 10px; /* Abstand zwischen Flagge und Zahl */
   font-size: 4em;
 }
-
-
-
 
 .stats-itemflag {
   display: flex; /* Flex-Container */
@@ -881,35 +891,38 @@ footer a:hover {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.switch {                   /* Das label-Element */ 
-	position: relative; /* Um im nächsten Schritt den runden Button mit position:absolute festzusetzen */ 
-	width: 64px;
-	height: 29px;
-	display: inline-block;
+.switch {
+  /* Das label-Element */
+  position: relative; /* Um im nächsten Schritt den runden Button mit position:absolute festzusetzen */
+  width: 64px;
+  height: 29px;
+  display: inline-block;
 }
 
-.switch span {		    /* Der graue Untergrund des Schalters */ 
-	position: absolute;
-	background-color: #ccc;
-	border-radius: 17px;
+.switch span {
+  /* Der graue Untergrund des Schalters */
+  position: absolute;
+  background-color: #ccc;
+  border-radius: 17px;
   height: 35px;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	transition: background-color .4s;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s;
 }
 
-.switch span::before {    /* Der kreisrunde Button im Switch */ 
-	background-color: white;
-	border-radius: 50%;
-	content: "";
-	position: absolute;
-	left: 4px;
-	bottom: 5px;
-	height: 25px;
-	width: 25px;
+.switch span::before {
+  /* Der kreisrunde Button im Switch */
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 5px;
+  height: 25px;
+  width: 25px;
 }
 
 input:checked + span {
@@ -921,39 +934,37 @@ input:checked + span::before {
 }
 
 .switch input {
-	display: none;
+  display: none;
 }
 
 .switch {
-	position: relative;
-	display: grid;
-	grid-template-columns: 85px 64px;
-	grid-template-rows: 34px;
-	grid-template-areas: "settings switch";
+  position: relative;
+  display: grid;
+  grid-template-columns: 85px 64px;
+  grid-template-rows: 34px;
+  grid-template-areas: "settings switch";
   background-color: white;
   border-radius: 10px; /* Macht die Ecken des Dropdown-Menüs rund */
   padding: 5px 10px; /* Fügt innen etwas Abstand hinzu */
   padding-right: 160px;
   font-size: 16px; /* Passt die Schriftgröße an */
   height: 45px;
-  
 }
 
 .switch span {
-	background-color: #ccc;
-	transition: .4s;
-	grid-area: switch;
+  background-color: #ccc;
+  transition: 0.4s;
+  grid-area: switch;
 }
 
 #meinLiniendiagramm {
-	background-color: #fff;
+  background-color: #fff;
 }
 
 .leaflet-marker-icon {
   background: transparent !important;
   border: none !important; /* Entfernt den Rand */
   box-shadow: none !important; /* Entfernt eventuelle Schatten */
-
 }
 
 .flex-container {
