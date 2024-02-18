@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Frage den Benutzer, ob das Python-Skript ausgeführt werden soll
-read -p "Do you want to update the stats? (j/n) " answer
+read -p "Möchtest du 'python3 generate_stats.py' ausführen? (j/n) " answer
 
 # Überprüfe die Benutzereingabe
 if [[ $answer = j ]]; then
@@ -15,7 +15,11 @@ if [[ $answer = j ]]; then
     fi
 fi
 
-# Füge alle Änderungen hinzu, erstelle einen Commit und pushe
+# Frage nach einem Kommentar für den Commit
+echo "Bitte gib einen Kommentar für den Commit ein:"
+read commitMessage
+
+# Füge alle Änderungen hinzu, erstelle einen Commit mit dem eingegebenen Kommentar und pushe
 git add .
-git commit -m "es gibt news"
+git commit -m "$commitMessage"
 git push origin main
