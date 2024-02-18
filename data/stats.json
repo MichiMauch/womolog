@@ -5,7 +5,7 @@
             {
                 "Ort": "Wohnmobilpark Bad Hindelang",
                 "Strasse": "Ostrachstraße",
-                "Stadt": "Bad Hindelang",
+                "Stadt": "Unbekannt",
                 "PLZ": "87541",
                 "Land": "Deutschland",
                 "Dateiname": "wohnmobilpark-bad-hindelang.md"
@@ -108,7 +108,7 @@
             },
             {
                 "Ort": "Südsee-Camp",
-                "Strasse": "Linlandweg",
+                "Strasse": "Schwanensee-Ring",
                 "Stadt": "Unbekannt",
                 "PLZ": "29649",
                 "Land": "Deutschland",
@@ -126,7 +126,7 @@
         "country_code": "de"
     },
     "Schweiz/Suisse/Svizzera/Svizra": {
-        "Besuche": 54,
+        "Besuche": 56,
         "Orte": [
             {
                 "Ort": "Monte Ceneri",
@@ -185,7 +185,7 @@
                 "Dateiname": "camping-muglin-muestair.md"
             },
             {
-                "Ort": "TempCamp",
+                "Ort": "Unbekannt",
                 "Strasse": "Werkstrasse",
                 "Stadt": "Unbekannt",
                 "PLZ": "6465",
@@ -266,7 +266,7 @@
             },
             {
                 "Ort": "swiss plage",
-                "Strasse": "Gemmistrasse",
+                "Strasse": "Campingweg",
                 "Stadt": "Unbekannt",
                 "PLZ": "3970",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
@@ -338,7 +338,7 @@
             },
             {
                 "Ort": "Aaregg",
-                "Strasse": "Rue de Blâmage",
+                "Strasse": "Seestrasse",
                 "Stadt": "Unbekannt",
                 "PLZ": "3855",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
@@ -402,9 +402,9 @@
             },
             {
                 "Ort": "Unbekannt",
-                "Strasse": "Rütistrasse",
+                "Strasse": "A8",
                 "Stadt": "Unbekannt",
-                "PLZ": "3800",
+                "PLZ": "3812",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "campingplatz-countryfestival-interlaken.md"
             },
@@ -505,6 +505,14 @@
                 "Dateiname": "tcs-camping-lugano-agno-winter.md"
             },
             {
+                "Ort": "Camping Arnist",
+                "Strasse": "Simmentalstrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "3765",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-arnist-oberwil-im-simmental.md"
+            },
+            {
                 "Ort": "Unbekannt",
                 "Strasse": "Knirigasse",
                 "Stadt": "Stans",
@@ -513,12 +521,20 @@
                 "Dateiname": "privater-stellplatz-knirig-stans.md"
             },
             {
-                "Ort": "Unbekannt",
-                "Strasse": "Unbekannt",
+                "Ort": "Camping de Vidy",
+                "Strasse": "Chemin du Camping",
                 "Stadt": "Lausanne",
-                "PLZ": "Unbekannt",
+                "PLZ": "1007",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-de-vidy-lausanne.md"
+            },
+            {
+                "Ort": "Rüti",
+                "Strasse": "Schwyzerhöhestrasse",
+                "Stadt": "Unbekannt",
+                "PLZ": "6443",
+                "Land": "Schweiz/Suisse/Svizzera/Svizra",
+                "Dateiname": "camping-ferienhof-rueti-morschach.md"
             },
             {
                 "Ort": "Attermenzen",
@@ -726,11 +742,33 @@
                 "Ort": "Camping Fornella",
                 "Strasse": "Via San Fermo",
                 "Stadt": "Unbekannt",
-                "PLZ": "29080",
+                "PLZ": "25010",
                 "Land": "Italia",
                 "Dateiname": "Camping Fornella, San Felice del Benaco.md"
             }
         ],
         "country_code": "it"
+    },
+    "France": {
+        "Besuche": 2,
+        "Orte": [
+            {
+                "Ort": "Unbekannt",
+                "Strasse": "Chemin de Linage",
+                "Stadt": "Unbekannt",
+                "PLZ": "38470",
+                "Land": "France",
+                "Dateiname": "Aire-de-Camping-Car-Chantesse.md"
+            },
+            {
+                "Ort": "Camping Bagatelle",
+                "Strasse": "Chemin de Bagatelle",
+                "Stadt": "Avignon",
+                "PLZ": "84000",
+                "Land": "France",
+                "Dateiname": "camping-bagatelle-avignon.md"
+            }
+        ],
+        "country_code": "fr"
     }
 }
