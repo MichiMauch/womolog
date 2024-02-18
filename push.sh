@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Frage den Benutzer, ob das Python-Skript ausgeführt werden soll
-read -p "Möchtest du 'python3 generate_stats.py' ausführen? (j/n) " answer
+read -p "Do you want to update the stats? (j/n) " answer
 
 # Überprüfe die Benutzereingabe
 if [[ $answer = j ]]; then

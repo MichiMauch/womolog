@@ -108,7 +108,7 @@
             },
             {
                 "Ort": "Südsee-Camp",
-                "Strasse": "Schwanensee-Ring",
+                "Strasse": "K 41",
                 "Stadt": "Unbekannt",
                 "PLZ": "29649",
                 "Land": "Deutschland",
@@ -282,7 +282,7 @@
             },
             {
                 "Ort": "Camping Yverdon Plage",
-                "Strasse": "Chemin du Buron",
+                "Strasse": "Avenue des Iris",
                 "Stadt": "Yverdon-les-Bains",
                 "PLZ": "1401",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
@@ -338,7 +338,7 @@
             },
             {
                 "Ort": "Aaregg",
-                "Strasse": "Seestrasse",
+                "Strasse": "Rue de Blâmage",
                 "Stadt": "Unbekannt",
                 "PLZ": "3855",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
@@ -404,7 +404,7 @@
                 "Ort": "Unbekannt",
                 "Strasse": "A8",
                 "Stadt": "Unbekannt",
-                "PLZ": "3812",
+                "PLZ": "3800",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "campingplatz-countryfestival-interlaken.md"
             },
@@ -521,10 +521,10 @@
                 "Dateiname": "privater-stellplatz-knirig-stans.md"
             },
             {
-                "Ort": "Camping de Vidy",
-                "Strasse": "Chemin du Camping",
+                "Ort": "Unbekannt",
+                "Strasse": "Unbekannt",
                 "Stadt": "Lausanne",
-                "PLZ": "1007",
+                "PLZ": "Unbekannt",
                 "Land": "Schweiz/Suisse/Svizzera/Svizra",
                 "Dateiname": "camping-de-vidy-lausanne.md"
             },
@@ -670,7 +670,7 @@
             },
             {
                 "Ort": "Unbekannt",
-                "Strasse": "Saltebakken",
+                "Strasse": "Søsportsvej",
                 "Stadt": "Frederikshavn",
                 "PLZ": "9900",
                 "Land": "Danmark",
