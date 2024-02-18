@@ -59,7 +59,11 @@ li {
 /* Basic styling */
 body {
   color: var(--color);
-  background: linear-gradient(to bottom, #4a7c59, #9c8265);
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 124, 89, 0.5),
+    rgba(156, 130, 101, 0.5)
+  );
 }
 
 header {
@@ -667,13 +671,14 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
+  padding: 5px; /* Fügt Padding hinzu, um den Abstand innerhalb des Containers zu gewährleisten */
 }
 
 .listbox {
   flex: 1 0 calc(25% - 20px); /* Adjust 'flex-basis' to account for margin */
   /* flex: 0 0 25%; Jede Box nimmt 25% der Breite ein */
   height: 300px; /* Höhe auf Desktop */
-  border: 0;
+  border: 2px solid black; /* Schwarzer Rahmen */
   padding: 15px; /* Fügt Padding zur gesamten Box hinzu */
   box-sizing: border-box;
   position: relative;
@@ -682,6 +687,7 @@ footer a:hover {
   background-size: cover; /* Startgröße des Bildes */
   overflow: hidden; /* Verhindert, dass das Hintergrundbild über die Grenzen hinausgeht */
   margin: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Schatten unten und rechts */
 }
 .zoomable-background {
   width: 100%;
@@ -709,7 +715,8 @@ footer a:hover {
 @media (max-width: 600px) {
   .listbox {
     flex: 0 0 100%; /* Setzt die Flex-Basis auf 100% der Breite */
-    width: 100%; /* Setzt die Breite auf 100% */
+    width: calc(100% - 20px); /* Zieht die Gesamt-Margin von der Breite ab */
+    margin: 10px auto; /* Setzt Margin oben und unten, zentriert die Box horizontal */
     height: 300px; /* Höhe auf Mobilgeräten */
   }
 }
