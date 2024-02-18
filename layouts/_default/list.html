@@ -1,17 +1,38 @@
-{{ define "body_class" }} post-template {{ end }}
-
-{{ define "main" }}
-
-{{- partial "header.html" . -}}
+{{ define "main" }} {{- partial "header.html" . -}}
 
 <div class="listcontainer">
-    {{ range where .Site.RegularPages "Section" "plaetze" }}
-    <div class="listbox">
-        <a href="{{ .Permalink }}"><div class="zoomable-background" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"></div></a>
-        <H2><a href="{{ .Permalink }}">{{ .Title }}</a></H2>
-        <p><a href="{{ .Permalink }}"><i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis }}</a></p>
-    </div>
-    {{ end }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Section"
+  "plaetze").ByDate.Reverse 10 }} {{ range $paginator.Pages }}
+  <div class="listbox">
+    <a href="{{ .Permalink }}"
+      ><div
+        class="zoomable-background"
+        style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"
+      ></div
+    ></a>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p>
+      <a href="{{ .Permalink }}"
+        ><i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis
+        }}</a
+      >
+    </p>
+  </div>
+  {{ end }}
+</div>
+
+<div class="pagination">
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}" class="page-link">Vorherige</a>
+  {{ end }} {{ range .Paginator.Pagers }}
+  <a
+    href="{{ .URL }}"
+    class="page-link {{ if eq . $paginator.PageNumber }}active{{ end }}"
+    >{{ .PageNumber }}</a
+  >
+  {{ end }} {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}" class="page-link">Nächste</a>
+  {{ end }}
 </div>
 
 {{ end }}

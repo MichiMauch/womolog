@@ -984,3 +984,46 @@ input:checked + span::before {
   max-width: 50%; /* Maximale Breite auf 50% begrenzen */
   height: 600px; /* Höhe auf 600px setzen */
 }
+
+/* Start Pager */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.page-link:hover {
+  background-color: #f9f9f9;
+}
+
+.page-link.active {
+  background-color: #f0f0f0;
+  color: #333;
+  border-color: #333;
+  pointer-events: none;
+}
+
+.page-link:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.page-link:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* End Pager */
