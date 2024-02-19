@@ -1,0 +1,454 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+<main class="record">
+    <article>
+        <div class="container">
+            <!-- Full-width box -->
+            <div class="box boxcentered">
+                {{ $anzahlPlaetze := 0 }}
+                {{ range .Site.RegularPages }}
+                {{ if and (isset .Params "anzahl_naechte") (ge (.Params.anzahl_naechte) 1) }}
+                {{ $anzahlPlaetze = add $anzahlPlaetze 1 }}
+                {{ end }}
+                {{ end }}
+                <p class="boxicon"><i class="fa-solid fa-map-location-dot"></i></p>
+                <p class="numberanimation"> {{ $anzahlPlaetze }}</p>
+                <div class="legend">Besuchte Plätze</div>
+            </div>
+            <div class="boxcentered">
+                {{ $gesamtNaechte := 0 }}
+                {{ range .Site.RegularPages }}
+                {{ if isset .Params "anzahl_naechte" }}
+                {{ $gesamtNaechte = add $gesamtNaechte .Params.anzahl_naechte }}
+                {{ end }}
+                {{ end }}
+                <p class="boxicon"><i class="fa-solid fa-bed"></i></p>
+                <p class="numberanimation"> {{ $gesamtNaechte }}</p>
+                <div class="legend">Total Übernachtungen</div>
+            </div>
+            <div class="boxcentered">
+                {{ $gesamtPlatzarten := dict }}
+                {{ $platzartIcons := dict 
+                    "Campingplatz" "fa-campground" 
+                    "Stellplatz" "fa-van-shuttle" 
+                    "Parkplatz" "fa-parking" 
+                }}
+            
+                {{ range .Site.RegularPages }}
+                {{ if and (isset .Params "anzahl_naechte") (gt .Params.anzahl_naechte 0) }}
+                {{ $artDesPlatzes := .Params.art_des_platzes }}
+                {{ if $artDesPlatzes }}
+                {{ $aktuellePlatzartAnzahl := add (index $gesamtPlatzarten $artDesPlatzes | default 0) 1 }}
+                {{ $gesamtPlatzarten = merge $gesamtPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+            
+                {{ range $platzart, $anzahl := $gesamtPlatzarten }}
+                <div class="platzart">
+                    <p class="boxicon"><i class="fa {{ index $platzartIcons $platzart | default "fa-question-circle" }}"></i></p>
+                    <p class="numberanimation">{{ $anzahl }}</p>
+                </div>
+                {{ end }}
+                <div class="legend">Total der Platzarten</div>
+            </div>   
+        </div>
+
+        <div class="container">
+                <!-- Full-width box -->
+            <div class="boxcentered2" style="height: 700px;">
+                <div class="boxcenteredflag">
+                    <!-- Lade die Statistiken aus dem JSON-File -->
+                    {{ $stats := .Site.Data.stats }}
+                    <!-- Durchlaufe jedes Land in den Statistiken -->
+                    {{ range $land, $info := $stats }}
+                    <div class="year-stats">
+                        <div class="stats-itemflag">
+                            <div class="flag-and-number">
+                                <!-- Flaggen-Icon anstelle des Font Awesome Icons -->
+                                <span class="fi fi-{{ $info.country_code | lower }}"></span>
+                                <span class="numberanimation-mini">{{ $info.Besuche }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                </div>
+                <div class="boxcentered2">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
+                    <script>
+                        var map = L.map('map').setView([47.33885, 7.05065], 5);
+
+                        var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+                            minZoom: 1,
+                            maxZoom: 16,
+                            attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                            ext: 'jpg'
+                        }).addTo(map);
+
+                        var homeLatLng = L.latLng([47.33885, 8.05065]);
+                        var home = L.marker(homeLatLng).addTo(map);
+
+                        var places = [
+                            {{ range .Site.RegularPages }}
+                            {{ if and .Params.coordinates.latitude .Params.coordinates.longitude }}
+                            [{{ .Params.coordinates.latitude }}, {{ .Params.coordinates.longitude }}]{{ if not (eq (index .Site.RegularPages (sub (len .Site.RegularPages) 1)).Permalink .Permalink) }},{{ end }}
+                            {{ end }}
+                            {{ end }}
+                        ];
+
+                        function getRandomColor() {
+                            var letters = '0123456789ABCDEF';
+                            var color = '#';
+                            for (var i = 0; i < 6; i++) {
+                                color += letters[Math.floor(Math.random() * 16)];
+                            }
+                            return color;
+                        }
+
+                        var polylines = [];
+                        var distanceLabels = [];
+
+                        places.forEach(function(latlng) {
+                            var destinationLatLng = L.latLng(latlng);
+                            var polylineColor = getRandomColor();
+                            var polyline = L.polyline([homeLatLng, destinationLatLng], {color: polylineColor}).addTo(map);
+                            polylines.push(polyline);
+
+                            var distance = homeLatLng.distanceTo(destinationLatLng) / 1000;
+                            var labelColor = getRandomColor();
+                            var backgroundColor = getRandomColor();
+                            var distanceLabel = L.marker(destinationLatLng, {
+                                icon: L.divIcon({
+                                    className: 'distance-label',
+                                    html: '<div style="color: ' + labelColor + '; background-color: ' + backgroundColor + '">' + distance.toFixed(2) + ' km</div>',
+                                    iconSize: [100, 40]
+                                })
+                            }).addTo(map);
+                            distanceLabels.push({label: distanceLabel, latlng: destinationLatLng, distance: distance});
+                        });
+
+                        function updatePolylineColors() {
+                            polylines.forEach(function(polyline, index) {
+                                var newPolylineColor = getRandomColor();
+                                polyline.setStyle({ color: newPolylineColor });
+
+                                var distanceLabel = distanceLabels[index];
+                                var newLabelColor = getRandomColor();
+                                var newBackgroundColor = getRandomColor();
+                                distanceLabel.label.setIcon(L.divIcon({
+                                    className: 'distance-label',
+                                    html: '<div style="color: ' + newLabelColor + '; background-color: ' + newBackgroundColor + '">' + distanceLabel.distance.toFixed(2) + ' km</div>',
+                                    iconSize: [100, 40]
+                                }));
+                            });
+                        }
+
+                        setInterval(updatePolylineColors, 1000); // Ändert die Farben alle 10 Sekunden
+                    </script>
+
+                    <style>
+                        .distance-label div {
+                            padding: 5px;
+                            border-radius: 3px;
+                            font-size: 20px;
+                            text-align: center;
+                            margin: -8px; /* Ausgleich für das Padding und die Grenze */
+
+                        }
+                    </style>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="boxcentered" id="meineKarte" style="height: 400px;">
+                    <script>    
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var meineKarte = L.map('meineKarte').setView([48.5260, 15.2551], 4);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 18,
+                        }).addTo(meineKarte);
+
+                        var besuchteLaender = [
+                            {{ range $land, $info := .Site.Data.stats }}
+                            { code: "{{ $info.country_code | upper }}", besuche: {{ $info.Besuche }} },
+                            {{ end }}
+                        ];
+
+                        function landBesucht(landCode) {
+                            return besuchteLaender.some(function(l) { return l.code === landCode; });
+                        }
+
+                        function besuchteLaenderAnzahl(landCode) {
+                            var land = besuchteLaender.find(function(l) { return l.code === landCode; });
+                            return land && land.besuche !== undefined ? land.besuche : 0;
+                        }
+
+                        meineKarte.on('zoomend', function() {
+                        var zoomLevel = meineKarte.getZoom(); // Aktuelle Zoomstufe abrufen
+                        console.log('Aktuelle Zoomstufe:', zoomLevel);
+                    });
+
+                        $.getJSON('https://raw.githubusercontent.com/MichiMauch/country_capital-cities_coordinates_iso2-3/main/countries-capitalcities-coordinates-iso2-3.geojson', function(capitalCitiesData) {
+                        var capitalCities = {};
+                        capitalCitiesData.features.forEach(function(feature) {
+                            var countryIsoCode = feature.properties.ISO2; // Verwende ISO2 in Großbuchstaben
+                            var capitalCityCoordinates = [feature.properties.Latitude, feature.properties.Longitude]; // Korrekte Reihenfolge: [Latitude, Longitude]
+                            capitalCities[countryIsoCode] = capitalCityCoordinates;
+                            console.log('Hauptstadt geladen:', countryIsoCode, capitalCityCoordinates);
+                        });
+
+                            // Funktionen für Hover-Effekt
+                            function highlightFeature(e) {
+                                var layer = e.target;
+                                layer.setStyle({
+                                    fillColor: "#FFEDA0", // Farbe beim Hover
+                                    fillOpacity: 0.7,
+                                    color: "#9CB58B",
+                                    weight: 2
+                                });
+                            }
+
+                            function resetHighlight(e) {
+                                var layer = e.target;
+                                if (landBesucht(layer.feature.properties.iso_a2)) {
+                                    // Zurücksetzen auf Stil für besuchte Länder
+                                    layer.setStyle({
+                                        fillColor: "#ADD19E",
+                                        fillOpacity: 0.6,
+                                        color: "#9CB58B",
+                                        weight: 2
+                                    });
+                                } else {
+                                    // Zurücksetzen auf Standardstil
+                                    layer.setStyle({
+                                        fillColor: "#000000",
+                                        fillOpacity: 0.1,
+                                        color: "#9CB58B",
+                                        weight: 1
+                                    });
+                                }
+                            }
+
+                            // Länderdaten hinzufügen
+                            $.getJSON('https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson', function(data) {
+                                L.geoJson(data, {
+                                    onEachFeature: function(feature, layer) {
+                                        var isoCode = feature.properties.iso_a2;
+                                        if (isoCode && landBesucht(isoCode)) {
+                                            layer.setStyle({
+                                                fillColor: "#ADD19E",
+                                                fillOpacity: 0.6,
+                                                color: "#9CB58B",
+                                                weight: 2
+                                            });
+
+                                            if (capitalCities[isoCode]) {
+                                                var capitalCoords = capitalCities[isoCode];
+                                                console.log('Marker Koordinaten:', capitalCoords);
+                                                var customIcon = L.divIcon({
+                                                    html: `<img src="/${isoCode.toLowerCase()}.svg" style="width: 32px; height: 32px;">`,
+                                                    iconSize: [32, 32],
+                                                    iconAnchor: [16, 16],
+                                                    popupAnchor: [0, -24]
+                                                });
+                                                L.marker(capitalCoords, { icon: customIcon }).addTo(meineKarte)
+                                                    .bindPopup(`${feature.properties.name} Besuche: ${besuchteLaenderAnzahl(isoCode)}`);
+                                                console.log('Marker gesetzt für:', isoCode, capitalCoords);
+                                            } else {
+                                                console.log('Keine Hauptstadtdaten für:', isoCode);
+                                            }
+
+                                            // Hinzufügen der Hover-Ereignisse
+                                            layer.on({
+                                                mouseover: highlightFeature,
+                                                mouseout: resetHighlight
+                                            });
+
+                                        } else {
+                                            layer.setStyle({
+                                                fillColor: "#000000",
+                                                fillOpacity: 0.1,
+                                                color: "#9CB58B",
+                                                weight: 1
+                                            });
+                                        }
+                                    }
+                                }).addTo(meineKarte);
+                            });
+
+                        });
+                    });
+
+                    </script>                                       
+                </div>
+            
+                <div class="boxcentered2">
+                    <canvas id="meinLiniendiagramm" style="height: 200px;"></canvas>
+                </div>
+                {{ $jahresNaechte := dict }}
+                {{ $plaetzeProJahr := dict }}
+                {{ $platzartenProJahr := dict }}
+
+                {{ range .Site.RegularPages }}
+                {{ $jahr := .Date.Format "2006" }}
+                {{ if and .Params.anzahl_naechte (not .Draft) }}
+                {{ $aktuelleNaechte := add (index $jahresNaechte $jahr | default 0) .Params.anzahl_naechte }}
+                {{ $jahresNaechte = merge $jahresNaechte (dict $jahr $aktuelleNaechte) }}
+
+                {{ if ge .Params.anzahl_naechte 1 }}
+                {{ $aktuellePlaetze := add (index $plaetzeProJahr $jahr | default 0) 1 }}
+                {{ $plaetzeProJahr = merge $plaetzeProJahr (dict $jahr $aktuellePlaetze) }}
+                {{ end }}
+
+                {{ $artDesPlatzes := .Params.art_des_platzes }}
+                {{ if $artDesPlatzes }}
+                {{ $jahresPlatzarten := index $platzartenProJahr $jahr | default (dict) }}
+                {{ $aktuellePlatzartAnzahl := add (index $jahresPlatzarten $artDesPlatzes | default 0) 1 }}
+                {{ $jahresPlatzarten = merge $jahresPlatzarten (dict $artDesPlatzes $aktuellePlatzartAnzahl) }}
+                {{ $platzartenProJahr = merge $platzartenProJahr (dict $jahr $jahresPlatzarten) }}
+                {{ end }}
+
+                {{ end }}
+                {{ end }}
+
+                {{ range $jahr, $naechte := $jahresNaechte }}
+                {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
+                {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+
+                {{ end }}
+                {{/* Iteriere über das $jahresNaechte Dictionary, um die Jahre und die zugehörigen Übernachtungszahlen zu bekommen */}}
+{{ range $jahr, $naechte := $jahresNaechte }}
+  {{ printf "Jahr: %s\n" $jahr }}
+  {{ printf "- Gesamtzahl der Übernachtungen: %d\n" $naechte }}
+
+  {{/* Hole die Gesamtzahl der Plätze für das aktuelle Jahr */}}
+  {{ $plaetze := index $plaetzeProJahr $jahr | default 0 }}
+  {{ printf "- Plätze insgesamt: %d\n" $plaetze }}
+
+  {{/* Überprüfe, ob für das aktuelle Jahr Daten zu Platzarten vorhanden sind */}}
+  {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+  {{ if gt (len $platzarten) 0 }}
+    {{/* Iteriere über die Platzarten, um die Namen der Platzarten und ihre Anzahlen zu bekommen */}}
+    {{ range $platzart, $anzahl := $platzarten }}
+      {{ printf "  - %s: %d\n" $platzart $anzahl }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+<table>
+    <tr>
+      <th>Jahr</th>
+      <th>Übernachtungen</th>
+      <th>Plätze insgesamt</th>
+      <th>Campingplatz</th>
+      <th>Stellplatz</th>
+    </tr>
+    {{ range $jahr, $naechte := $jahresNaechte }}
+    <tr>
+      <td>{{ $jahr }}</td>
+      <td>{{ $naechte }}</td>
+      <td>{{ index $plaetzeProJahr $jahr | default 0 }}</td>
+      {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+      <td>{{ index $platzarten "Campingplatz" | default 0 }}</td>
+      <td>{{ index $platzarten "Stellplatz" | default 0 }}</td>
+    </tr>
+    {{ end }}
+  </table>
+  
+                <script>
+                    var ctx = document.getElementById('meinLiniendiagramm').getContext('2d');
+                    
+                    // Arrays für die Daten
+                    var jahre = [];
+                    var naechte = [];
+                    var plaetze = [];
+                    var campingplaetze = []; // Array für Campingplätze
+                    var stellplaetze = [];   // Array für Stellplätze
+                    
+                    // Füge hier weitere Arrays für zusätzliche Daten hinzu, falls benötigt
+                    
+                    {{ range $jahr, $nacht := $jahresNaechte }}
+                    jahre.push("{{ $jahr }}");
+                    naechte.push({{ $nacht }});
+                    plaetze.push({{ index $plaetzeProJahr $jahr | default 0 }});
+                    
+                    // Füge hier weitere Datensätze hinzu, falls benötigt
+                    // Daten für jede Platzart
+                    {{ $platzarten := index $platzartenProJahr $jahr | default (dict) }}
+                    campingplaetze.push({{ index $platzarten "Campingplatz" | default 0 }});
+                    stellplaetze.push({{ index $platzarten "Stellplatz" | default 0 }});
+                    {{ end }}
+                    
+                    var chartData = {
+                        labels: jahre,
+                        datasets: [{
+                            label: 'Anzahl der Plätze',
+                            data: plaetze,
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            fill: false,
+                        }, {
+                            label: 'Anzahl der Nächte',
+                            data: naechte,
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Anzahl der Campingplätze',
+                            data: campingplaetze,
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Anzahl der Stellplätze',
+                            data: stellplaetze,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            fill: false
+                        }
+                        // Füge hier weitere Datensätze für andere Platzarten hinzu
+                    ]
+                };
+                
+                    var meinLiniendiagramm = new Chart(ctx, {
+                        type: 'line',
+                        data: chartData,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            animation: {
+                                duration: 1000, // Dauer in Millisekunden
+                                easing: 'easeInOutQuart', // Easing-Typ
+                                onProgress: function(animation) {
+                                    console.log(animation.currentStep / animation.numSteps);
+                                },
+                                onComplete: function() {
+                                    console.log('Animation completed!');
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            
+        </div>
+    </article>
+
+            
+
+</main>
+
+{{ end }}
+
+
+
+
+
+
+
+
+

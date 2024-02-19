@@ -123,10 +123,90 @@ main {
   }
 }
 
+/* common */
+
+a.genres:link,
+a.genres:visited {
+  text-decoration: none;
+  padding: 0.3rem;
+  background-color: var(--bg-genres);
+  color: var(--link-genres);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0.1rem;
+  margin-top: 8px;
+}
+
+a.genres:hover {
+  background-color: var(--accent);
+}
+
+a.album-info:link,
+a.album-info:visited {
+  text-decoration: none;
+  padding: 0.3rem;
+  border: 1px solid var(--bg-genres);
+  border-radius: 5px;
+  color: var(--bg-genres);
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: smaller;
+  padding-bottom: 10px;
+}
+
+a.album-info:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 ul > li {
   list-style-type: none;
   font-size: smaller;
   margin: 0.1rem;
+}
+
+/* album list page */
+
+main.album-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 692px) {
+  .album-card {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .album-card {
+    flex: 100%;
+    background-position: top;
+    padding-left: 0.1rem;
+    padding-top: 255px;
+    min-height: auto;
+  }
+}
+
+a.album-artist:link,
+a.album-artist:visited {
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: block;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  color: var(--link-color);
+  padding-left: 8px;
+  padding-bottom: 10px;
+}
+
+a.album-artist:hover {
+  color: var(--accent);
 }
 
 a.album-title:link,
@@ -947,99 +1027,77 @@ input:checked + span::before {
   border-bottom-right-radius: 5px;
 }
 /* End Pager */
+/*das Ende*/
+/*das Ende*/
+/*das Ende*/
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   padding: 10px;
 }
 
 .grid-item {
   background-color: #f0f0f0;
-  border: 2px solid black; /* Schwarzer Rahmen */
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Schatten unten und rechts */
+  border: 1px solid #333;
   padding: 20px;
   text-align: center;
 }
 
 /* Erste Zeile */
-.box1,
-.box2,
-.box3,
-.box31 {
-  grid-column: span 3; /* Nimmt drei Spalten ein */
-}
+.box1 {
+  grid-column: span 2;
+} /* Nimmt zwei Spalten ein */
+.box2 {
+  grid-column: span 2;
+} /* Nimmt zwei Spalten ein */
+.box3 {
+  grid-column: span 2;
+} /* Nimmt zwei Spalten ein */
 
 /* Zweite Zeile */
 .box4 {
-  grid-column: span 8; /* Nimmt acht Spalten ein */
-}
+  grid-column: span 3;
+} /* Nimmt drei Spalten ein */
 .box5 {
-  grid-column: span 4; /* Nimmt vier Spalten ein */
-}
+  grid-column: span 3;
+} /* Nimmt drei Spalten ein */
 
-/* Media Query für kleinere Bildschirme bis zu 900px Breite */
-@media (max-width: 1300px) {
+/* Dritte Zeile */
+.box6 {
+  grid-column: span 3;
+} /* Nimmt drei Spalten ein */
+.box7 {
+  grid-column: span 3;
+} /* Nimmt drei Spalten ein */
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Zweispaltiges Layout */
+    grid-template-columns: repeat(3, 1fr);
   }
   .box1,
   .box2,
   .box3,
-  .box31,
   .box4,
-  .box5 {
-    grid-column: span 1; /* Jede Box nimmt eine Spalte ein */
+  .box5,
+  .box6,
+  .box7 {
+    grid-column: span 3; /* Jede Box nimmt die volle Breite ein */
   }
 }
 
-/* Media Query für noch kleinere Bildschirme unter 480px Breite */
-@media (max-width: 700px) {
+/* Media Query für noch kleinere Bildschirme */
+@media (max-width: 480px) {
   .grid-container {
-    grid-template-columns: repeat(1, 1fr); /* Einspaltiges Layout */
+    grid-template-columns: 1fr; /* Einzelspaltiges Layout */
   }
   .box1,
   .box2,
   .box3,
-  .box31,
   .box4,
-  .box5 {
+  .box5,
+  .box6,
+  .box7 {
     grid-column: 1 / -1; /* Jede Box nimmt die volle Breite ein */
   }
-}
-
-/* Stellt sicher, dass die Tabelle die volle Breite des umgebenden Elements einnimmt */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-/* Unterstreicht jede Zeile außer der letzten */
-tr:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
-
-/* Optional: Stile für die Tabelle */
-th,
-td {
-  text-align: center;
-  padding: 8px;
-}
-
-/* Setzt die Farbe der FontAwesome-Icons in den Kopfzeilen */
-th i {
-  color: #add19e; /* Die gewünschte Farbe für die Icons */
-  font-size: 24px; /* Setzt die Größe der Icons */
-}
-
-/* Zebrastreifen-Stil für die Tabelle */
-tr:nth-child(even) {
-  background-color: #add19e;
-}
-
-/* Stile für die Icons */
-th i,
-td i {
-  margin-right: 4px;
 }
