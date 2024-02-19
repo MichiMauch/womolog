@@ -629,7 +629,7 @@ footer a:hover {
 }
 .numberanimation-mini {
   animation: growAndSpin 2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  font-size: 4rem;
+  font-size: 3rem;
   color: black;
   padding-left: 20px;
 }
@@ -867,7 +867,7 @@ footer a:hover {
 .fi {
   flex-shrink: 0; /* Verhindert, dass die Flagge skaliert */
   margin-right: 10px; /* Abstand zwischen Flagge und Zahl */
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .stats-itemflag {
