@@ -12,6 +12,7 @@ anzahl_naechte: 1
 aufenthalt_von_bis: 17.10.2022 - 18.10.2022
 preis: CHF 26.40
 art_des_platzes: Campingplatz
+distance_km: 195.19629999999998
 coordinates:
   latitude: 46.13836
   longitude: 8.90746

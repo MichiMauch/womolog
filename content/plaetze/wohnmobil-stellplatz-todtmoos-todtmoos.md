@@ -11,6 +11,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 29.07.2022 - 01.08.2022
 preis: € 45.00
 art_des_platzes: Stellplatz
+distance_km: 62.689699999999995
 coordinates:
   latitude: 47.730521
   longitude: 8.00184

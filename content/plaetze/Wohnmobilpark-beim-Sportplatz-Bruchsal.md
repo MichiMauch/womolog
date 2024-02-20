@@ -39,6 +39,7 @@ cover: img/20231009_175805.jpg
 description: Der Campingplatz liegt im Mittelschwarzwald. Ca. 45min von Freiburg entfernt. Zwar nahe an der Strasse aber durch die erhöhte und zurückliegende Lage sehr ruhig und entspannt. 
 
 # Koordinaten des Platzes. Wird auf der single page als Kartenausschnitt angezeigt
+distance_km: 276.56359999999995
 coordinates:
   latitude: 49.13475
   longitude: 8.58652

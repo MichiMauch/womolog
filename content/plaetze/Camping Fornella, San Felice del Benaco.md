@@ -18,6 +18,7 @@ ausstattung:
 
 aktivitaeten: []
 
+distance_km: 410.6071
 coordinates:
   latitude: 45.5865
   longitude: 10.5676

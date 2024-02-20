@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 18.04.2022 - 20.04.2022
 preis: € 40.00
 art_des_platzes: Stellplatz
+distance_km: 231.3887
 coordinates:
   latitude: 45.99644
   longitude: 8.65336

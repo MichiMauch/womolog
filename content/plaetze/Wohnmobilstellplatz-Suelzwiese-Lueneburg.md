@@ -23,6 +23,7 @@ art_des_platzes: "Stellplatz"
 
 cover: img/20231005_142456.jpg
 
+distance_km: 855.725
 coordinates:
   latitude: 53.24554
   longitude: 10.39753

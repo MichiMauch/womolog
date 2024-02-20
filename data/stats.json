@@ -249,7 +249,7 @@
                 "Dateiname": "camping-jaunpass-boltigen.md"
             },
             {
-                "Ort": "Unbekannt",
+                "Ort": "Camping International Giswil",
                 "Strasse": "Campingstrasse",
                 "Stadt": "Unbekannt",
                 "PLZ": "6074",
@@ -626,11 +626,11 @@
         "country_code": "at"
     },
     "Danmark": {
-        "Besuche": 8,
+        "Besuche": 7,
         "Orte": [
             {
                 "Ort": "Unbekannt",
-                "Strasse": "Egå Havvej",
+                "Strasse": "Egå Strandvej",
                 "Stadt": "Unbekannt",
                 "PLZ": "8250",
                 "Land": "Danmark",
@@ -651,14 +651,6 @@
                 "PLZ": "6100",
                 "Land": "Danmark",
                 "Dateiname": "Camper-plads-Haderslev-Sejlclub-Haderslev.md"
-            },
-            {
-                "Ort": "CampOne Grenen Strand",
-                "Strasse": "Gammel Fyrvej",
-                "Stadt": "Skagen",
-                "PLZ": "9990",
-                "Land": "Danmark",
-                "Dateiname": "campone-grene-strand-skagen.md"
             },
             {
                 "Ort": "Unbekannt",

@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 15.06.2022 - 17.06.2022
 preis: CHF 58.00
 art_des_platzes: Stellplatz
+distance_km: 263.294
 coordinates:
   latitude: 46.30714
   longitude: 7.74199

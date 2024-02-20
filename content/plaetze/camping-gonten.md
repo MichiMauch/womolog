@@ -33,6 +33,7 @@ cover: img/IMG_20190721_101022.jpg
 
 
 # Koordinaten des Platzes. Wird auf der single page als Kartenausschnitt angezeigt
+distance_km: 136.7366
 coordinates:
   latitude: 47.31856
   longitude: 9.33442

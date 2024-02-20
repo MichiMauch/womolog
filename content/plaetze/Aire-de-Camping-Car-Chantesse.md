@@ -9,6 +9,7 @@ anzahl_naechte: 1
 aufenthalt_von_bis: 01.11.2018 - 02.11.2018
 preis: € 5.00
 art_des_platzes: Stellplatz
+distance_km: 405.3425
 coordinates:
   latitude: 45.24114
   longitude: 5.45551

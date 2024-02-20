@@ -9,6 +9,7 @@ anzahl_naechte: 4
 aufenthalt_von_bis: 29.10.2021 - 02.11.2021
 preis: € ???
 art_des_platzes: Campingplatz
+distance_km: 172.4515
 coordinates:
   latitude: 47.53721
   longitude: 9.72969

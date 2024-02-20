@@ -9,6 +9,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 17.06.2022 - 20.06.2022
 preis: CHF 150.00
 art_des_platzes: Campingplatz
+distance_km: 214.2662
 coordinates:
   latitude: 46.08617
   longitude: 7.78313

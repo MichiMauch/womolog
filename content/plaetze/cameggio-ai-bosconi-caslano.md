@@ -9,6 +9,7 @@ anzahl_naechte: 5
 aufenthalt_von_bis: 19.09.2021 - 24.09.2021
 preis: CHF ???
 art_des_platzes: Campingplatz
+distance_km: 214.6359
 coordinates:
   latitude: 45.97232
   longitude: 8.88693

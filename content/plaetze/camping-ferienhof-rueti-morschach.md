@@ -9,6 +9,7 @@ anzahl_naechte: 4
 aufenthalt_von_bis: 28.12.2023 - 01.01.2024
 preis: CHF 136.00
 art_des_platzes: Campingplatz
+distance_km: 88.1917
 coordinates:
   latitude: 46.99007
   longitude: 8.63359

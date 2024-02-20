@@ -32,6 +32,7 @@ aktivitaeten:
 
 art_des_platzes: "Campingplatz"
 
+distance_km: 808.4431
 coordinates:
   latitude: 52.93625
   longitude: 9.96934

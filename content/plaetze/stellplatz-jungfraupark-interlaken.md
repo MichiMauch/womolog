@@ -9,6 +9,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 22.07.2021 - 25.07.2021
 preis: CHF 115.00
 art_des_platzes: Stellplatz
+distance_km: 132.1732
 coordinates:
   latitude: 46.68070
   longitude: 7.87688

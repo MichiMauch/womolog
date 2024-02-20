@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 25.10.2021 - 27.10.2021
 preis: € ???
 art_des_platzes: Stellplatz
+distance_km: 278.3075
 coordinates:
   latitude: 47.58179
   longitude: 10.70265

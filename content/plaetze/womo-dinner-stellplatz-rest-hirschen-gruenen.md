@@ -9,6 +9,7 @@ anzahl_naechte: 1
 aufenthalt_von_bis: 06.03.2021 - 07.03.2021
 preis: gratis
 art_des_platzes: Stellplatz
+distance_km: 55.3909
 coordinates:
   latitude: 47.02548
   longitude: 7.74253

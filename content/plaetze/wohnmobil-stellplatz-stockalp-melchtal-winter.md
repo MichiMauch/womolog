@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 28.12.2020 - 30.12.2020
 preis: CHF 24.00
 art_des_platzes: Stellplatz
+distance_km: 83.108
 coordinates:
   latitude: 46.80165
   longitude: 8.18112

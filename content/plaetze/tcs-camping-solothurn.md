@@ -9,6 +9,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 03.03.2022 - 06.03.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
+distance_km: 50.4959
 coordinates:
   latitude: 47.19732
   longitude: 7.52184

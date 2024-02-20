@@ -1,0 +1,462 @@
+[
+    {
+        "file_name": "wohnmobilpark-bad-hindelang.md",
+        "year": 2021,
+        "distance_km": 238.3052
+    },
+    {
+        "file_name": "stellplatz-rehbach-menzenschwand.md",
+        "year": 2023,
+        "distance_km": 74.6952
+    },
+    {
+        "file_name": "camper-area-tamaro-monte-ceneri-rivera.md",
+        "year": 2022,
+        "distance_km": 195.19629999999998
+    },
+    {
+        "file_name": "stellplatz-soerenberg-platz-soerenberg-2023_05.md",
+        "year": 2023,
+        "distance_km": 81.1217
+    },
+    {
+        "file_name": "camping-frutigresort-frutigen-2021.md",
+        "year": 2021,
+        "distance_km": 124.8866
+    },
+    {
+        "file_name": "wohnmobilstellplatz-lugano-2021-09.md",
+        "year": 2021,
+        "distance_km": 210.2574
+    },
+    {
+        "file_name": "wohnmobil-stellplatz-stockalp-melchtal-winter.md",
+        "year": 2020,
+        "distance_km": 83.108
+    },
+    {
+        "file_name": "stellplatz-s\u00f6renberg-platz-s\u00f6renberg.md",
+        "year": 2022,
+        "distance_km": 81.10010000000001
+    },
+    {
+        "file_name": "camping-muglin-muestair.md",
+        "year": 2023,
+        "distance_km": 267.63009999999997
+    },
+    {
+        "file_name": "stellplatz-untersch\u00e4chen-untersch\u00e4chen.md",
+        "year": 2022,
+        "distance_km": 96.7591
+    },
+    {
+        "file_name": "wohnmobilstellplatz-wessnerhof-marquartstein.md",
+        "year": 2021,
+        "distance_km": 447.4268
+    },
+    {
+        "file_name": "campingplatz-wolfach.md",
+        "year": 2023,
+        "distance_km": 163.0885
+    },
+    {
+        "file_name": "wohnmobilstellplatz-eichholz-bern-2021-03.md",
+        "year": 2021,
+        "distance_km": 82.2187
+    },
+    {
+        "file_name": "stellplatz-lampertij-6-gampel-2022-04.md",
+        "year": 2022,
+        "distance_km": 263.294
+    },
+    {
+        "file_name": "camping-bumbach-schangnau.md",
+        "year": 2021,
+        "distance_km": 87.6244
+    },
+    {
+        "file_name": "kaiser-camp-scheffau-at.md",
+        "year": 2021,
+        "distance_km": 412.8455
+    },
+    {
+        "file_name": "wohnmobilstellplatz-lugano-2023.md",
+        "year": 2023,
+        "distance_km": 210.2574
+    },
+    {
+        "file_name": "Wohnmobilpark-beim-Sportplatz-Bruchsal.md",
+        "year": 2023,
+        "distance_km": 276.56359999999995
+    },
+    {
+        "file_name": "wohnmobilstellplatz-ega-marina-ega.md",
+        "year": 2023,
+        "distance_km": 1221.8168999999998
+    },
+    {
+        "file_name": "alpencamping-meiringen.md",
+        "year": 2021,
+        "distance_km": 90.9026
+    },
+    {
+        "file_name": "Camping-Obess-Lungern.md",
+        "year": 2018,
+        "distance_km": 79.945
+    },
+    {
+        "file_name": "camping-forstgarten-gstatterboden-at.md",
+        "year": 2021,
+        "distance_km": 679.41
+    },
+    {
+        "file_name": "camping-jaunpass-boltigen.md",
+        "year": 2022,
+        "distance_km": 144.4705
+    },
+    {
+        "file_name": "wohnmobilstellplatz-dorf-tirol-meran.md",
+        "year": 2023,
+        "distance_km": 337.1778
+    },
+    {
+        "file_name": "Aire-de-Camping-Car-Chantesse.md",
+        "year": 2018,
+        "distance_km": 405.3425
+    },
+    {
+        "file_name": "camping-erlebnis-zugspitze-grainau.md",
+        "year": 2021,
+        "distance_km": 327.1325
+    },
+    {
+        "file_name": "park-camping-lindau.md",
+        "year": 2021,
+        "distance_km": 172.4515
+    },
+    {
+        "file_name": "camping-lakolk-strand-romo.md",
+        "year": 2023,
+        "distance_km": 1115.2839
+    },
+    {
+        "file_name": "Wohnmobilstellplatz-Suelzwiese-Lueneburg.md",
+        "year": 2023,
+        "distance_km": 855.725
+    },
+    {
+        "file_name": "Camper-plads-Haderslev-Sejlclub-Haderslev.md",
+        "year": 2023,
+        "distance_km": 1091.0966
+    },
+    {
+        "file_name": "camping-international-giswil.md",
+        "year": 2021,
+        "distance_km": 74.57560000000001
+    },
+    {
+        "file_name": "camping-gonten-2021-08.md",
+        "year": 2021,
+        "distance_km": 136.7366
+    },
+    {
+        "file_name": "camping-swiss-plage-salgesch.md",
+        "year": 2021,
+        "distance_km": 249.72660000000002
+    },
+    {
+        "file_name": "stellplatz-lampertij-6-gampel-2022.md",
+        "year": 2022,
+        "distance_km": 263.294
+    },
+    {
+        "file_name": "camping-yverdon-plage-yverdon.md",
+        "year": 2022,
+        "distance_km": 150.948
+    },
+    {
+        "file_name": "campone-grene-strand-skagen.md",
+        "year": 2023,
+        "distance_km": 1432.6027
+    },
+    {
+        "file_name": "camping-manor-farm-unterseen.md",
+        "year": 2021,
+        "distance_km": 130.4836
+    },
+    {
+        "file_name": "womo-dinner-stellplatz-rest-hirschen-gruenen.md",
+        "year": 2021,
+        "distance_km": 55.3909
+    },
+    {
+        "file_name": "stellplatz-jungfraupark-interlaken.md",
+        "year": 2021,
+        "distance_km": 132.1732
+    },
+    {
+        "file_name": "camping-unterseen-2022-05.md",
+        "year": 2022,
+        "distance_km": 131.0867
+    },
+    {
+        "file_name": "camping-unterseen-2023-2.md",
+        "year": 2023,
+        "distance_km": 131.0867
+    },
+    {
+        "file_name": "wohnmobil-stellplatz-lac-sourterrain-st-leonard.md",
+        "year": 2022,
+        "distance_km": 236.9388
+    },
+    {
+        "file_name": "camping-bagatelle-avignon.md",
+        "year": 2018,
+        "distance_km": 604.9571
+    },
+    {
+        "file_name": "camping-aaregg-brienz.md",
+        "year": 2021,
+        "distance_km": 94.1797
+    },
+    {
+        "file_name": "wohnmobilstellplatz-haverslev-havn.md",
+        "year": 2023,
+        "distance_km": 1337.3443
+    },
+    {
+        "file_name": "wohnmobilpark-fuessen.md",
+        "year": 2021,
+        "distance_km": 278.3075
+    },
+    {
+        "file_name": "camping-lido-luzern-2022.md",
+        "year": 2022,
+        "distance_km": 46.9945
+    },
+    {
+        "file_name": "stellplatz-soerenberg-platz-soerenberg-2021-07.md",
+        "year": 2021,
+        "distance_km": 81.58139999999999
+    },
+    {
+        "file_name": "jungfrau-camp-unterseen-2021-04.md",
+        "year": 2021,
+        "distance_km": 131.0867
+    },
+    {
+        "file_name": "camping-zillertal-aschau-at.md",
+        "year": 2021,
+        "distance_km": 392.3079
+    },
+    {
+        "file_name": "cameggio-ai-bosconi-caslano.md",
+        "year": 2021,
+        "distance_km": 214.6359
+    },
+    {
+        "file_name": "camping-gonten.md",
+        "year": 2018,
+        "distance_km": 136.7366
+    },
+    {
+        "file_name": "camping-unterseen-2023-1.md",
+        "year": 2023,
+        "distance_km": 131.0867
+    },
+    {
+        "file_name": "Stellplatz-Frederikshavn-Marina-Frederikshavn.md",
+        "year": 2023,
+        "distance_km": 1384.4809
+    },
+    {
+        "file_name": "stellplatz-marina-bay-yacht-club-buchholz.md",
+        "year": 2023,
+        "distance_km": 764.8357
+    },
+    {
+        "file_name": "wohnmobilstellplatz-lampertij6-gampel-steg-2023.md",
+        "year": 2023,
+        "distance_km": 263.294
+    },
+    {
+        "file_name": "campingplatz-countryfestival-interlaken.md",
+        "year": 2023,
+        "distance_km": 132.7393
+    },
+    {
+        "file_name": "womo-dinner-stellplatz-weisses-kreuz-lyss.md",
+        "year": 2021,
+        "distance_km": 86.1016
+    },
+    {
+        "file_name": "camping-kohlhofmuehl-pernitz-at.md",
+        "year": 2021,
+        "distance_km": 784.0561
+    },
+    {
+        "file_name": "tcs-camping-gwatt-thun.md",
+        "year": 2022,
+        "distance_km": 107.2538
+    },
+    {
+        "file_name": "tcs-camping-thusis-viamala.md",
+        "year": 2022,
+        "distance_km": 193.91639999999998
+    },
+    {
+        "file_name": "wohnmobilstellplatz-eichholz-bern-2022-01.md",
+        "year": 2023,
+        "distance_km": 82.2187
+    },
+    {
+        "file_name": "wohnmobilpark-rupertus-therme-bad-reichenhall.md",
+        "year": 2021,
+        "distance_km": 488.2294
+    },
+    {
+        "file_name": "wohnmobil-stellplatz-todtmoos-todtmoos.md",
+        "year": 2022,
+        "distance_km": 62.689699999999995
+    },
+    {
+        "file_name": "camping-goldrain-suedtirol.md",
+        "year": 2023,
+        "distance_km": 303.75829999999996
+    },
+    {
+        "file_name": "camping-frutigresort-frutigen-2023.md",
+        "year": 2023,
+        "distance_km": 124.8866
+    },
+    {
+        "file_name": "wohnmobilstellplatz-geisssticki-gurtnellen-2023.md",
+        "year": 2023,
+        "distance_km": 102.58439999999999
+    },
+    {
+        "file_name": "stellplatz-hotel-sunstar-davos.md",
+        "year": 2022,
+        "distance_km": 199.98229999999998
+    },
+    {
+        "file_name": "camping-thorbach-fluehli.md",
+        "year": 2021,
+        "distance_km": 73.3027
+    },
+    {
+        "file_name": "wohnmobil-stellplatz-oggebbio.md",
+        "year": 2022,
+        "distance_km": 231.3887
+    },
+    {
+        "file_name": "stellplatz-bei-der-hofstatt-tenna.md",
+        "year": 2021,
+        "distance_km": 199.6192
+    },
+    {
+        "file_name": "tcs-camping-solothurn.md",
+        "year": 2022,
+        "distance_km": 50.4959
+    },
+    {
+        "file_name": "wohnmobilstellplatz-lugano-2022-01.md",
+        "year": 2022,
+        "distance_km": 210.2574
+    },
+    {
+        "file_name": "tcs-camping-lugano-agno-winter.md",
+        "year": 2020,
+        "distance_km": 212.0553
+    },
+    {
+        "file_name": "stellplatz-therme-bad-woerishofen.md",
+        "year": 2021,
+        "distance_km": 283.6296
+    },
+    {
+        "file_name": "camping-arnist-oberwil-im-simmental.md",
+        "year": 2024,
+        "distance_km": 130.6715
+    },
+    {
+        "file_name": "suedsee-camp-wietzendorf.md",
+        "year": 2023,
+        "distance_km": 808.4431
+    },
+    {
+        "file_name": "privater-stellplatz-knirig-stans.md",
+        "year": 2021,
+        "distance_km": 57.5886
+    },
+    {
+        "file_name": "camping-de-vidy-lausanne.md",
+        "year": 2022,
+        "distance_km": 180.5015
+    },
+    {
+        "file_name": "camping-ferienhof-rueti-morschach.md",
+        "year": 2023,
+        "distance_km": 88.1917
+    },
+    {
+        "file_name": "autocamper-plads-hivde-sande-havn.md",
+        "year": 2023,
+        "distance_km": 1238.6608999999999
+    },
+    {
+        "file_name": "Fusina Camping & Dock, Fusina, Venedig.md",
+        "year": 2022,
+        "distance_km": 544.1204
+    },
+    {
+        "file_name": "camping-thoeni-st-valentin-auf-der-haide-vinschgau-suedtirol.md",
+        "year": 2023,
+        "distance_km": 283.3931
+    },
+    {
+        "file_name": "reisemobil-stellplatz-salzburg.md",
+        "year": 2021,
+        "distance_km": 499.4757
+    },
+    {
+        "file_name": "camping-attermenzen-randa.md",
+        "year": 2022,
+        "distance_km": 214.2662
+    },
+    {
+        "file_name": "camping-lido-luzern.md",
+        "year": 2023,
+        "distance_km": 46.9945
+    },
+    {
+        "file_name": "camping-bachtalen-moehlin.md",
+        "year": 2021,
+        "distance_km": 62.7295
+    },
+    {
+        "file_name": "wohnmobilstellplatz-oasen-romo.md",
+        "year": 2023,
+        "distance_km": 1118.1111
+    },
+    {
+        "file_name": "wohnmobilstellplatz-eichholz-bern-2023.md",
+        "year": 2023,
+        "distance_km": 82.2187
+    },
+    {
+        "file_name": "Camping Fornella, San Felice del Benaco.md",
+        "year": 2022,
+        "distance_km": 410.6071
+    },
+    {
+        "file_name": "wohnmobilstellplatz-an-der-therme-bad-aibling.md",
+        "year": 2021,
+        "distance_km": 415.8126
+    },
+    {
+        "file_name": "stellplatz-soerenberg-platz-soerenberg-2022-06.md",
+        "year": 2022,
+        "distance_km": 81.58139999999999
+    }
+]

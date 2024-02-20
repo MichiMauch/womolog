@@ -10,6 +10,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 11.08.2023 - 14.08.2023
 preis: CHF 211.00
 art_des_platzes: Campingplatz
+distance_km: 124.8866
 coordinates:
   latitude: 46.59401
   longitude: 7.65458

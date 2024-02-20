@@ -24,6 +24,7 @@ cover: img/5a381898d0b95.jpg
 
 description: Der Wohnmobilstellplatz Sülzwiese befindet sich in malerischer Lage in Lüneburg. Trotz der Nähe zur Stadt kann man hier Ruhe und Natur genießen. Mit den bereitgestellten Annehmlichkeiten ist er ideal für einen kurzen Zwischenstopp.
 
+distance_km: 79.945
 coordinates:
   latitude: 46.78531
   longitude: 8.15221

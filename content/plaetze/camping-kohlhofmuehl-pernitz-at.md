@@ -9,6 +9,7 @@ anzahl_naechte: 3
 aufenthalt_von_bis: 29.05.2021 - 01.06.2021
 preis: € ???
 art_des_platzes: Campingplatz
+distance_km: 784.0561
 coordinates:
   latitude: 47.89129
   longitude: 15.95546

@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 10.06.2021 - 12.06.201
 preis: CHF ???
 art_des_platzes: Campingplatz
+distance_km: 392.3079
 coordinates:
   latitude: 47.26392
   longitude: 11.90106

@@ -9,6 +9,7 @@ anzahl_naechte: 4
 aufenthalt_von_bis: 12.05.2021 - 16.05.2021
 preis: CHF ???
 art_des_platzes: Stellplatz
+distance_km: 199.6192
 coordinates:
   latitude: 46.75118
   longitude: 9.34184

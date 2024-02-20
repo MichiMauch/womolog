@@ -9,6 +9,7 @@ anzahl_naechte: 5
 aufenthalt_von_bis: 31.10.2018 - 01.11.2018
 preis: € ???
 art_des_platzes: Campingplatz
+distance_km: 604.9571
 coordinates:
   latitude: 43.95397
   longitude: 4.79883

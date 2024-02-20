@@ -24,6 +24,7 @@ aktivitaeten:
 
 art_des_platzes: "Campingplatz"
 
+distance_km: 1432.6027
 coordinates:
   latitude: 57.73009
   longitude: 10.61626
@@ -40,4 +41,4 @@ pictures:
   - img/20231001_154119.jpg
 
 description: "Grosser Camping am Rande von Skagen, direkt am Strand. Nicht weit bis zum grossen Leuchtrum und bis zur Stelle wo die Nord- und Ostsee aufeinander treffen."
----
+---distance_km: 1432.6027

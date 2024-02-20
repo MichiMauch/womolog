@@ -9,6 +9,7 @@ anzahl_naechte: 4
 aufenthalt_von_bis: 26.04.2021 - 30.04.2021
 preis: CHF ???
 art_des_platzes: Campingplatz
+distance_km: 62.7295
 coordinates:
   latitude: 47.57578
   longitude: 7.83835

@@ -19,6 +19,7 @@ art_des_platzes: "Campingplatz"
 
 cover: img/20221022_081028.jpg
 
+distance_km: 544.1204
 coordinates:
   latitude: 45.42064
   longitude: 12.25865

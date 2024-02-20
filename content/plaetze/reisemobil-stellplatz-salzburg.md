@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 04.06.2021 - 06.06.2021
 preis: € ???
 art_des_platzes: Stellplatz
+distance_km: 499.4757
 coordinates:
   latitude: 47.83532
   longitude: 13.06089

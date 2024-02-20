@@ -22,6 +22,7 @@ aktivitaeten:
 
 art_des_platzes: "Stellplatz"
 
+distance_km: 1238.6608999999999
 coordinates:
   latitude: 56.00145
   longitude: 8.12840

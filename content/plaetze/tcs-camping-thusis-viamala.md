@@ -9,6 +9,7 @@ anzahl_naechte: 2
 aufenthalt_von_bis: 16.04.2022 - 18.04.2022
 preis: CHF ???
 art_des_platzes: Campingplatz
+distance_km: 193.91639999999998
 coordinates:
   latitude: 46.69978
   longitude: 9.44503
