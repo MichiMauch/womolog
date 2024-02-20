@@ -20,7 +20,7 @@ ausstattung:
   - Restaurant auf Platz
 aktivitaeten:
 
-cover: img/IMG_20181101_121757-1024x768.jpg
+cover: img/camping.jpg
 pictures:
-  - img/IMG_20181101_121757-1024x768.jpg
+  - img/camping.jpg
 ---
