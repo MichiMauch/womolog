@@ -53,10 +53,7 @@ partial "header.html" . -}}
             >Aktuelles Wetter</a
           >
         </p>
-        <h2 class="platz-title full-width-title">Ausstattung</h2>
-        {{ range .Params.ausstattung }}
-        <a href="/ausstattung/{{ . | urlize }}" class="genres">{{ . }}</a>
-        {{ end }}
+        
       </div>
       <div class="box">
         {{ if .Params.cover }}

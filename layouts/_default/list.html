@@ -1,37 +1,40 @@
-{{ define "main" }} {{- partial "header.html" . -}}
+{{ define "main" }}
+{{- partial "header.html" . -}}
 
 <div class="listcontainer">
-  {{ $paginator := .Paginate (where .Site.RegularPages "Section"
-  "plaetze").ByDate.Reverse 10 }} {{ range $paginator.Pages }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Section" "plaetze").ByDate.Reverse 10 }}
+  {{ range $paginator.Pages }}
   <div class="listbox">
-    <a href="{{ .Permalink }}"
-      ><div
-        class="zoomable-background"
-        style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"
-      ></div
-    ></a>
+    <a href="{{ .Permalink }}">
+      <div class="zoomable-background" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.cover }}')"></div>
+    </a>
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p>
-      <a href="{{ .Permalink }}"
-        ><i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis
-        }}</a
-      >
+      <a href="{{ .Permalink }}">
+        <i class="fa-regular fa-calendar"></i> {{ .Params.aufenthalt_von_bis }}
+      </a>
     </p>
   </div>
   {{ end }}
 </div>
 
 <div class="pagination">
+  {{ if gt $paginator.PageNumber 1 }}
+  <a href="{{ $paginator.First.URL }}" class="page-link">Erste</a>
+  {{ end }}
   {{ if $paginator.HasPrev }}
   <a href="{{ $paginator.Prev.URL }}" class="page-link">Vorherige</a>
-  {{ end }} {{ range .Paginator.Pagers }}
-  <a
-    href="{{ .URL }}"
-    class="page-link {{ if eq . $paginator.PageNumber }}active{{ end }}"
-    >{{ .PageNumber }}</a
-  >
-  {{ end }} {{ if $paginator.HasNext }}
+  {{ end }}
+ <!-- 
+   {{ range .Paginator.Pagers }}
+  <a href="{{ .URL }}" class="page-link {{ if eq . $paginator.PageNumber }}active{{ end }}">{{ .PageNumber }}</a>
+  {{ end }}
+  -->
+  {{ if $paginator.HasNext }}
   <a href="{{ $paginator.Next.URL }}" class="page-link">Nächste</a>
+  {{ end }}
+  {{ if lt $paginator.PageNumber $paginator.TotalPages }}
+  <a href="{{ $paginator.Last.URL }}" class="page-link">Letzte</a>
   {{ end }}
 </div>
 

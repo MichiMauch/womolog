@@ -947,6 +947,8 @@ input:checked + span::before {
   border-bottom-right-radius: 5px;
 }
 /* End Pager */
+
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
